@@ -23,7 +23,7 @@ function sortObject(object, sortWith) {
             total[key] = object[key];
         }
         return total;
-    }, Object.create(null));
+    }, {});
     if (options.useSource) {
         Object.keys(ret)
             .forEach(function (key, index, array) {

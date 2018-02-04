@@ -47,7 +47,7 @@ function sortObject(object, sortWith)
 		}
 
 		return total;
-	}, Object.create(null));
+	}, {});
 
 	if (options.useSource)
 	{
