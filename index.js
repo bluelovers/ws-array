@@ -21,6 +21,7 @@ function sortObject(object, sortWith) {
         keys = keys.concat()
             .concat(Object.keys(object).sort(options.sort));
     }
+    keys = array_unique(keys);
     if (options.desc) {
         keys = keys.reverse();
     }
@@ -39,5 +40,10 @@ function sortObject(object, sortWith) {
         return object;
     }
     return ret;
+}
+function array_unique(array) {
+    return array.filter(function (el, index, arr) {
+        return index == arr.indexOf(el);
+    });
 }
 module.exports = sortObject;

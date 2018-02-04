@@ -44,6 +44,8 @@ function sortObject(object, sortWith)
 		;
 	}
 
+	keys = array_unique(keys);
+
 	if (options.desc)
 	{
 		keys = keys.reverse()
@@ -107,6 +109,14 @@ module sortObject
 		useSource?: boolean,
 
 	}
+}
+
+function array_unique(array: any[])
+{
+	return array.filter(function (el, index, arr)
+	{
+		return index == arr.indexOf(el);
+	});
 }
 
 export = sortObject;
