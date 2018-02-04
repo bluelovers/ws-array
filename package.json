@@ -3,19 +3,46 @@
   "version": "0.0.0",
   "description": "Sort an object's keys, including an optional key list",
   "keywords": [
+    "arr",
+    "array",
+    "deep",
+    "deterministic",
+    "function",
+    "js",
+    "key",
     "keys",
+    "obj",
     "object",
-    "sort"
+    "order",
+    "re",
+    "re-order",
+    "recursive",
+    "recursively",
+    "sort",
+    "source",
+    "stable",
+    "util",
+    "utils"
   ],
+  "homepage": "https://github.com/bluelovers/sort-object-keys#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/sort-object-keys/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/sort-object-keys.git"
+  },
   "license": "MIT",
   "author": "Keith Cirkel <npm@keithcirkel.co.uk> (http://keithcirkel.co.uk/)",
   "files": [
     "index.js"
   ],
   "main": "index.js",
-  "scripts": {
-    "test": "node test/test.js"
+  "directories": {
+    "test": "test"
   },
-  "devDependencies": {
-  }
+  "scripts": {
+    "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).ts\""
+  },
+  "devDependencies": {}
 }
