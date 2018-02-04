@@ -1,16 +1,29 @@
-# Sort Object
+# sort-object-keys2
 
+> Returns a copy of an object with all keys sorted.
 
+`npm install sort-object-keys2`
 
-[![Build Status](https://travis-ci.org/keithamus/sort-object-keys.svg)](https://travis-ci.org/keithamus/sort-object-keys)
+* [Full Api](index.d.ts)
 
-Returns a copy of an object with all keys sorted.
+```ts
+declare function sortObject<T>(object: T, options?: sortObject.IOptions & {
+    useSource: true;
+}): T;
+declare function sortObject<T>(object: T, options?: sortObject.IOptions & {
+    keys: string[];
+    onlyKeys: true;
+}): Partial<T>;
+declare function sortObject<T>(object: T, options?: sortObject.IOptions): Partial<T>;
+declare function sortObject<T>(object: T, sortFn: (a, b) => any): Partial<T>;
+declare function sortObject<T>(object: T, sortWith: string[]): Partial<T>;
+```
 
 The second argument is optional and is used for ordering - to provide custom sorts. You can either pass an array containing ordered keys or a function to sort the keys (same signature as in [`Array.prototype.sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)).
 
 ```js
 const assert = require('assert');
-const sortObject = require('sort-object-keys');
+const sortObject = require('sort-object-keys2');
 
 assert.equal(JSON.stringify({
   c: 1,

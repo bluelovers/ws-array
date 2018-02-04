@@ -31,12 +31,22 @@ function sortObject(object, sortWith)
 	if (options.onlyKeys)
 	{
 		options.useSource = false;
+
+		if ((options.keys || []).length == 0)
+		{
+			throw new ReferenceError(`options.key is empty or not exists.`)
+		}
 	}
 	else
 	{
 		keys = keys.concat()
 			.concat(Object.keys(object).sort(options.sort))
 		;
+	}
+
+	if (options.desc)
+	{
+		keys = keys.reverse()
 	}
 
 	let ret = keys.reduce(function (total, key)
@@ -69,12 +79,33 @@ module sortObject
 {
 	export interface IOptions
 	{
+		/**
+		 * key order
+		 */
 		keys?: string[],
+		/**
+		 * return Object only keys
+		 * will disable useSource
+		 */
+		onlyKeys?: boolean,
+		/**
+		 * sort callback
+		 *
+		 * @param a
+		 * @param b
+		 * @returns {any}
+		 */
 		sort?: (a, b) => any,
+		/**
+		 * return reversed Object
+		 */
 		desc?: boolean,
 		allowNotExists?: boolean,
+		/**
+		 * return source Object
+		 */
 		useSource?: boolean,
-		onlyKeys?: boolean,
+
 	}
 }
 
