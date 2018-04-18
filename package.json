@@ -1,6 +1,6 @@
 {
   "name": "sort-object-keys2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sort an object's keys, including an optional key list",
   "keywords": [
     "arr",
@@ -34,9 +34,6 @@
   },
   "license": "MIT",
   "author": "Keith Cirkel <npm@keithcirkel.co.uk> (http://keithcirkel.co.uk/)",
-  "files": [
-    "index.js"
-  ],
   "main": "index.js",
   "directories": {
     "test": "test"
