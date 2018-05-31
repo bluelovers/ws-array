@@ -44,6 +44,12 @@ describe(relative(__filename), () =>
 				{ a: { b: undefined } },
 				{ a: {  } },
 				{ a: { b: 3, c: undefined } },
+				/1/,
+				{},
+				/1/,
+				/1/g,
+				/1/i,
+				{},
 			],
 			[
 				1,
@@ -59,6 +65,10 @@ describe(relative(__filename), () =>
 				{ a: { b: undefined } },
 				{ a: {  } },
 				{ a: { b: 3, c: undefined } },
+				/1/,
+				{},
+				/1/g,
+				/1/i,
 			],
 			`main test`
 		);
