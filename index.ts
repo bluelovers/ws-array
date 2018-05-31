@@ -35,19 +35,25 @@ export function array_unique<T>(arr: T, options: {
 
 	if (options.overwrite)
 	{
-		// @ts-ignore
-		arr.forEach(function (val, index, array)
+		let index = 0;
+
+		while (index in arr)
 		{
-			// @ts-ignore
-			let i = array.findIndex(a => checker(a, val, array, arr));
+			let val = arr[index];
 
-			if (i !== index)
+			let i = arr.findIndex(a => checker(a, val, arr, arr));
+
+			if (i != index)
 			{
-				arr.splice(i, 1);
-			}
+				let j = Math.max(index, i);
 
-			return i === index;
-		});
+				arr.splice(j, 1);
+			}
+			else
+			{
+				index++;
+			}
+		}
 
 		return arr;
 	}

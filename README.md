@@ -7,6 +7,7 @@
 1. this module base on [arr-unique](https://www.npmjs.com/package/arr-unique)
 2. but rewrite to typescript and bug fix
 3. also add option control
+4. see [_data.ts](test/_data.ts) and [test.test.ts](test/test.test.ts)
 
 ## demo
 

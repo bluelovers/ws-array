@@ -7,6 +7,7 @@ import { chai, relative, expect, path, assert, util, mochaAsync } from './_local
 
 // @ts-ignore
 import { describe, before, beforeEach, it, ITest } from 'mocha';
+import getTestcase from './_data';
 
 // @ts-ignore
 let DEBUG = process.argv.includes('--debug');
@@ -27,66 +28,16 @@ describe(relative(__filename), () =>
 	// @ts-ignore
 	describe(`suite`, () =>
 	{
-		_testIt(
-			[
-				1,
-				0,
-				true,
-				undefined,
-				null,
-				false,
-				['a', 'b', 'c'],
-				['a', 'b', 'c'],
-				['a', 'c', 'b'],
-				{ a: { b: 2 } },
-				{ a: { b: 2 } },
-				{ a: { b: 3 } },
-				{ a: { b: undefined } },
-				{ a: {  } },
-				{ a: { b: 3, c: undefined } },
-				/1/,
-				{},
-				/1/,
-				/1/g,
-				/1/i,
-				{},
-			],
-			[
-				1,
-				0,
-				true,
-				undefined,
-				null,
-				false,
-				['a', 'b', 'c'],
-				['a', 'c', 'b'],
-				{ a: { b: 2 } },
-				{ a: { b: 3 } },
-				{ a: { b: undefined } },
-				{ a: {  } },
-				{ a: { b: 3, c: undefined } },
-				/1/,
-				{},
-				/1/g,
-				/1/i,
-			],
-			`main test`
-		);
-
-		_testIt(
-			[{a: {b: 2}}, {a: {b: 2}}, {a: {b: 3}}],
-			[{a: {b: 2}}, {a: {b: 3}}]
-		);
-
-		_testIt(
-			[1, 2, 3, 3],
-			[1, 2, 3]
-		);
-
-		_testIt(
-			[['a', 'b', 'c'], ['a', 'b', 'c'],],
-			[['a', 'b', 'c'], ]
-		);
+		getTestcase()
+			.forEach(function ({
+				data,
+				expected,
+				label,
+			})
+			{
+				_testIt(data, expected, label)
+			})
+		;
 
 		function _testIt(data, expected, label: string = `label`)
 		{
@@ -124,56 +75,16 @@ describe(relative(__filename), () =>
 	// @ts-ignore
 	describe(`overwrite source input`, () =>
 	{
-		_testIt(
-			[
-				1,
-				0,
-				true,
-				undefined,
-				null,
-				false,
-				['a', 'b', 'c'],
-				['a', 'b', 'c'],
-				['a', 'c', 'b'],
-				{ a: { b: 2 } },
-				{ a: { b: 2 } },
-				{ a: { b: 3 } },
-				{ a: { b: undefined } },
-				{ a: {  } },
-				{ a: { b: 3, c: undefined } },
-			],
-			[
-				1,
-				0,
-				true,
-				undefined,
-				null,
-				false,
-				['a', 'b', 'c'],
-				['a', 'c', 'b'],
-				{ a: { b: 2 } },
-				{ a: { b: 3 } },
-				{ a: { b: undefined } },
-				{ a: {  } },
-				{ a: { b: 3, c: undefined } },
-			],
-			`main test`
-		);
-
-		_testIt(
-			[{a: {b: 2}}, {a: {b: 2}}, {a: {b: 3}}],
-			[{a: {b: 2}}, {a: {b: 3}}]
-		);
-
-		_testIt(
-			[1, 2, 3, 3],
-			[1, 2, 3]
-		);
-
-		_testIt(
-			[['a', 'b', 'c'], ['a', 'b', 'c'],],
-			[['a', 'b', 'c'], ]
-		);
+		getTestcase()
+			.forEach(function ({
+				data,
+				expected,
+				label,
+			})
+			{
+				_testIt(data, expected, label)
+			})
+		;
 
 		function _testIt(data, expected, label: string = `label`)
 		{

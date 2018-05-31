@@ -17,13 +17,18 @@ function array_unique(arr, options = {}) {
     }
     let checker = options.checker || defaultChecker;
     if (options.overwrite) {
-        arr.forEach(function (val, index, array) {
-            let i = array.findIndex(a => checker(a, val, array, arr));
-            if (i !== index) {
-                arr.splice(i, 1);
+        let index = 0;
+        while (index in arr) {
+            let val = arr[index];
+            let i = arr.findIndex(a => checker(a, val, arr, arr));
+            if (i != index) {
+                let j = Math.max(index, i);
+                arr.splice(j, 1);
             }
-            return i === index;
-        });
+            else {
+                index++;
+            }
+        }
         return arr;
     }
     return arr.reduce((acc, val) => {
