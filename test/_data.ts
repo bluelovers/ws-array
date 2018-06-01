@@ -62,6 +62,7 @@ export function getTestcase(): {
 				'undefined',
 				'null',
 				'false',
+				'',
 			],
 
 			expected: [
@@ -88,6 +89,7 @@ export function getTestcase(): {
 				'undefined',
 				'null',
 				'false',
+				'',
 			],
 		},
 
@@ -101,8 +103,8 @@ export function getTestcase(): {
 		{
 			label: `number`,
 
-			data: [1, 2, 3, 3],
-			expected: [1, 2, 3],
+			data: [1, 2, 3, 3, 0],
+			expected: [1, 2, 3, 0],
 		},
 
 		{

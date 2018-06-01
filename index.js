@@ -2,44 +2,54 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const equals = require("deep-eql");
 function lazy_unique(...arr) {
-    if (arr.length == 0 || arr.length == 1 && !Array.isArray(arr[0])) {
-        throw new TypeError(`Expected an Array but got ${typeof arr[0]}.`);
+    if (arr.length > 1) {
+        return array_unique(arr);
     }
-    else if (arr.length == 1) {
-        return array_unique(arr[0]);
-    }
-    return array_unique(arr);
+    return array_unique(arr[0]);
 }
 exports.lazy_unique = lazy_unique;
 function array_unique(arr, options = {}) {
     if (!Array.isArray(arr)) {
         throw new TypeError(`Expected an Array but got ${typeof arr}.`);
     }
-    let checker = options.checker || defaultChecker;
+    const cb = defaultFilter(options);
     if (options.overwrite) {
-        let index = 0;
-        while (index in arr) {
+        let index = arr.length;
+        while (index--) {
             let val = arr[index];
-            let i = arr.findIndex(a => checker(a, val, arr, arr));
-            if (i != index) {
-                let j = Math.max(index, i);
-                arr.splice(j, 1);
-            }
-            else {
-                index++;
+            if (!cb(val, index, arr)) {
+                arr.splice(index, 1);
             }
         }
         return arr;
     }
-    return arr.reduce((acc, val) => {
-        let i = acc.findIndex(a => checker(a, val, acc, arr));
-        if (i == -1) {
-            acc.push(val);
-        }
-        return acc;
-    }, []);
+    return arr.filter(cb);
 }
 exports.array_unique = array_unique;
+function lazy_unique_overwrite(...arr) {
+    if (arr.length > 1) {
+        return array_unique_overwrite(arr);
+    }
+    return array_unique_overwrite(arr[0]);
+}
+exports.lazy_unique_overwrite = lazy_unique_overwrite;
+function array_unique_overwrite(arr, options = {}) {
+    let opts = Object.assign({}, options, {
+        overwrite: true,
+    });
+    return array_unique(arr, opts);
+}
+exports.array_unique_overwrite = array_unique_overwrite;
+function defaultFilter(options = {}) {
+    const checker = options.checker || defaultChecker;
+    const filter = options.filter || null;
+    const cb = (val, index, arr) => {
+        let i = arr.findIndex(a => checker(a, val, arr, arr));
+        return i == index && (!filter || filter(val));
+    };
+    return cb;
+}
+exports.defaultFilter = defaultFilter;
 function defaultChecker(element, value, arr_new, arr_old) {
     return equals(element, value);
 }

@@ -46,6 +46,8 @@ describe(relative(__filename), () =>
 				//console.log('it:inner', currentTest.title);
 				//console.log('it:inner', currentTest.fullTitle());
 
+				let len = data.length;
+
 				let actual = array_unique(data);
 
 				let actual2;
@@ -68,6 +70,9 @@ describe(relative(__filename), () =>
 				expect(actual2).to.be.deep.equal(expected);
 
 				expect(actual2).to.be.deep.equal(actual);
+
+				expect(actual).to.be.not.deep.equal(data);
+				expect(actual.length).to.be.not.deep.equal(len);
 			});
 		}
 	});
