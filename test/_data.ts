@@ -108,6 +108,13 @@ export function getTestcase(): {
 		},
 
 		{
+			label: `string`,
+
+			data: ['1', '2', '3', '3', '0', ''],
+			expected: ['1', '2', '3', '0', ''],
+		},
+
+		{
 			label: `string[]`,
 
 			data: [['a', 'b', 'c'], ['a', 'b', 'c'],],

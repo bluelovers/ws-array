@@ -7,7 +7,18 @@
 1. this module base on [arr-unique](https://www.npmjs.com/package/arr-unique)
 2. but rewrite to typescript and bug fix
 3. also add option control
-4. see [_data.ts](test/_data.ts) and [test.test.ts](test/test.test.ts)
+4. see [_data.ts](test/_data.ts) and [test.test.ts](test/test.test.ts) or [lib.chk.ts](test/lib.chk.ts)
+
+```json5
+{ 'array-hyper-unique': { success: 7, fail: 0, error: 0 },
+  'array-unique-deep': { success: 6, fail: 1, error: 0 },
+  'tfk-unique-array': { success: 4, fail: 2, error: 1 },
+  'arr-unique': { success: 4, fail: 3, error: 0 },
+  'array-uniq': { success: 2, fail: 5, error: 0 },
+  'array-unique': { success: 2, fail: 5, error: 0 },
+  '@arr/unique': { success: 2, fail: 5, error: 0 },
+  'just-unique': { success: 2, fail: 5, error: 0 } }
+```
 
 ## demo
 
@@ -155,4 +166,93 @@ array_unique(arr_input, {
 	// overwrite source array
 	overwrite: true,
 })
+```
+
+## diff with other module
+
+[lib.chk.ts](test/lib.chk.ts)
+
+```
+[LOG] main test
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[FAIL] just-unique
+[FAIL] arr-unique
+[FAIL] array-unique-deep
+
+
+[LOG] object
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[SUCCESS] tfk-unique-array
+[FAIL] just-unique
+[SUCCESS] arr-unique
+[SUCCESS] array-unique-deep
+
+
+[LOG] number
+--------------
+[SUCCESS] array-hyper-unique
+[SUCCESS] array-uniq
+[SUCCESS] array-unique
+[SUCCESS] @arr/unique
+[SUCCESS] tfk-unique-array
+[SUCCESS] just-unique
+[SUCCESS] arr-unique
+[SUCCESS] array-unique-deep
+
+
+[LOG] string
+--------------
+[SUCCESS] array-hyper-unique
+[SUCCESS] array-uniq
+[SUCCESS] array-unique
+[SUCCESS] @arr/unique
+[SUCCESS] tfk-unique-array
+[SUCCESS] just-unique
+[SUCCESS] arr-unique
+[SUCCESS] array-unique-deep
+
+
+[LOG] string[]
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[SUCCESS] tfk-unique-array
+[FAIL] just-unique
+[FAIL] arr-unique
+[SUCCESS] array-unique-deep
+
+
+[LOG] RegExp
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[FAIL] tfk-unique-array
+[FAIL] just-unique
+[FAIL] arr-unique
+[SUCCESS] array-unique-deep
+
+
+[LOG] Map
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[FAIL] tfk-unique-array
+[FAIL] just-unique
+[SUCCESS] arr-unique
+[SUCCESS] array-unique-deep
 ```

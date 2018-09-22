@@ -19,4 +19,8 @@ export declare type IOptions<T> = {
 };
 export declare function defaultFilter<T>(options?: IOptions<T>): <K extends any[]>(val: K[keyof K], index: number, arr: K) => boolean;
 export declare function defaultChecker<T, R>(element: T, value: R, arr_new?: Array<T | R>, arr_old?: Array<T | R>): boolean;
+export declare function equals(a1: any, a2: any): boolean;
 export default lazy_unique;
+export declare namespace lazy_unique {
+}
+export = lazy_unique;
