@@ -2,6 +2,7 @@
  * Created by user on 2018/5/30/030.
  */
 
+import SELF_MODULE = require('../index');
 import { array_unique, default as lazy_unique } from '../index';
 import { chai, relative, expect, path, assert, util, mochaAsync } from './_local-dev';
 
@@ -23,6 +24,50 @@ describe(relative(__filename), () =>
 
 		//console.log('it:before', currentTest.title);
 		//console.log('it:before', currentTest.fullTitle());
+	});
+
+	// @ts-ignore
+	it(`export chk`, () =>
+	{
+		expect(SELF_MODULE).to.equal(SELF_MODULE.default);
+		expect(SELF_MODULE).to.equal(SELF_MODULE.lazy_unique);
+		expect(SELF_MODULE).to.equal(lazy_unique);
+		expect(SELF_MODULE).to.not.equal(array_unique);
+		// @ts-ignore
+		expect(SELF_MODULE.equals).to.equal(require('deep-eql'));
+
+		[
+			'lazy_unique',
+			'array_unique',
+			'lazy_unique_overwrite',
+			'array_unique_overwrite',
+			'defaultFilter',
+			'defaultChecker',
+			'equals',
+			'default',
+		].forEach((name) =>
+		{
+			expect(typeof SELF_MODULE[name] === 'function').to.be.true;
+			expect( SELF_MODULE[name]).to.be.ok;
+
+			expect(() => {
+				delete SELF_MODULE[name];
+			}, name).to.throw(TypeError);
+			expect(() => {
+				SELF_MODULE[name] = null;
+			}, name).to.throw(TypeError);
+			expect(() => {
+				SELF_MODULE[name][name] = 1;
+			}, name).to.throw(TypeError);
+			expect(() => {
+				Object.defineProperty(SELF_MODULE[name], "__test", { value: true });
+			}, name).to.throw(TypeError);
+		});
+
+		// @ts-ignore
+		expect( SELF_MODULE.__esModule).to.be.ok;
+
+
 	});
 
 	// @ts-ignore

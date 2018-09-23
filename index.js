@@ -77,12 +77,21 @@ var lazy_unique;
 lazy_unique = lazy_unique.lazy_unique = Object.assign(lazy_unique.lazy_unique, lazy_unique, exports, {
     // @ts-ignore
     equals: require('deep-eql'),
-    default: lazy_unique,
+    default: lazy_unique.lazy_unique,
 });
 // @ts-ignore
 exports.default = lazy_unique;
 // @ts-ignore
 Object.defineProperty(lazy_unique, "__esModule", { value: true });
+// @ts-ignore
+Object.keys(lazy_unique).forEach((k) => {
+    try {
+        // @ts-ignore
+        lazy_unique[k] = Object.freeze(lazy_unique[k]);
+    }
+    catch (e) {
+    }
+});
 // @ts-ignore
 lazy_unique = Object.freeze(lazy_unique);
 module.exports = lazy_unique;
