@@ -165,7 +165,7 @@ Object.assign(lazy_unique, exports, {
 });
 
 // @ts-ignore
-Object.freeze(lazy_unique);
+lazy_unique = Object.freeze(lazy_unique);
 
 // @ts-ignore
 export = lazy_unique

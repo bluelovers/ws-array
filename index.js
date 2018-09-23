@@ -61,5 +61,5 @@ Object.assign(lazy_unique, exports, {
     equals,
     default: lazy_unique,
 });
-Object.freeze(lazy_unique);
+lazy_unique = Object.freeze(lazy_unique);
 module.exports = lazy_unique;
