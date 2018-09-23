@@ -10,14 +10,14 @@
 4. see [_data.ts](test/_data.ts) and [test.test.ts](test/test.test.ts) or [lib.chk.ts](test/lib.chk.ts)
 
 ```json5
-{ 'array-hyper-unique': { success: 7, fail: 0, error: 0 },
-  'array-unique-deep': { success: 6, fail: 1, error: 0 },
-  'tfk-unique-array': { success: 4, fail: 2, error: 1 },
-  'arr-unique': { success: 4, fail: 3, error: 0 },
-  'array-uniq': { success: 2, fail: 5, error: 0 },
-  'array-unique': { success: 2, fail: 5, error: 0 },
-  '@arr/unique': { success: 2, fail: 5, error: 0 },
-  'just-unique': { success: 2, fail: 5, error: 0 } }
+{ 'array-hyper-unique': { success: 12, fail: 0, error: 0 },
+  'array-unique-deep': { success: 9, fail: 3, error: 0 },
+  'arr-unique': { success: 7, fail: 5, error: 0 },
+  'array-uniq': { success: 6, fail: 6, error: 0 },
+  'just-unique': { success: 6, fail: 6, error: 0 },
+  'tfk-unique-array': { success: 5, fail: 3, error: 4 },
+  'array-unique': { success: 5, fail: 7, error: 0 },
+  '@arr/unique': { success: 5, fail: 7, error: 0 } }
 ```
 
 ## demo
@@ -172,8 +172,8 @@ array_unique(arr_input, {
 
 [lib.chk.ts](test/lib.chk.ts)
 
-```
-[LOG] main test
+```ts
+[LOG] main mixin test
 --------------
 [SUCCESS] array-hyper-unique
 [FAIL] array-uniq
@@ -206,6 +206,18 @@ array_unique(arr_input, {
 [SUCCESS] tfk-unique-array
 [SUCCESS] just-unique
 [SUCCESS] arr-unique
+[SUCCESS] array-unique-deep
+
+
+[LOG] number 2
+--------------
+[SUCCESS] array-hyper-unique
+[SUCCESS] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[FAIL] tfk-unique-array
+[SUCCESS] just-unique
+[FAIL] arr-unique
 [SUCCESS] array-unique-deep
 
 
@@ -245,6 +257,30 @@ array_unique(arr_input, {
 [SUCCESS] array-unique-deep
 
 
+[LOG] boolean
+--------------
+[SUCCESS] array-hyper-unique
+[SUCCESS] array-uniq
+[SUCCESS] array-unique
+[SUCCESS] @arr/unique
+[SUCCESS] tfk-unique-array
+[SUCCESS] just-unique
+[SUCCESS] arr-unique
+[SUCCESS] array-unique-deep
+
+
+[LOG] boolean 2
+--------------
+[SUCCESS] array-hyper-unique
+[SUCCESS] array-uniq
+[SUCCESS] array-unique
+[SUCCESS] @arr/unique
+[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[SUCCESS] just-unique
+[FAIL] arr-unique
+[SUCCESS] array-unique-deep
+
+
 [LOG] Map
 --------------
 [SUCCESS] array-hyper-unique
@@ -255,4 +291,28 @@ array_unique(arr_input, {
 [FAIL] just-unique
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
+
+
+[LOG] function
+--------------
+[SUCCESS] array-hyper-unique
+[SUCCESS] array-uniq
+[SUCCESS] array-unique
+[SUCCESS] @arr/unique
+[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[SUCCESS] just-unique
+[SUCCESS] arr-unique
+[FAIL] array-unique-deep
+
+
+[LOG] function 2
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[FAIL] just-unique
+[SUCCESS] arr-unique
+[FAIL] array-unique-deep
 ```

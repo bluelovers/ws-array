@@ -9,9 +9,22 @@ export function getTestcase(): {
 	expected: any[],
 }[]
 {
+	let mapA = new Map();
+	let mapB = new Map();
+	mapA.set('a', 1);
+	mapA.set('b', 2);
+	mapA.set('c', 3);
+	mapB.set('c', 3);
+	mapB.set('b', 2);
+	mapB.set('a', 1);
+
+	let fn1 = function() {};
+	let fn2 = function() {};
+	let fn3 = function() {};
+
 	let list: ReturnType<typeof getTestcase> = [
 		{
-			label: `main test`,
+			label: `main mixin test`,
 
 			data: [
 				1,
@@ -63,6 +76,8 @@ export function getTestcase(): {
 				'null',
 				'false',
 				'',
+				NaN, NaN, NaN, Infinity,
+				fn1, fn2, fn3, fn2, fn3, fn2,
 			],
 
 			expected: [
@@ -90,6 +105,8 @@ export function getTestcase(): {
 				'null',
 				'false',
 				'',
+				NaN, Infinity,
+				fn1, fn2, fn3,
 			],
 		},
 
@@ -106,12 +123,18 @@ export function getTestcase(): {
 			data: [1, 2, 3, 3, 0],
 			expected: [1, 2, 3, 0],
 		},
+		{
+			label: `number 2`,
+
+			data: [1, 2, 3, 3, 0, NaN, NaN, NaN, Infinity],
+			expected: [1, 2, 3, 0, NaN, Infinity],
+		},
 
 		{
 			label: `string`,
 
-			data: ['1', '2', '3', '3', '0', ''],
-			expected: ['1', '2', '3', '0', ''],
+			data: ['1', '2', '3', '3', '0', '', 'a', 'b', 'c', 'a', 'b', 'd'],
+			expected: ['1', '2', '3', '0', '', 'a', 'b', 'c', 'd'],
 		},
 
 		{
@@ -127,6 +150,21 @@ export function getTestcase(): {
 			data: [/1/, {}, /1/g, /1/i, /1/, {}, /1/g, /1/i,],
 			expected: [/1/, {}, /1/g, /1/i,],
 		},
+
+		{
+			label: `boolean`,
+
+			data: [true, true, false, false, true],
+			expected: [true, false],
+		},
+
+		{
+			label: `boolean 2`,
+
+			data: [true, true, false, false, true, null, 0, undefined, null, 0, undefined, 0, NaN, Infinity, ''],
+			expected: [true, false, null, 0, undefined, NaN, Infinity, ''],
+		},
+
 	];
 
 	{
@@ -152,6 +190,26 @@ export function getTestcase(): {
 				mapA,
 				{ 'a': 1, 'b': 2, 'c': 3 }
 			],
+		});
+	}
+
+	{
+		let fn1 = function() {};
+		let fn2 = function() {};
+		let fn3 = function() {};
+
+		list.push({
+			label: `function`,
+
+			data: [fn1, fn2, fn3, fn2, fn3, fn2],
+			expected: [fn1, fn2, fn3],
+		});
+
+		list.push({
+			label: `function 2`,
+
+			data: [fn1, fn2, fn3, fn2, fn3, {}, fn2, {}],
+			expected: [fn1, fn2, fn3, {}],
 		});
 	}
 
