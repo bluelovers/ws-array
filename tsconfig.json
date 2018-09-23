@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "es2017",
+    "target": "es2018",
 
     "moduleResolution": "node",
     "allowJs": false,
@@ -13,7 +13,7 @@
     "declaration": true,
     "experimentalDecorators": true,
 
-    "allowSyntheticDefaultImports": true,
+//    "allowSyntheticDefaultImports": true,
 
     "strict": false,
 
@@ -22,7 +22,9 @@
     "locale": "zh-TW",
     "pretty": true,
 
-    "removeComments": true,
+    //"lib": ["es2015", "es2017", "es2018", "dom"],
+
+    "removeComments": false,
 
 //    "baseUrl": ".",
 //    "sourceRoot": ".",

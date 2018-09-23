@@ -2,15 +2,18 @@
  * Created by user on 2018/9/23/023.
  */
 
-import { array_unique as array_hyper_unique } from '../index';
-import { equals } from '../index';
-import { lazy_unique } from '../index';
-//import lazy_unique = require('../index');
+import { array_unique as array_hyper_unique } from '..';
+import { equals } from '..';
+//import { lazy_unique } from '../index';
+//import * as lazy_unique from '../index';
+import lazy_unique = require('../index');
 import getTestcase from './_data';
 import arrayUniq = require('array-uniq');
 import arrayUnique = require('array-unique');
 
 import console, { console2 } from './lib.log';
+
+lazy_unique([], []);
 
 let _stat = {} as {
 	[k: string]: {
@@ -57,6 +60,7 @@ getTestcase()
 			},
 		].forEach(function (lib_data)
 		{
+			// @ts-ignore
 			const fn = lib_data.fn || require(lib_data.name);
 
 			let ret;
