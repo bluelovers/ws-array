@@ -213,6 +213,37 @@ export function getTestcase(): {
 		});
 	}
 
+	{
+		// @ts-ignore
+		let a1 = Buffer.alloc(5);
+		let a2 = [0, 0, 0, 0, 0];
+		// @ts-ignore
+		let a3 = Buffer.from([0, 0, 0, 0, 0]);
+		let a4 = new ArrayBuffer(5);
+		let a5 = new ArrayBuffer(6);
+
+		list.push({
+			label: `Buffer`,
+
+			data: [a1, a2, {}, a3, a1, a2],
+			expected: [a1, a2, {}],
+		});
+
+		list.push({
+			label: `ArrayBuffer`,
+
+			data: [a4, a5, a4],
+			expected: [a4, a5],
+		});
+
+		list.push({
+			label: `Buffer & ArrayBuffer`,
+
+			data: [a1, a2, {}, a3, a4, a4, a1, a2],
+			expected: [a1, a2, {}, a4],
+		});
+	}
+
 	return list;
 }
 
