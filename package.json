@@ -59,6 +59,7 @@
     "array-unique-deep": "^1.0.1",
     "debug-color2": "^1.0.6",
     "just-unique": "^3.2.0",
+    "lodash.uniq": "^4.5.0",
     "tfk-unique-array": "^1.0.11"
   }
 }

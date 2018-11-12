@@ -58,6 +58,9 @@ getTestcase()
 			{
 				name: 'array-unique-deep',
 			},
+			{
+				name: 'lodash.uniq',
+			},
 		].forEach(function (lib_data)
 		{
 			// @ts-ignore

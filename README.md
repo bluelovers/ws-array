@@ -10,14 +10,15 @@
 4. see [_data.ts](test/_data.ts) and [test.test.ts](test/test.test.ts) or [lib.chk.ts](test/lib.chk.ts)
 
 ```json5
-{ 'array-hyper-unique': { success: 12, fail: 0, error: 0 },
-  'array-unique-deep': { success: 9, fail: 3, error: 0 },
-  'arr-unique': { success: 7, fail: 5, error: 0 },
-  'array-uniq': { success: 6, fail: 6, error: 0 },
-  'just-unique': { success: 6, fail: 6, error: 0 },
-  'tfk-unique-array': { success: 5, fail: 3, error: 4 },
-  'array-unique': { success: 5, fail: 7, error: 0 },
-  '@arr/unique': { success: 5, fail: 7, error: 0 } }
+{ 'array-hyper-unique': { success: 15, fail: 0, error: 0 },
+  'array-unique-deep': { success: 11, fail: 4, error: 0 },
+  'array-uniq': { success: 7, fail: 8, error: 0 },
+  'just-unique': { success: 7, fail: 8, error: 0 },
+  'arr-unique': { success: 7, fail: 8, error: 0 },
+  'lodash.uniq': { success: 7, fail: 8, error: 0 },
+  'array-unique': { success: 6, fail: 9, error: 0 },
+  '@arr/unique': { success: 6, fail: 9, error: 0 },
+  'tfk-unique-array': { success: 5, fail: 6, error: 4 } }
 ```
 
 ## demo
@@ -183,6 +184,7 @@ array_unique(arr_input, {
 [FAIL] just-unique
 [FAIL] arr-unique
 [FAIL] array-unique-deep
+[FAIL] lodash.uniq
 
 
 [LOG] object
@@ -195,6 +197,7 @@ array_unique(arr_input, {
 [FAIL] just-unique
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
+[FAIL] lodash.uniq
 
 
 [LOG] number
@@ -207,6 +210,7 @@ array_unique(arr_input, {
 [SUCCESS] just-unique
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
+[SUCCESS] lodash.uniq
 
 
 [LOG] number 2
@@ -219,6 +223,7 @@ array_unique(arr_input, {
 [SUCCESS] just-unique
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
+[SUCCESS] lodash.uniq
 
 
 [LOG] string
@@ -231,6 +236,7 @@ array_unique(arr_input, {
 [SUCCESS] just-unique
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
+[SUCCESS] lodash.uniq
 
 
 [LOG] string[]
@@ -243,6 +249,7 @@ array_unique(arr_input, {
 [FAIL] just-unique
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
+[FAIL] lodash.uniq
 
 
 [LOG] RegExp
@@ -255,6 +262,7 @@ array_unique(arr_input, {
 [FAIL] just-unique
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
+[FAIL] lodash.uniq
 
 
 [LOG] boolean
@@ -267,6 +275,7 @@ array_unique(arr_input, {
 [SUCCESS] just-unique
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
+[SUCCESS] lodash.uniq
 
 
 [LOG] boolean 2
@@ -279,6 +288,7 @@ array_unique(arr_input, {
 [SUCCESS] just-unique
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
+[SUCCESS] lodash.uniq
 
 
 [LOG] Map
@@ -291,6 +301,7 @@ array_unique(arr_input, {
 [FAIL] just-unique
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
+[FAIL] lodash.uniq
 
 
 [LOG] function
@@ -303,6 +314,7 @@ array_unique(arr_input, {
 [SUCCESS] just-unique
 [SUCCESS] arr-unique
 [FAIL] array-unique-deep
+[SUCCESS] lodash.uniq
 
 
 [LOG] function 2
@@ -315,4 +327,55 @@ array_unique(arr_input, {
 [FAIL] just-unique
 [SUCCESS] arr-unique
 [FAIL] array-unique-deep
+[FAIL] lodash.uniq
+
+
+[LOG] Buffer
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[FAIL] tfk-unique-array
+[FAIL] just-unique
+[FAIL] arr-unique
+[SUCCESS] array-unique-deep
+[FAIL] lodash.uniq
+
+
+[LOG] ArrayBuffer
+--------------
+[SUCCESS] array-hyper-unique
+[SUCCESS] array-uniq
+[SUCCESS] array-unique
+[SUCCESS] @arr/unique
+[FAIL] tfk-unique-array
+[SUCCESS] just-unique
+[FAIL] arr-unique
+[FAIL] array-unique-deep
+[SUCCESS] lodash.uniq
+
+
+[LOG] Buffer & ArrayBuffer
+--------------
+[SUCCESS] array-hyper-unique
+[FAIL] array-uniq
+[FAIL] array-unique
+[FAIL] @arr/unique
+[FAIL] tfk-unique-array
+[FAIL] just-unique
+[FAIL] arr-unique
+[SUCCESS] array-unique-deep
+[FAIL] lodash.uniq
+
+
+{ 'array-hyper-unique': { success: 15, fail: 0, error: 0 },
+  'array-unique-deep': { success: 11, fail: 4, error: 0 },
+  'array-uniq': { success: 7, fail: 8, error: 0 },
+  'just-unique': { success: 7, fail: 8, error: 0 },
+  'arr-unique': { success: 7, fail: 8, error: 0 },
+  'lodash.uniq': { success: 7, fail: 8, error: 0 },
+  'array-unique': { success: 6, fail: 9, error: 0 },
+  '@arr/unique': { success: 6, fail: 9, error: 0 },
+  'tfk-unique-array': { success: 5, fail: 6, error: 4 } }
 ```
