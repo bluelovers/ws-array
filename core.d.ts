@@ -1,13 +1,28 @@
 declare function sortObject<T>(object: T, options?: sortObject.IOptions & {
     useSource: true;
 }): T;
+declare namespace sortObject {
+    var default: typeof sortObject;
+}
 declare function sortObject<T>(object: T, options?: sortObject.IOptions & {
     keys: string[];
     onlyKeys: true;
 }): Partial<T>;
+declare namespace sortObject {
+    var default: typeof sortObject;
+}
 declare function sortObject<T>(object: T, options?: sortObject.IOptions): Partial<T>;
-declare function sortObject<T>(object: T, sortFn: (a, b) => any): Partial<T>;
+declare namespace sortObject {
+    var default: typeof sortObject;
+}
+declare function sortObject<T>(object: T, sortFn: (a: any, b: any) => any): Partial<T>;
+declare namespace sortObject {
+    var default: typeof sortObject;
+}
 declare function sortObject<T>(object: T, sortWith: string[]): Partial<T>;
+declare namespace sortObject {
+    var default: typeof sortObject;
+}
 declare module sortObject {
     interface IOptions {
         /**
@@ -26,7 +41,7 @@ declare module sortObject {
          * @param b
          * @returns {any}
          */
-        sort?: (a, b) => any;
+        sort?: (a: any, b: any) => any;
         /**
          * return reversed Object
          */
@@ -37,5 +52,7 @@ declare module sortObject {
          */
         useSource?: boolean;
     }
+    const sortObjectKeys: typeof sortObject;
 }
-export = sortObject;
+export { sortObject };
+export default sortObject;

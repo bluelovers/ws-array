@@ -108,7 +108,11 @@ module sortObject
 		 */
 		useSource?: boolean,
 	}
+
+	export const sortObjectKeys = sortObject;
 }
+
+sortObject.default = sortObject;
 
 function array_unique(array: any[])
 {
@@ -118,4 +122,6 @@ function array_unique(array: any[])
 	});
 }
 
-export = sortObject;
+export { sortObject }
+
+export default sortObject;

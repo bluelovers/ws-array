@@ -14,7 +14,7 @@
 *.old
 
 tsconfig.json
-#package-lock.json
+package-lock.json
 
 test
 
@@ -22,3 +22,5 @@ test
 .gitkeep
 
 /.*
+*.ts
+!*.d.ts
