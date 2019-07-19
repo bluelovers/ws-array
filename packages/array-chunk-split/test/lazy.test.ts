@@ -172,6 +172,25 @@ describe(relative(__filename), () =>
 
 		});
 
+		// @ts-ignore
+		it(`empty`, function ()
+		{
+			//console.log('it:inner', currentTest.title);
+			//console.log('it:inner', currentTest.fullTitle());
+
+			const arr = [];
+
+			let actual = arrayChunkSplit(arr, 8);
+			let expected = [];
+
+			currentTest[SymbolLogOutput] = actual;
+
+			//expect(actual).to.be.ok;
+			expect(actual).to.be.deep.equal(expected);
+			//assert.isOk(actual.value, util.inspect(actual));
+
+		});
+
 	});
 
 	// @ts-ignore
@@ -282,6 +301,25 @@ describe(relative(__filename), () =>
 
 			let actual = arrayChunkBySize(arr, 8);
 			let expected = [[1, 2, 3, 4, 5, 6, 7, 8]];
+
+			currentTest[SymbolLogOutput] = actual;
+
+			//expect(actual).to.be.ok;
+			expect(actual).to.be.deep.equal(expected);
+			//assert.isOk(actual.value, util.inspect(actual));
+
+		});
+
+		// @ts-ignore
+		it(`empty`, function ()
+		{
+			//console.log('it:inner', currentTest.title);
+			//console.log('it:inner', currentTest.fullTitle());
+
+			const arr = [];
+
+			let actual = arrayChunkBySize(arr, 8);
+			let expected = [];
 
 			currentTest[SymbolLogOutput] = actual;
 

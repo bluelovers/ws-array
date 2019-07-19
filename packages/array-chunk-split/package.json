@@ -1,10 +1,21 @@
 {
   "name": "array-chunk-split",
   "version": "1.0.0",
-  "description": "",
+  "description": "Split an array into arrays with max chunk length",
+  "homepage": "https://github.com/bluelovers/ws-array#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-array/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-array.git"
+  },
   "license": "ISC",
   "author": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
@@ -16,5 +27,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "ts-type": "^1.2.9"
   }
 }
