@@ -12,7 +12,7 @@
 /// <reference types="node" />
 
 import { chai, relative, expect, path, assert, util, mochaAsync, SymbolLogOutput } from './_local-dev';
-import { arrayChunkBySize, arrayChunkSplit } from '../index';
+import { arrayChunkBySize, arrayChunkMap, arrayChunkSplit } from '../index';
 
 // @ts-ignore
 describe(relative(__filename), () =>
@@ -191,6 +191,12 @@ describe(relative(__filename), () =>
 
 		});
 
+		// @ts-ignore
+		it(`throw error`, function ()
+		{
+			expect(() => arrayChunkSplit([], 0)).throw();
+		});
+
 	});
 
 	// @ts-ignore
@@ -327,6 +333,12 @@ describe(relative(__filename), () =>
 			expect(actual).to.be.deep.equal(expected);
 			//assert.isOk(actual.value, util.inspect(actual));
 
+		});
+
+		// @ts-ignore
+		it(`throw error`, function ()
+		{
+			expect(() => arrayChunkBySize([], 0)).throw();
 		});
 
 	});
