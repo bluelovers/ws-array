@@ -46,13 +46,25 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npx -r chai -r mocha -r ts-node mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\""
+    "build:lib:chk": "ts-node test/lib.chk",
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test && ysrn run build:lib:chk",
+    "postpublish": "echo postpublish & git commit -m \"publish new version\" .",
+    "sort-package-json": "npx sort-package-json ./package.json",
+    "test": "npx -r chai -r mocha -r ts-node mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
     "deep-eql": "^3.0.1"
   },
   "devDependencies": {
     "@arr/unique": "^1.0.0",
+    "@bluelovers/tsconfig": "^1.0.12",
+    "@types/node": "^12.6.8",
     "arr-unique": "^1.0.2",
     "array-uniq": "^2.0.0",
     "array-unique": "^0.3.2",
@@ -60,6 +72,7 @@
     "debug-color2": "^1.0.6",
     "just-unique": "^3.2.0",
     "lodash.uniq": "^4.5.0",
-    "tfk-unique-array": "^1.0.11"
+    "strip-ansi": "^5.2.0",
+    "tfk-unique-array": "^2.0.0"
   }
 }

@@ -10,8 +10,43 @@ import lazy_unique = require('../index');
 import getTestcase from './_data';
 import arrayUniq = require('array-uniq');
 import arrayUnique = require('array-unique');
+import fs = require('fs');
+import stripAnsi = require('strip-ansi');
 
 import console, { console2 } from './lib.log';
+
+let io = fs.createWriteStream('../lib.chk.md');
+
+//console._stdout.on('data', (data) => io.write(data));
+//console._stderr.on('data', (data) => io.write(data));
+
+//process.stdout.pipe(io);
+//process.stderr.pipe(io);
+
+//console._stdout.pipe(io);
+//console._stderr.pipe(io);
+
+io.write(`\`\`\`\n`);
+
+// @ts-ignore
+hook_writestream(console._stdout, (data) => io.write(stripAnsi(data)));
+//// @ts-ignore
+//hook_writestream(console._stderr, (data) => io.write(stripAnsi(data)));
+
+function hook_writestream(stream, callback) {
+	var old_write = stream.write;
+
+	stream.write = (function(write) {
+		return function(string, encoding, fd) {
+			write.apply(stream, arguments);
+			callback(string, encoding, fd);
+		};
+	})(stream.write);
+
+	return function() {
+		stream.write = old_write;
+	};
+}
 
 lazy_unique([], []);
 
@@ -123,4 +158,12 @@ _stat = Object.keys(_stat)
 	}, {})
 ;
 
+io.write(`\`\`\`\n\n---\n\n`);
+
+io.write(`\`\`\`js\n`);
+
 console.dir(_stat);
+
+io.write(`\`\`\`\n`);
+
+io.end();
