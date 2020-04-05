@@ -1,6 +1,6 @@
 {
   "name": "sort-object-keys2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Sort an object's keys, including an optional key list",
   "keywords": [
     "arr",
@@ -41,7 +41,7 @@
   "scripts": {
     "ncu": "npx yarn-tool ncu -u",
     "npm:publish": "npm publish",
-    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "postpublish": "git commit -m \"chore(release): publish\" .",
     "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly": "yarn run ncu && yarn run sort-package-json && npx yarn-tool install && yarn run test",
     "sort-package-json": "npx yarn-tool sort",
