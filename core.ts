@@ -1,17 +1,17 @@
 
-function sortObject<T>(object: T, options?: sortObject.IOptions & {
+export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
 	useSource: true,
 }): T
-function sortObject<T>(object: T, options?: sortObject.IOptions & {
+export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'keys' | 'onlyKeys'> & {
 	keys: string[],
 	onlyKeys: true,
 }): Partial<T>
-function sortObject<T>(object: T, options?: sortObject.IOptions): Partial<T>
-function sortObject<T>(object: T, sortFn: (a, b) => any): Partial<T>
-function sortObject<T>(object: T, sortWith: string[]): Partial<T>
-function sortObject(object, sortWith)
+export function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): Partial<T>
+export function sortObject<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T
+export function sortObject<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T
+export function sortObject<T extends Record<any, any>>(object: T, sortWith): T | Partial<T>
 {
-	let options: sortObject.IOptions = {};
+	let options: IOptions<T> = {};
 
 	if (typeof sortWith === 'function')
 	{
@@ -26,7 +26,7 @@ function sortObject(object, sortWith)
 		options = Object.assign(options, sortWith);
 	}
 
-	let keys: string[] = (options.keys || []);
+	let keys: IOptions<T>["keys"] = (options.keys || []);
 
 	if (options.onlyKeys)
 	{
@@ -59,11 +59,11 @@ function sortObject(object, sortWith)
 		}
 
 		return total;
-	}, {});
+	}, {} as Partial<T>);
 
 	if (options.useSource)
 	{
-		Object.keys(ret)
+		(Object.keys(ret) as IOptions<T>["keys"])
 			.forEach(function (key, index, array)
 			{
 				delete object[key];
@@ -77,51 +77,46 @@ function sortObject(object, sortWith)
 	return ret;
 }
 
-module sortObject
+export interface IOptions<T extends Record<any, any> = Record<any, any> , K extends string = Extract<keyof T, string>>
 {
-	export interface IOptions
-	{
-		/**
-		 * key order
-		 */
-		keys?: string[],
-		/**
-		 * return Object only keys
-		 * will disable useSource
-		 */
-		onlyKeys?: boolean,
-		/**
-		 * sort callback
-		 *
-		 * @param a
-		 * @param b
-		 * @returns {any}
-		 */
-		sort?: (a, b) => any,
-		/**
-		 * return reversed Object
-		 */
-		desc?: boolean,
-		allowNotExists?: boolean,
-		/**
-		 * return source Object
-		 */
-		useSource?: boolean,
-	}
-
-	export const sortObjectKeys = sortObject;
+	/**
+	 * key order
+	 */
+	keys?: (string | K)[],
+	/**
+	 * return Object only keys
+	 * will disable useSource
+	 */
+	onlyKeys?: boolean,
+	/**
+	 * sort callback
+	 *
+	 * @param a
+	 * @param b
+	 * @returns {any}
+	 */
+	sort?: (a: string | K, b: string | K) => number,
+	/**
+	 * return reversed Object
+	 */
+	desc?: boolean,
+	allowNotExists?: boolean,
+	/**
+	 * return source Object
+	 */
+	useSource?: boolean,
 }
 
-sortObject.default = sortObject;
+sortObject.sortObjectKeys = sortObject
+
+export { sortObject as sortObjectKeys }
 
 function array_unique(array: any[])
 {
 	return array.filter(function (el, index, arr)
 	{
-		return index == arr.indexOf(el);
+		return index === arr.indexOf(el);
 	});
 }
-
-export { sortObject }
 
 export default sortObject;

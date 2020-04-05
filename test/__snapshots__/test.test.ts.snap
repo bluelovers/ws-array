@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should add extra keys to object 1`] = `
+Object {
+  "a": 1,
+  "b": 1,
+  "c": undefined,
+  "d": undefined,
+}
+`;
+
+exports[`should follow sort function 1`] = `
+Object {
+  "key-1": 1,
+  "key-10": 1,
+  "key-2": 1,
+  "key-3": 1,
+}
+`;
+
+exports[`should not add extra keys to object 1`] = `
+Object {
+  "a": 1,
+  "b": 1,
+}
+`;
+
+exports[`sort object 1`] = `
+Object {
+  "a": 1,
+  "b": 1,
+  "c": 1,
+  "d": 1,
+}
+`;
+
+exports[`source will change order 1`] = `
+Object {
+  "a": 1,
+  "b": 3,
+  "c": 2,
+  "d": 4,
+  "e": 5,
+}
+`;
+
+exports[`source will not change order 1`] = `
+Object {
+  "a": 1,
+  "b": 3,
+  "c": 2,
+  "d": 4,
+  "e": 5,
+}
+`;

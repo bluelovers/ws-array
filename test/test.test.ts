@@ -2,74 +2,133 @@
  * Created by user on 2018/2/4/004.
  */
 
-import localDev, { relative, expect, path, assert, util } from './_local-dev';
+import { sortObject } from '../core';
 
-import * as sortObject from '../index';
-
-// @ts-ignore
-describe(relative(__filename), () =>
+it(`sort object`, function ()
 {
-	let currentTest;
-
-	// @ts-ignore
-	beforeEach(function ()
-	{
-		currentTest = this.currentTest;
-
-		//console.log('it:before', currentTest.title);
-		//console.log('it:before', currentTest.fullTitle());
+	let actual = sortObject({
+		c: 1,
+		b: 1,
+		d: 1,
+		a: 1,
 	});
 
-	// @ts-ignore
-	describe(`suite`, () =>
-	{
-		// @ts-ignore
-		it(`source will not change order`, function (done)
-		{
-			//console.log('it:inner', currentTest.title);
-			//console.log('it:inner', currentTest.fullTitle());
+	let expected = {
+		a: 1,
+		b: 1,
+		c: 1,
+		d: 1,
+	};
 
-			//expect(r).to.be.ok;
-			//assert.isOk(r.value, util.inspect(r));
+	expect(actual).toStrictEqual(expected);
+	strictStringify(actual, expected);
 
-			let o = {a: 1, c: 2, e: 5, d: 4, b: 3};
-			let o2 = sortObject(o, {
-				keys: ['a', 'b'],
-			});
+	strictKeys(actual,expected);
 
-			console.log(o, o2);
-
-			expect(o2).to.be.deep.equal({ a: 1, b: 3, c: 2, d: 4, e: 5 });
-			expect(o2).to.be.deep.equal(o);
-			expect(Object.keys(o2)).to.not.deep.equal(Object.keys(o));
-			expect(o2 === o).to.deep.equal(false);
-
-			done();
-		});
-
-		// @ts-ignore
-		it(`source will change order`, function (done)
-		{
-			//console.log('it:inner', currentTest.title);
-			//console.log('it:inner', currentTest.fullTitle());
-
-			//expect(r).to.be.ok;
-			//assert.isOk(r.value, util.inspect(r));
-
-			let o = {a: 1, c: 2, e: 5, d: 4, b: 3};
-			let o2 = sortObject(o, {
-				keys: ['a', 'b'],
-				useSource: true,
-			});
-
-			console.log(o, o2);
-
-			expect(o2).to.be.deep.equal({ a: 1, b: 3, c: 2, d: 4, e: 5 });
-			expect(o2).to.be.deep.equal(o);
-			expect(Object.keys(o2)).to.deep.equal(Object.keys(o));
-			expect(o2 === o).to.deep.equal(true);
-
-			done();
-		});
-	});
+	expect(actual).toMatchSnapshot();
 });
+
+it(`source will not change order`, function ()
+{
+	let source = { a: 1, c: 2, e: 5, d: 4, b: 3 };
+	let actual = sortObject(source, {
+		keys: ['a', 'b'],
+	});
+	let expected = { a: 1, b: 3, c: 2, d: 4, e: 5 };
+
+	expect(actual).toStrictEqual(expected);
+	expect(actual).toStrictEqual(source);
+
+	strictKeys(actual,source, true);
+	strictKeys(actual,expected);
+
+	expect(actual === source).toStrictEqual(false);
+
+	expect(actual).toMatchSnapshot();
+});
+
+it(`source will change order`, function ()
+{
+	let source = { a: 1, c: 2, e: 5, d: 4, b: 3 };
+	let actual = sortObject(source, {
+		keys: ['a', 'b'],
+		useSource: true,
+	});
+	let expected = { a: 1, b: 3, c: 2, d: 4, e: 5 };
+
+	expect(actual).toStrictEqual(expected);
+	expect(actual).toStrictEqual(source);
+
+	strictKeys(actual,source);
+	strictKeys(actual,expected);
+
+	expect(actual === source).toStrictEqual(true);
+
+	expect(actual).toMatchSnapshot();
+});
+
+it('should not add extra keys to object', function ()
+{
+	let actual = sortObject({
+		b: 1,
+		a: 1,
+	}, ['a', 'b', 'c', 'd'])
+
+	expect(Object.keys(actual)).toStrictEqual([
+		'a',
+		'b',
+	]);
+	expect(actual).toMatchSnapshot();
+});
+
+it('should follow sort function', function ()
+{
+	let actual = sortObject({
+		"key-1": 1,
+		"key-3": 1,
+		"key-10": 1,
+		"key-2": 1,
+	}, removeKeyAncCompareIndex)
+
+	strictKeys(actual, {
+		"key-1": 1,
+		"key-2": 1,
+		"key-3": 1,
+		"key-10": 1,
+	});
+
+	expect(actual).toMatchSnapshot();
+
+	function removeKeyAncCompareIndex(keyA, keyB)
+	{
+		let a = parseInt(keyA.slice(4));
+		let b = parseInt(keyB.slice(4));
+		return a - b;
+	}
+});
+
+it('should add extra keys to object', function ()
+{
+	let actual = sortObject({
+		b: 1,
+		a: 1,
+	}, {
+		keys: ['a', 'b', 'c', 'd'],
+		allowNotExists: true,
+	})
+
+	expect(Object.keys(actual)).toStrictEqual(['a', 'b', 'c', 'd']);
+	expect(actual).toMatchSnapshot();
+});
+
+function strictStringify(actual, expected, not?: boolean)
+{
+	let ex = expect(JSON.stringify(actual))
+	return (not ? ex.not : ex).toStrictEqual(JSON.stringify(expected));
+}
+
+function strictKeys(actual, expected, not?: boolean)
+{
+	let ex = expect(Object.keys(actual));
+	return (not ? ex.not : ex).toStrictEqual(Object.keys(expected));
+}

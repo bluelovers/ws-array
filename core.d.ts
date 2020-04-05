@@ -1,58 +1,55 @@
-declare function sortObject<T>(object: T, options?: sortObject.IOptions & {
+export declare function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
     useSource: true;
 }): T;
-declare namespace sortObject {
-    var default: typeof sortObject;
+export declare namespace sortObject {
+    var sortObjectKeys: typeof sortObject;
 }
-declare function sortObject<T>(object: T, options?: sortObject.IOptions & {
+export declare function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'keys' | 'onlyKeys'> & {
     keys: string[];
     onlyKeys: true;
 }): Partial<T>;
-declare namespace sortObject {
-    var default: typeof sortObject;
+export declare namespace sortObject {
+    var sortObjectKeys: typeof sortObject;
 }
-declare function sortObject<T>(object: T, options?: sortObject.IOptions): Partial<T>;
-declare namespace sortObject {
-    var default: typeof sortObject;
+export declare function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): Partial<T>;
+export declare namespace sortObject {
+    var sortObjectKeys: typeof sortObject;
 }
-declare function sortObject<T>(object: T, sortFn: (a: any, b: any) => any): Partial<T>;
-declare namespace sortObject {
-    var default: typeof sortObject;
+export declare function sortObject<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T;
+export declare namespace sortObject {
+    var sortObjectKeys: typeof sortObject;
 }
-declare function sortObject<T>(object: T, sortWith: string[]): Partial<T>;
-declare namespace sortObject {
-    var default: typeof sortObject;
+export declare function sortObject<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T;
+export declare namespace sortObject {
+    var sortObjectKeys: typeof sortObject;
 }
-declare module sortObject {
-    interface IOptions {
-        /**
-         * key order
-         */
-        keys?: string[];
-        /**
-         * return Object only keys
-         * will disable useSource
-         */
-        onlyKeys?: boolean;
-        /**
-         * sort callback
-         *
-         * @param a
-         * @param b
-         * @returns {any}
-         */
-        sort?: (a: any, b: any) => any;
-        /**
-         * return reversed Object
-         */
-        desc?: boolean;
-        allowNotExists?: boolean;
-        /**
-         * return source Object
-         */
-        useSource?: boolean;
-    }
-    const sortObjectKeys: typeof sortObject;
+export interface IOptions<T extends Record<any, any> = Record<any, any>, K extends string = Extract<keyof T, string>> {
+    /**
+     * key order
+     */
+    keys?: (string | K)[];
+    /**
+     * return Object only keys
+     * will disable useSource
+     */
+    onlyKeys?: boolean;
+    /**
+     * sort callback
+     *
+     * @param a
+     * @param b
+     * @returns {any}
+     */
+    sort?: (a: string | K, b: string | K) => number;
+    /**
+     * return reversed Object
+     */
+    desc?: boolean;
+    allowNotExists?: boolean;
+    /**
+     * return source Object
+     */
+    useSource?: boolean;
 }
-export { sortObject };
+export { sortObject as sortObjectKeys };
 export default sortObject;
