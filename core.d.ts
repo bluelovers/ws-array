@@ -1,6 +1,8 @@
-export declare function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
-    useSource: true;
-}): T;
+export declare function sortObject<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T;
+export declare namespace sortObject {
+    var sortObjectKeys: typeof sortObject;
+}
+export declare function sortObject<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T;
 export declare namespace sortObject {
     var sortObjectKeys: typeof sortObject;
 }
@@ -11,15 +13,13 @@ export declare function sortObject<T extends Record<any, any>>(object: T, option
 export declare namespace sortObject {
     var sortObjectKeys: typeof sortObject;
 }
-export declare function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): Partial<T>;
+export declare function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
+    useSource: true;
+}): T;
 export declare namespace sortObject {
     var sortObjectKeys: typeof sortObject;
 }
-export declare function sortObject<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T;
-export declare namespace sortObject {
-    var sortObjectKeys: typeof sortObject;
-}
-export declare function sortObject<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T;
+export declare function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): T;
 export declare namespace sortObject {
     var sortObjectKeys: typeof sortObject;
 }

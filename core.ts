@@ -1,14 +1,14 @@
 
-export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
-	useSource: true,
-}): T
+export function sortObject<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T
+export function sortObject<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T
 export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'keys' | 'onlyKeys'> & {
 	keys: IOptions<T>["keys"],
 	onlyKeys: true,
 }): Partial<T>
-export function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): Partial<T>
-export function sortObject<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T
-export function sortObject<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T
+export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
+	useSource: true,
+}): T
+export function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): T
 export function sortObject<T extends Record<any, any>>(object: T, sortWith): T | Partial<T>
 {
 	let options: IOptions<T> = {};
