@@ -3,6 +3,12 @@
  */
 
 import { sortObject } from '../core';
+import sortObject2 from '../';
+import sortObject3 from '../index';
+
+sortObject;
+sortObject2;
+sortObject3;
 
 it(`sort object`, function ()
 {
