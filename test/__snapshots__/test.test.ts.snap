@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should add extra keys to object 1`] = `
+Array [
+  "a",
+  "b",
+  "c",
+  "d",
+]
+`;
+
+exports[`should add extra keys to object 2`] = `
 Object {
   "a": 1,
   "b": 1,
@@ -10,6 +19,15 @@ Object {
 `;
 
 exports[`should follow sort function 1`] = `
+Array [
+  "key-1",
+  "key-2",
+  "key-3",
+  "key-10",
+]
+`;
+
+exports[`should follow sort function 2`] = `
 Object {
   "key-1": 1,
   "key-10": 1,
@@ -19,6 +37,13 @@ Object {
 `;
 
 exports[`should not add extra keys to object 1`] = `
+Array [
+  "a",
+  "b",
+]
+`;
+
+exports[`should not add extra keys to object 2`] = `
 Object {
   "a": 1,
   "b": 1,
@@ -26,6 +51,51 @@ Object {
 `;
 
 exports[`sort object 1`] = `
+Array [
+  "a",
+  "b",
+  "c",
+  "d",
+]
+`;
+
+exports[`sort object 2`] = `
+Object {
+  "a": 1,
+  "b": 1,
+  "c": 1,
+  "d": 1,
+}
+`;
+
+exports[`sort object v2 1`] = `
+Array [
+  "b",
+  "c",
+  "a",
+  "d",
+]
+`;
+
+exports[`sort object v2 2`] = `
+Object {
+  "a": 1,
+  "b": 1,
+  "c": 1,
+  "d": 1,
+}
+`;
+
+exports[`sort object v3 1`] = `
+Array [
+  "b",
+  "c",
+  "a",
+  "d",
+]
+`;
+
+exports[`sort object v3 2`] = `
 Object {
   "a": 1,
   "b": 1,
@@ -35,6 +105,16 @@ Object {
 `;
 
 exports[`source will change order 1`] = `
+Array [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+]
+`;
+
+exports[`source will change order 2`] = `
 Object {
   "a": 1,
   "b": 3,
@@ -45,11 +125,62 @@ Object {
 `;
 
 exports[`source will not change order 1`] = `
+Array [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+]
+`;
+
+exports[`source will not change order 2`] = `
 Object {
   "a": 1,
   "b": 3,
   "c": 2,
   "d": 4,
   "e": 5,
+}
+`;
+
+exports[`with desc 1`] = `
+Array [
+  "d",
+  "a",
+  "c",
+  "b",
+]
+`;
+
+exports[`with desc 2`] = `
+Object {
+  "a": 1,
+  "b": 1,
+  "c": 1,
+  "d": 1,
+}
+`;
+
+exports[`with onlyKeys 1`] = `
+Array [
+  "b",
+  "d",
+]
+`;
+
+exports[`with onlyKeys 2`] = `
+Array [
+  "c",
+  "b",
+  "d",
+  "a",
+]
+`;
+
+exports[`with onlyKeys 3`] = `
+Object {
+  "b": 1,
+  "d": 1,
 }
 `;

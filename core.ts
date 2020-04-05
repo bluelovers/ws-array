@@ -3,7 +3,7 @@ export function sortObject<T extends Record<any, any>>(object: T, options?: Omit
 	useSource: true,
 }): T
 export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'keys' | 'onlyKeys'> & {
-	keys: string[],
+	keys: IOptions<T>["keys"],
 	onlyKeys: true,
 }): Partial<T>
 export function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): Partial<T>
@@ -26,13 +26,16 @@ export function sortObject<T extends Record<any, any>>(object: T, sortWith): T |
 		options = Object.assign(options, sortWith);
 	}
 
-	let keys: IOptions<T>["keys"] = (options.keys || []);
+	let {
+		keys = [] as IOptions<T>["keys"],
+		useSource,
+	} = options;
 
 	if (options.onlyKeys)
 	{
-		options.useSource = false;
+		useSource = false;
 
-		if ((options.keys || []).length == 0)
+		if (typeof keys.length !== 'number' || keys.length === 0)
 		{
 			throw new ReferenceError(`options.key is empty or not exists.`)
 		}
@@ -61,7 +64,7 @@ export function sortObject<T extends Record<any, any>>(object: T, sortWith): T |
 		return total;
 	}, {} as Partial<T>);
 
-	if (options.useSource)
+	if (useSource)
 	{
 		(Object.keys(ret) as IOptions<T>["keys"])
 			.forEach(function (key, index, array)

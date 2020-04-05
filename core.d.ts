@@ -5,7 +5,7 @@ export declare namespace sortObject {
     var sortObjectKeys: typeof sortObject;
 }
 export declare function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'keys' | 'onlyKeys'> & {
-    keys: string[];
+    keys: IOptions<T>["keys"];
     onlyKeys: true;
 }): Partial<T>;
 export declare namespace sortObject {

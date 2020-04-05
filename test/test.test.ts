@@ -31,8 +31,26 @@ it(`sort object`, function ()
 	expect(actual).toStrictEqual(expected);
 	strictStringify(actual, expected);
 
-	strictKeys(actual,expected);
+	strictKeys(actual, expected);
 
+	expect(Object.keys(actual)).toMatchSnapshot();
+	expect(actual).toMatchSnapshot();
+});
+
+it('sort object v2', function ()
+{
+	let actual = sortObject({
+		c: 1,
+		b: 1,
+		d: 1,
+		a: 1,
+	}, {
+		keys: ['b', 'c', 'a', 'd'],
+		onlyKeys: true,
+	})
+
+	expect(Object.keys(actual)).toStrictEqual(['b', 'c', 'a', 'd']);
+	expect(Object.keys(actual)).toMatchSnapshot();
 	expect(actual).toMatchSnapshot();
 });
 
@@ -47,11 +65,12 @@ it(`source will not change order`, function ()
 	expect(actual).toStrictEqual(expected);
 	expect(actual).toStrictEqual(source);
 
-	strictKeys(actual,source, true);
-	strictKeys(actual,expected);
+	strictKeys(actual, source, true);
+	strictKeys(actual, expected);
 
 	expect(actual === source).toStrictEqual(false);
 
+	expect(Object.keys(actual)).toMatchSnapshot();
 	expect(actual).toMatchSnapshot();
 });
 
@@ -67,11 +86,12 @@ it(`source will change order`, function ()
 	expect(actual).toStrictEqual(expected);
 	expect(actual).toStrictEqual(source);
 
-	strictKeys(actual,source);
-	strictKeys(actual,expected);
+	strictKeys(actual, source);
+	strictKeys(actual, expected);
 
 	expect(actual === source).toStrictEqual(true);
 
+	expect(Object.keys(actual)).toMatchSnapshot();
 	expect(actual).toMatchSnapshot();
 });
 
@@ -82,6 +102,7 @@ it('should not add extra keys to object', function ()
 		a: 1,
 	}, ['a', 'b', 'c', 'd'])
 
+	expect(Object.keys(actual)).toMatchSnapshot();
 	expect(Object.keys(actual)).toStrictEqual([
 		'a',
 		'b',
@@ -105,6 +126,7 @@ it('should follow sort function', function ()
 		"key-10": 1,
 	});
 
+	expect(Object.keys(actual)).toMatchSnapshot();
 	expect(actual).toMatchSnapshot();
 
 	function removeKeyAncCompareIndex(keyA, keyB)
@@ -125,7 +147,78 @@ it('should add extra keys to object', function ()
 		allowNotExists: true,
 	})
 
+	expect(Object.keys(actual)).toMatchSnapshot();
+
 	expect(Object.keys(actual)).toStrictEqual(['a', 'b', 'c', 'd']);
+	expect(actual).toMatchSnapshot();
+});
+
+it('with onlyKeys', function ()
+{
+	let source = {
+		c: 1,
+		b: 1,
+		d: 1,
+		a: 1,
+	};
+	let actual = sortObject(source, {
+		keys: ['b', 'd'],
+		onlyKeys: true,
+		useSource: true,
+	})
+
+	expect(Object.keys(actual)).toMatchSnapshot();
+	expect(Object.keys(source)).toMatchSnapshot();
+
+	expect(Object.keys(actual)).toStrictEqual(['b', 'd']);
+	expect(Object.keys(source)).toStrictEqual(['c', 'b', 'd', 'a']);
+	expect(actual).toMatchSnapshot();
+});
+
+it('with onlyKeys v2', function ()
+{
+	let source = {
+		c: 1,
+		b: 1,
+		d: 1,
+		a: 1,
+	};
+
+	expect(() => sortObject(source, {
+		onlyKeys: true,
+	})).toThrow()
+});
+
+it('with desc', function ()
+{
+	let actual = sortObject({
+		c: 1,
+		b: 1,
+		d: 1,
+		a: 1,
+	}, {
+		keys: ['b', 'c', 'a', 'd'],
+		desc: true,
+	})
+
+	let keys = Object.keys(actual);
+	expect(keys).toMatchSnapshot();
+
+	expect(keys).toStrictEqual(['d', 'a', 'c', 'b']);
+	expect(actual).toMatchSnapshot();
+});
+
+it('sort object v3', function ()
+{
+	let actual = sortObject({
+		c: 1,
+		b: 1,
+		d: 1,
+		a: 1,
+	}, ['b', 'c', 'a', 'd'])
+
+	expect(Object.keys(actual)).toStrictEqual(['b', 'c', 'a', 'd']);
+	expect(Object.keys(actual)).toMatchSnapshot();
 	expect(actual).toMatchSnapshot();
 });
 

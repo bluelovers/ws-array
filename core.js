@@ -12,10 +12,10 @@ function sortObject(object, sortWith) {
     else {
         options = Object.assign(options, sortWith);
     }
-    let keys = (options.keys || []);
+    let { keys = [], useSource, } = options;
     if (options.onlyKeys) {
-        options.useSource = false;
-        if ((options.keys || []).length == 0) {
+        useSource = false;
+        if (typeof keys.length !== 'number' || keys.length === 0) {
             throw new ReferenceError(`options.key is empty or not exists.`);
         }
     }
@@ -33,7 +33,7 @@ function sortObject(object, sortWith) {
         }
         return total;
     }, {});
-    if (options.useSource) {
+    if (useSource) {
         Object.keys(ret)
             .forEach(function (key, index, array) {
             delete object[key];
