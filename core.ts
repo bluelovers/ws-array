@@ -110,9 +110,10 @@ export interface IOptions<T extends Record<any, any> = Record<any, any> , K exte
 	useSource?: boolean,
 }
 
-sortObject.sortObjectKeys = sortObject
+sortObject.sortObjectKeys = sortObject;
 
-(sortObject as any).default = sortObject
+// @ts-ignore
+(sortObject as any).default = sortObject;
 
 export { sortObject as sortObjectKeys }
 
