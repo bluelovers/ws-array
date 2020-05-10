@@ -112,6 +112,8 @@ export interface IOptions<T extends Record<any, any> = Record<any, any> , K exte
 
 sortObject.sortObjectKeys = sortObject
 
+(sortObject as any).default = sortObject
+
 export { sortObject as sortObjectKeys }
 
 function array_unique(array: any[])

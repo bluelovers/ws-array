@@ -45,7 +45,7 @@ function sortObject(object, sortWith) {
 }
 exports.sortObject = sortObject;
 exports.sortObjectKeys = sortObject;
-sortObject.sortObjectKeys = sortObject;
+sortObject.sortObjectKeys = sortObject(sortObject).default = sortObject;
 function array_unique(array) {
     return array.filter(function (el, index, arr) {
         return index === arr.indexOf(el);
