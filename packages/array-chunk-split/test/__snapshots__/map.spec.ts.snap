@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrayChunkMap default 1`] = `
+Array [
+  1,
+  5,
+]
+`;
+
+exports[`arrayChunkMap mapMethod:true 1`] = `
+Array [
+  4,
+  8,
+]
+`;
+
+exports[`arrayChunkMap maxChunkSize 1`] = `
+Array [
+  0,
+  1,
+  2,
+  3,
+]
+`;

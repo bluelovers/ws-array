@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrayChunkBySize 1 1`] = `
+Array [
+  Array [
+    1,
+  ],
+  Array [
+    2,
+  ],
+  Array [
+    3,
+  ],
+  Array [
+    4,
+  ],
+  Array [
+    5,
+  ],
+  Array [
+    6,
+  ],
+  Array [
+    7,
+  ],
+  Array [
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize 4 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+  Array [
+    5,
+    6,
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize 5 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+    5,
+  ],
+  Array [
+    6,
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize 6 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+  ],
+  Array [
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize 7 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+  ],
+  Array [
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize 8 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize empty 1`] = `Array []`;
+
+exports[`arrayChunkSplit 1 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkSplit 2 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+    4,
+  ],
+  Array [
+    5,
+    6,
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkSplit 3 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+    6,
+  ],
+  Array [
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkSplit 4 1`] = `
+Array [
+  Array [
+    1,
+    2,
+  ],
+  Array [
+    3,
+    4,
+  ],
+  Array [
+    5,
+    6,
+  ],
+  Array [
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkSplit 5 but will only get 4 1`] = `
+Array [
+  Array [
+    1,
+    2,
+  ],
+  Array [
+    3,
+    4,
+  ],
+  Array [
+    5,
+    6,
+  ],
+  Array [
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkSplit 8 1`] = `
+Array [
+  Array [
+    1,
+  ],
+  Array [
+    2,
+  ],
+  Array [
+    3,
+  ],
+  Array [
+    4,
+  ],
+  Array [
+    5,
+  ],
+  Array [
+    6,
+  ],
+  Array [
+    7,
+  ],
+  Array [
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkSplit empty 1`] = `Array []`;

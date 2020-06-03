@@ -2,6 +2,7 @@
   "name": "array-chunk-split",
   "version": "1.0.2",
   "description": "Split an array into arrays with max chunk length",
+  "keywords": [],
   "homepage": "https://github.com/bluelovers/ws-array#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-array/issues"
@@ -11,7 +12,7 @@
     "url": "git+https://github.com/bluelovers/ws-array.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -19,17 +20,21 @@
   "scripts": {
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
+    "test": "yarn run test:jest",
+    "test:jest": "jest --coverage",
     "npm:publish": "npm publish",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test",
     "postpublish": "echo postpublish",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx mocha --require ts-node/register test/**/*.{test,spec}.{ts,tsx}",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "ts-type": "^1.2.9"
+    "ts-type": "^1.2.17"
   },
-  "gitHead": "c3147ddf55344948214c4a2cd58a15bac7075a76"
+  "devDependencies": {}
 }
