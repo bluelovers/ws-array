@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`desc 1`] = `
+Array [
+  5,
+  "4",
+  1,
+]
+`;
+
+exports[`number 1`] = `
+Array [
+  1,
+  4,
+  5,
+]
+`;

@@ -7,12 +7,16 @@
   ],
   "scripts": {
     "lerna:publish": "lerna publish",
-    "ncu": "npx npm-check-updates -u",
-    "sort-package-json": "npx \"sort-package-json\"",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.3"
+    "@bluelovers/tsconfig": "^1.0.19",
+    "@types/jest": "^25.2.3",
+    "@types/node": "*",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0"
   },
   "peerDependencies": {
     "lerna": "^3.14.1"
