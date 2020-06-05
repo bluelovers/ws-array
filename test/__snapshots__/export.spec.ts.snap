@@ -6,6 +6,8 @@ Array [
   "array_unique_overwrite",
   "lazy_unique_overwrite",
   "equals",
+  "defaultFilter",
+  "defaultChecker",
   "lazy_unique",
   "default",
 ]

@@ -59,6 +59,8 @@ lazy_unique.array_unique = array_unique;
 lazy_unique.array_unique_overwrite = array_unique_overwrite;
 lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite;
 lazy_unique.equals = util_1.equals;
+lazy_unique.defaultFilter = util_1.defaultFilter;
+lazy_unique.defaultChecker = util_1.defaultChecker;
 lazy_unique.lazy_unique = lazy_unique;
 lazy_unique.default = lazy_unique;
 Object.defineProperty(lazy_unique, "__esModule", { value: true });

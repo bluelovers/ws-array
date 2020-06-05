@@ -1,4 +1,4 @@
-import { defaultFilter, equals } from './lib/util';
+import { defaultFilter, equals, defaultChecker } from './lib/util';
 import { IOptions } from './lib/types';
 
 export * from './lib/types';
@@ -72,6 +72,8 @@ lazy_unique.array_unique_overwrite = array_unique_overwrite;
 lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite;
 
 lazy_unique.equals = equals;
+lazy_unique.defaultFilter = defaultFilter;
+lazy_unique.defaultChecker = defaultChecker;
 
 lazy_unique.lazy_unique = lazy_unique;
 lazy_unique.default = lazy_unique;

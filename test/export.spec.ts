@@ -12,3 +12,11 @@ test(`import check`, () =>
 	expect(actual).toMatchSnapshot();
 
 });
+
+test(`__esModule`, () =>
+{
+
+	expect(_m0).toHaveProperty('__esModule', true);
+	expect(_m1).toHaveProperty('__esModule', true);
+
+});

@@ -9,6 +9,8 @@ export declare namespace lazy_unique {
     var array_unique_overwrite: typeof import("./core").array_unique_overwrite;
     var lazy_unique_overwrite: typeof import("./core").lazy_unique_overwrite;
     var equals: typeof import("./lib/util").equals;
+    var defaultFilter: typeof import("./lib/util").defaultFilter;
+    var defaultChecker: typeof import("./lib/util").defaultChecker;
     var lazy_unique: typeof import("./core").lazy_unique;
     var default: typeof import("./core").lazy_unique;
 }
@@ -18,6 +20,8 @@ export declare namespace lazy_unique {
     var array_unique_overwrite: typeof import("./core").array_unique_overwrite;
     var lazy_unique_overwrite: typeof import("./core").lazy_unique_overwrite;
     var equals: typeof import("./lib/util").equals;
+    var defaultFilter: typeof import("./lib/util").defaultFilter;
+    var defaultChecker: typeof import("./lib/util").defaultChecker;
     var lazy_unique: typeof import("./core").lazy_unique;
     var default: typeof import("./core").lazy_unique;
 }
@@ -27,6 +31,8 @@ export declare namespace lazy_unique {
     var array_unique_overwrite: typeof import("./core").array_unique_overwrite;
     var lazy_unique_overwrite: typeof import("./core").lazy_unique_overwrite;
     var equals: typeof import("./lib/util").equals;
+    var defaultFilter: typeof import("./lib/util").defaultFilter;
+    var defaultChecker: typeof import("./lib/util").defaultChecker;
     var lazy_unique: typeof import("./core").lazy_unique;
     var default: typeof import("./core").lazy_unique;
 }
