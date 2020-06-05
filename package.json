@@ -40,21 +40,23 @@
     "url": "git+https://github.com/bluelovers/array-hyper-unique.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build:lib:chk": "ts-node test/lib.chk",
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
+    "test": "jest",
+    "build:lib:chk": "ts-node test/lib.chk",
     "npm:publish": "npm publish",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test && yarn run build:lib:chk",
-    "postpublish": "echo postpublish & git commit -m \"publish new version\" .",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx -r chai -r mocha -r ts-node mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run test && yarn run build:lib:chk",
+    "postpublish": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort",
     "tsc:default": "tsc -p tsconfig.json",
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
@@ -62,17 +64,24 @@
     "deep-eql": "^4.0.0"
   },
   "devDependencies": {
-    "@arr/unique": "^1.0.0",
-    "@bluelovers/tsconfig": "^1.0.12",
-    "@types/node": "^12.6.8",
+    "@arr/unique": "^1.0.1",
+    "@bluelovers/tsconfig": "^1.0.19",
+    "@types/array-unique": "^0.3.0",
+    "@types/jest": "^25.2.3",
+    "@types/lodash": "^4.14.155",
+    "@types/lodash.uniq": "^4.5.6",
+    "@types/node": "^14.0.11",
     "arr-unique": "^1.0.2",
     "array-uniq": "^2.1.0",
     "array-unique": "^0.3.2",
     "array-unique-deep": "^1.0.1",
-    "debug-color2": "^1.1.6",
+    "debug-color2": "^1.1.7",
+    "jest": "^26.0.1",
     "just-unique": "^3.2.0",
+    "lodash": "^4.17.15",
     "lodash.uniq": "^4.5.0",
-    "strip-ansi": "^5.2.0",
-    "tfk-unique-array": "^2.0.0"
+    "strip-ansi": "^6.0.0",
+    "tfk-unique-array": "^2.0.0",
+    "ts-jest": "^26.1.0"
   }
 }

@@ -2,72 +2,52 @@
  * Created by user on 2018/5/30/030.
  */
 
-import { array_unique, default as lazy_unique, IOptions } from '../index';
-import { chai, relative, expect, path, assert, util, mochaAsync } from './_local-dev';
-
-// @ts-ignore
-import { describe, before, beforeEach, it, ITest } from 'mocha';
 import getTestcase from './_data';
+import { array_unique, IOptions } from '../core';
 
-// @ts-ignore
-let DEBUG = process.argv.includes('--debug');
-
-// @ts-ignore
-describe(relative(__filename), () =>
+describe(`(v) => v`, () =>
 {
-	let currentTest: ITest;
-
-	beforeEach(function ()
-	{
-		// @ts-ignore
-		currentTest = this.currentTest as ITest;
-
-		//console.log('it:before', currentTest.title);
-		//console.log('it:before', currentTest.fullTitle());
-	});
-
-	// @ts-ignore
-	describe(`(v) => v`, () =>
-	{
-		let options: IOptions<any> = {
-			filter(v)
-			{
-				return v;
-			},
-		};
-
-		getTestcase()
-			.forEach(function ({
-				data,
-				expected,
-				label,
-			})
-			{
-				expected = expected.filter(options.filter);
-
-				_testIt(data, expected, label, options)
-			})
-		;
-
-		function _testIt(data, expected, label: string = `label`, options?)
+	let options: IOptions<any> = {
+		filter(v)
 		{
-			it(label, function ()
-			{
-				//console.log('it:inner', currentTest.title);
-				//console.log('it:inner', currentTest.fullTitle());
+			return v;
+		},
+	};
 
-				let len = data.length;
+	getTestcase()
+		.forEach(function ({
+			data,
+			expected,
+			label,
+		})
+		{
+			expected = expected.filter(options.filter);
 
-				let actual = array_unique(data, options);
+			_testIt(data, expected, label, options)
+		})
+	;
 
-				DEBUG && console.dir(actual);
+	function _testIt(data, expected, label: string = `label`, options?)
+	{
+		it(label, () =>
+		{
+			//console.log('it:inner', currentTest.title);
+			//console.log('it:inner', currentTest.fullTitle());
 
-				expect(actual).to.be.ok;
-				expect(actual).to.be.deep.equal(expected);
+			let len = data.length;
 
-				expect(actual).to.be.not.deep.equal(data);
-				expect(actual.length).to.be.not.deep.equal(len);
-			});
-		}
-	});
+			let actual = array_unique(data, options);
+
+			expect(actual).toBeTruthy();
+			expect(actual).toEqual(expected);
+
+			expect(actual).not.toEqual(data);
+			expect(actual.length).not.toEqual(len);
+
+			expect(actual).toMatchSnapshot();
+			expect(data).toMatchSnapshot();
+
+		});
+	}
 });
+

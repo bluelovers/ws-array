@@ -2,74 +2,46 @@
  * Created by user on 2018/5/30/030.
  */
 
-import { array_unique, default as lazy_unique, IOptions } from '../index';
-import { chai, relative, expect, path, assert, util, mochaAsync } from './_local-dev';
+import { lazy_unique, array_unique } from '../core';
 
-// @ts-ignore
-import { describe, before, beforeEach, it, ITest } from 'mocha';
-import getTestcase from './_data';
-
-// @ts-ignore
-let DEBUG = process.argv.includes('--debug');
-
-// @ts-ignore
-describe(relative(__filename), () =>
+describe(`throw`, () =>
 {
-	let currentTest: ITest;
-
-	beforeEach(function ()
-	{
-		// @ts-ignore
-		currentTest = this.currentTest as ITest;
-
-		//console.log('it:before', currentTest.title);
-		//console.log('it:before', currentTest.fullTitle());
-	});
-
-	// @ts-ignore
-	describe(`throw`, () =>
-	{
-		let options: IOptions<any> = {
-			filter(v)
-			{
-				return v;
-			},
-		};
-
-		[
-			{
-				data: [null],
-				label: 'null',
-			},
-			{
-				data: [{}],
-				label: '[]',
-			},
-		]
-			.forEach(function ({
-				data,
-				label,
-			})
-			{
-				_testIt(data, undefined, label)
-			})
-		;
-
-		function _testIt(data, expected, label: string = `label`, options?)
+	([
 		{
-			it(label, function ()
-			{
-				expect(function ()
-				{
-					// @ts-ignore
-					return array_unique(...data);
-				}).to.throw(TypeError);
+			data: [null],
+			label: 'null',
+		},
+		{
+			data: [{} as any],
+			label: '[]',
+		},
+	] as {
+		data: [any, ...any[]],
+		label: string,
+	}[])
+		.forEach(({
+			data,
+			label,
+		}) =>
+		{
+			_testIt(data, undefined, label)
+		})
+	;
 
-				expect(function ()
-				{
-					return lazy_unique(...data);
-				}).to.throw(TypeError);
-			});
-		}
-	});
+	function _testIt(data: [any, ...any[]], expected, label: string = `label`, options?)
+	{
+		it(label, () =>
+		{
+			expect(function ()
+			{
+				return array_unique(...data);
+			}).toThrowError(TypeError);
+
+			expect(function ()
+			{
+				return lazy_unique(...data);
+			}).toThrowError(TypeError);
+		});
+	}
 });
+

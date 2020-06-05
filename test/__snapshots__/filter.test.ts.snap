@@ -1,0 +1,631 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(v) => v ArrayBuffer 1`] = `
+Array [
+  ArrayBuffer [],
+  ArrayBuffer [],
+]
+`;
+
+exports[`(v) => v ArrayBuffer 2`] = `
+Array [
+  ArrayBuffer [],
+  ArrayBuffer [],
+  ArrayBuffer [],
+]
+`;
+
+exports[`(v) => v Buffer & ArrayBuffer 1`] = `
+Array [
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  Array [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  Object {},
+  ArrayBuffer [],
+]
+`;
+
+exports[`(v) => v Buffer & ArrayBuffer 2`] = `
+Array [
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  Array [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  Object {},
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  ArrayBuffer [],
+  ArrayBuffer [],
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  Array [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+]
+`;
+
+exports[`(v) => v Buffer 1`] = `
+Array [
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  Array [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  Object {},
+]
+`;
+
+exports[`(v) => v Buffer 2`] = `
+Array [
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  Array [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  Object {},
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  Object {
+    "data": Array [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "type": "Buffer",
+  },
+  Array [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+]
+`;
+
+exports[`(v) => v Map 1`] = `
+Array [
+  Map {
+    "a" => 1,
+    "b" => 2,
+    "c" => 3,
+  },
+  Object {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+  },
+]
+`;
+
+exports[`(v) => v Map 2`] = `
+Array [
+  Map {
+    "a" => 1,
+    "b" => 2,
+    "c" => 3,
+  },
+  Map {
+    "c" => 3,
+    "b" => 2,
+    "a" => 1,
+  },
+  Object {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+  },
+  Object {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+  },
+]
+`;
+
+exports[`(v) => v RegExp 1`] = `
+Array [
+  /1/,
+  Object {},
+  /1/g,
+  /1/i,
+]
+`;
+
+exports[`(v) => v RegExp 2`] = `
+Array [
+  /1/,
+  Object {},
+  /1/g,
+  /1/i,
+  /1/,
+  Object {},
+  /1/g,
+  /1/i,
+]
+`;
+
+exports[`(v) => v boolean 1`] = `
+Array [
+  true,
+]
+`;
+
+exports[`(v) => v boolean 2`] = `
+Array [
+  true,
+  true,
+  false,
+  false,
+  true,
+]
+`;
+
+exports[`(v) => v boolean 2 1`] = `
+Array [
+  true,
+  Infinity,
+]
+`;
+
+exports[`(v) => v boolean 2 2`] = `
+Array [
+  true,
+  true,
+  false,
+  false,
+  true,
+  null,
+  0,
+  undefined,
+  null,
+  0,
+  undefined,
+  0,
+  NaN,
+  Infinity,
+  "",
+]
+`;
+
+exports[`(v) => v function 1`] = `
+Array [
+  [Function],
+  [Function],
+  [Function],
+]
+`;
+
+exports[`(v) => v function 2`] = `
+Array [
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+]
+`;
+
+exports[`(v) => v function 2 1`] = `
+Array [
+  [Function],
+  [Function],
+  [Function],
+  Object {},
+]
+`;
+
+exports[`(v) => v function 2 2`] = `
+Array [
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+  Object {},
+  [Function],
+  Object {},
+]
+`;
+
+exports[`(v) => v main mixin test 1`] = `
+Array [
+  1,
+  true,
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+  Array [
+    "a",
+    "c",
+    "b",
+  ],
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": undefined,
+    },
+  },
+  Object {
+    "a": Object {},
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+      "c": undefined,
+    },
+  },
+  /1/,
+  Object {},
+  /1/g,
+  /1/i,
+  "1",
+  "0",
+  "true",
+  "undefined",
+  "null",
+  "false",
+  Infinity,
+  [Function],
+  [Function],
+  [Function],
+]
+`;
+
+exports[`(v) => v main mixin test 2`] = `
+Array [
+  1,
+  0,
+  true,
+  undefined,
+  null,
+  false,
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+  Array [
+    "a",
+    "c",
+    "b",
+  ],
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": undefined,
+    },
+  },
+  Object {
+    "a": Object {},
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+      "c": undefined,
+    },
+  },
+  /1/,
+  Object {},
+  /1/,
+  /1/g,
+  /1/i,
+  Object {},
+  1,
+  0,
+  true,
+  undefined,
+  null,
+  false,
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+  Array [
+    "a",
+    "c",
+    "b",
+  ],
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": undefined,
+    },
+  },
+  Object {
+    "a": Object {},
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+      "c": undefined,
+    },
+  },
+  /1/,
+  Object {},
+  /1/,
+  /1/g,
+  /1/i,
+  Object {},
+  "1",
+  "0",
+  "true",
+  "undefined",
+  "null",
+  "false",
+  "",
+  NaN,
+  NaN,
+  NaN,
+  Infinity,
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+  [Function],
+]
+`;
+
+exports[`(v) => v number 1`] = `
+Array [
+  1,
+  2,
+  3,
+]
+`;
+
+exports[`(v) => v number 2`] = `
+Array [
+  1,
+  2,
+  3,
+  3,
+  0,
+]
+`;
+
+exports[`(v) => v number 2 1`] = `
+Array [
+  1,
+  2,
+  3,
+  Infinity,
+]
+`;
+
+exports[`(v) => v number 2 2`] = `
+Array [
+  1,
+  2,
+  3,
+  3,
+  0,
+  NaN,
+  NaN,
+  NaN,
+  Infinity,
+]
+`;
+
+exports[`(v) => v object 1`] = `
+Array [
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+    },
+  },
+]
+`;
+
+exports[`(v) => v object 2`] = `
+Array [
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 2,
+    },
+  },
+  Object {
+    "a": Object {
+      "b": 3,
+    },
+  },
+]
+`;
+
+exports[`(v) => v string 1`] = `
+Array [
+  "1",
+  "2",
+  "3",
+  "0",
+  "a",
+  "b",
+  "c",
+  "d",
+]
+`;
+
+exports[`(v) => v string 2`] = `
+Array [
+  "1",
+  "2",
+  "3",
+  "3",
+  "0",
+  "",
+  "a",
+  "b",
+  "c",
+  "a",
+  "b",
+  "d",
+]
+`;
+
+exports[`(v) => v string[] 1`] = `
+Array [
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+]
+`;
+
+exports[`(v) => v string[] 2`] = `
+Array [
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+  Array [
+    "a",
+    "b",
+    "c",
+  ],
+]
+`;

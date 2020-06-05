@@ -10,6 +10,7 @@
 [FAIL] arr-unique
 [FAIL] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 [LOG] object
@@ -23,6 +24,7 @@
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 [LOG] number
@@ -36,6 +38,7 @@
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
 [SUCCESS] lodash.uniq
+[SUCCESS] lodash/uniq
 
 
 [LOG] number 2
@@ -49,6 +52,7 @@
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
 [SUCCESS] lodash.uniq
+[SUCCESS] lodash/uniq
 
 
 [LOG] string
@@ -62,6 +66,7 @@
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
 [SUCCESS] lodash.uniq
+[SUCCESS] lodash/uniq
 
 
 [LOG] string[]
@@ -75,6 +80,7 @@
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 [LOG] RegExp
@@ -88,6 +94,7 @@
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 [LOG] boolean
@@ -101,6 +108,7 @@
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
 [SUCCESS] lodash.uniq
+[SUCCESS] lodash/uniq
 
 
 [LOG] boolean 2
@@ -114,6 +122,7 @@
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
 [SUCCESS] lodash.uniq
+[SUCCESS] lodash/uniq
 
 
 [LOG] Map
@@ -127,6 +136,7 @@
 [SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 [LOG] function
@@ -140,6 +150,7 @@
 [SUCCESS] arr-unique
 [FAIL] array-unique-deep
 [SUCCESS] lodash.uniq
+[SUCCESS] lodash/uniq
 
 
 [LOG] function 2
@@ -153,6 +164,7 @@
 [SUCCESS] arr-unique
 [FAIL] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 [LOG] Buffer
@@ -166,6 +178,7 @@
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 [LOG] ArrayBuffer
@@ -179,6 +192,7 @@
 [FAIL] arr-unique
 [FAIL] array-unique-deep
 [SUCCESS] lodash.uniq
+[SUCCESS] lodash/uniq
 
 
 [LOG] Buffer & ArrayBuffer
@@ -192,6 +206,7 @@
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
 [FAIL] lodash.uniq
+[FAIL] lodash/uniq
 
 
 ```
@@ -206,6 +221,7 @@
   'just-unique': { success: 7, fail: 8, error: 0 },
   'arr-unique': { success: 7, fail: 8, error: 0 },
   'lodash.uniq': { success: 7, fail: 8, error: 0 },
+  'lodash/uniq': { success: 7, fail: 8, error: 0 },
   'array-unique': { success: 6, fail: 9, error: 0 },
   '@arr/unique': { success: 6, fail: 9, error: 0 },
   'tfk-unique-array': { success: 5, fail: 6, error: 4 }

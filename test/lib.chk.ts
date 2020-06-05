@@ -2,20 +2,15 @@
  * Created by user on 2018/9/23/023.
  */
 
-import { array_unique as array_hyper_unique } from '..';
-import { equals } from '..';
-//import { lazy_unique } from '../index';
-//import * as lazy_unique from '../index';
-import lazy_unique = require('../index');
+import { lazy_unique, array_unique as array_hyper_unique } from '../core';
+import { equals } from '../core';
 import getTestcase from './_data';
-import arrayUniq = require('array-uniq');
-import arrayUnique = require('array-unique');
-import fs = require('fs');
-import stripAnsi = require('strip-ansi');
+import { createWriteStream } from 'fs';
+import stripAnsi from 'strip-ansi';
 
 import console, { console2 } from './lib.log';
 
-let io = fs.createWriteStream('../lib.chk.md');
+let io = createWriteStream('../lib.chk.md');
 
 //console._stdout.on('data', (data) => io.write(data));
 //console._stderr.on('data', (data) => io.write(data));
@@ -95,6 +90,9 @@ getTestcase()
 			},
 			{
 				name: 'lodash.uniq',
+			},
+			{
+				name: 'lodash/uniq',
 			},
 		].forEach(function (lib_data)
 		{
