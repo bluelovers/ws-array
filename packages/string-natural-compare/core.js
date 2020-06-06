@@ -27,6 +27,9 @@ function naturalCompare(a, b, opts) {
         else if (typeof b === 'number') {
             b = String(b);
         }
+        if (a === b) {
+            return 0;
+        }
         i = string_natural_compare_1.default(a, b, opts);
     }
     if (i !== 0 && (opts === null || opts === void 0 ? void 0 : opts.desc)) {

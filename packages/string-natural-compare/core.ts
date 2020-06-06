@@ -47,6 +47,11 @@ export function naturalCompare(a, b, opts?: IOptionsNaturalCompare)
 			b = String(b);
 		}
 
+		if (a === b)
+		{
+			return 0
+		}
+
 		i = _naturalCompare(a, b, opts)
 	}
 
