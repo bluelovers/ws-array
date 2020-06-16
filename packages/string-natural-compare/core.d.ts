@@ -23,9 +23,10 @@ export interface IOptionsNaturalCompare extends IOptionsStringNaturalCompare {
  */
 export declare function naturalCompare(a: any, b: any, opts?: IOptionsNaturalCompare): number;
 export declare namespace naturalCompare {
-    var createNew: typeof import("./core").createNew;
-    var compareCaseInsensitive: (a: any, b: any) => number;
-    var default: typeof naturalCompare;
+    export var createNew: typeof import("./core").createNew;
+    export var compareCaseInsensitive: (a: any, b: any) => number;
+    var _a: typeof naturalCompare;
+    export { _a as default };
 }
 /**
  * create compare with preset options

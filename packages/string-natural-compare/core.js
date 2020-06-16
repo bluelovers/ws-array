@@ -54,5 +54,6 @@ exports.compareCaseInsensitive = createNew({
 naturalCompare.createNew = createNew;
 naturalCompare.compareCaseInsensitive = exports.compareCaseInsensitive;
 naturalCompare.default = naturalCompare;
+Object.defineProperty(naturalCompare, "__esModule", { value: true });
 exports.default = naturalCompare;
 //# sourceMappingURL=core.js.map

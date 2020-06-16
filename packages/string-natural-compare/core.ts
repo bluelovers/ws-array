@@ -82,4 +82,6 @@ naturalCompare.createNew = createNew;
 naturalCompare.compareCaseInsensitive = compareCaseInsensitive;
 naturalCompare.default = naturalCompare;
 
+Object.defineProperty(naturalCompare, "__esModule", { value: true });
+
 export default naturalCompare
