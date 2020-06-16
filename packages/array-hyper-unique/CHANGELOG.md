@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.5...array-hyper-unique@1.1.6) (2020-06-16)
+
+
+### 🔖　Miscellaneous
+
+* . ([cd1cb58](https://github.com/bluelovers/ws-array/commit/cd1cb580fb89d57cb3a5083e150d6fa56db316a0))
+
+
+
+
+
 ## [1.1.5](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.4...array-hyper-unique@1.1.5) (2020-06-16)
 
 
