@@ -1,4 +1,5 @@
 import { defaultFilter, equals, defaultChecker } from './lib/util';
+
 import { IOptions } from './lib/types';
 
 export * from './lib/types';
