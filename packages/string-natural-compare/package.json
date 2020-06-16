@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/string-natural-compare",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Compare alphanumeric strings the same way a human would, using a natural order algorithm",
   "homepage": "https://github.com/bluelovers/ws-array/tree/master/packages/string-natural-compare#readme",
   "bugs": {
