@@ -77,5 +77,6 @@
     "strip-ansi": "^6.0.0",
     "tfk-unique-array": "^2.0.0",
     "ts-jest": "^26.1.0"
-  }
+  },
+  "gitHead": "9e7b61659c0246517caf39d2a3c4802cc24ebbfc"
 }
