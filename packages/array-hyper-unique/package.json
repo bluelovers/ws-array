@@ -61,22 +61,14 @@
   },
   "devDependencies": {
     "@arr/unique": "^1.0.1",
-    "@types/array-unique": "^0.3.0",
-    "@types/jest": "^25.2.3",
-    "@types/lodash": "^4.14.155",
-    "@types/lodash.uniq": "^4.5.6",
     "arr-unique": "^1.0.2",
     "array-uniq": "^2.1.0",
     "array-unique": "^0.3.2",
     "array-unique-deep": "^1.0.1",
-    "debug-color2": "^1.1.7",
-    "jest": "^26.0.1",
     "just-unique": "^3.2.0",
     "lodash": "^4.17.15",
     "lodash.uniq": "^4.5.0",
-    "strip-ansi": "^6.0.0",
-    "tfk-unique-array": "^2.0.0",
-    "ts-jest": "^26.1.0"
+    "tfk-unique-array": "^2.0.0"
   },
-  "gitHead": "9e7b61659c0246517caf39d2a3c4802cc24ebbfc"
+  "gitHead": "6298cb145140a56cca638ce0900ba0669beddb44"
 }
