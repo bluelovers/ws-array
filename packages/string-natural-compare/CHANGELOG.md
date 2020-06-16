@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@1.0.5...@bluelovers/string-natural-compare@1.0.6) (2020-06-16)
+
+
+### 🔖　Miscellaneous
+
+* . ([bfe589c](https://github.com/bluelovers/ws-array/commit/bfe589c597da1f2968eeba1ed98e8f504c1e6b82))
+
+
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@1.0.4...@bluelovers/string-natural-compare@1.0.5) (2020-06-16)
 
 
