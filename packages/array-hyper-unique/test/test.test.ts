@@ -20,7 +20,7 @@ describe(`suite`, () =>
 
 	function _testIt(data, expected, label: string = `label`)
 	{
-		it(label, () =>
+		it(label, (done) =>
 		{
 			//console.log('it:inner', currentTest.title);
 			//console.log('it:inner', currentTest.fullTitle());
@@ -50,6 +50,8 @@ describe(`suite`, () =>
 
 			expect(actual).not.toEqual(data);
 			expect(actual.length).not.toEqual(len);
+
+			done()
 		});
 	}
 });

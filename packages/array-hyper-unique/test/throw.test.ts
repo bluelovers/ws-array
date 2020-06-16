@@ -30,7 +30,7 @@ describe(`throw`, () =>
 
 	function _testIt(data: [any, ...any[]], expected, label: string = `label`, options?)
 	{
-		it(label, () =>
+		it(label, (done) =>
 		{
 			expect(function ()
 			{
@@ -41,6 +41,8 @@ describe(`throw`, () =>
 			{
 				return lazy_unique(...data);
 			}).toThrowError(TypeError);
+
+			done()
 		});
 	}
 });

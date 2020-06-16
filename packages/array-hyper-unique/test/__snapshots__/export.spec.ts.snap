@@ -4,11 +4,11 @@ exports[`import check 1`] = `
 Array [
   "array_unique",
   "array_unique_overwrite",
-  "lazy_unique_overwrite",
-  "equals",
-  "defaultFilter",
-  "defaultChecker",
-  "lazy_unique",
   "default",
+  "defaultChecker",
+  "defaultFilter",
+  "equals",
+  "lazy_unique",
+  "lazy_unique_overwrite",
 ]
 `;

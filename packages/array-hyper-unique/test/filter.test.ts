@@ -29,7 +29,7 @@ describe(`(v) => v`, () =>
 
 	function _testIt(data, expected, label: string = `label`, options?)
 	{
-		it(label, () =>
+		it(label, (done) =>
 		{
 			//console.log('it:inner', currentTest.title);
 			//console.log('it:inner', currentTest.fullTitle());
@@ -47,6 +47,7 @@ describe(`(v) => v`, () =>
 			expect(actual).toMatchSnapshot();
 			expect(data).toMatchSnapshot();
 
+			done()
 		});
 	}
 });

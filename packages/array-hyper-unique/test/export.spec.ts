@@ -2,7 +2,7 @@ import _m0 = require('../');
 import _m1 from '../';
 import _m2 = require('../core');
 
-test(`import check`, () =>
+test(`import check`, (done) =>
 {
 
 	let actual = Object.keys(_m0).sort();
@@ -14,12 +14,16 @@ test(`import check`, () =>
 	//expect(actual).toBeInstanceOf(Date);
 	expect(actual).toMatchSnapshot();
 
+	done()
 });
 
-test(`__esModule`, () =>
+test(`__esModule`, (done) =>
 {
 
-	expect(_m0).toHaveProperty('__esModule', true);
-	expect(_m1).toHaveProperty('__esModule', true);
+	// @ts-ignore
+	expect(_m0.__esModule).toStrictEqual(true);
+	// @ts-ignore
+	expect(_m1.__esModule).toStrictEqual(true);
 
+	done();
 });
