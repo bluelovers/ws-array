@@ -9,8 +9,9 @@ import { createWriteStream } from 'fs';
 import stripAnsi from 'strip-ansi';
 
 import console, { console2 } from './lib.log';
+import { join } from 'path';
 
-let io = createWriteStream('../lib.chk.md');
+let io = createWriteStream(join(__dirname, '../lib.chk.md'));
 
 //console._stdout.on('data', (data) => io.write(data));
 //console._stderr.on('data', (data) => io.write(data));
