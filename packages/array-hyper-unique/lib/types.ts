@@ -11,4 +11,6 @@ export type IOptions<T> = {
 
 	filter?(v: T[keyof T]): boolean,
 	filter?<R>(v: R[keyof R]): boolean,
+
+	removeFromFirst?: boolean,
 };

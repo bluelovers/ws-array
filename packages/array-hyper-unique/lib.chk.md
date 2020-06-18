@@ -91,7 +91,7 @@
 [FAIL] @arr/unique
 [FAIL] tfk-unique-array
 [FAIL] just-unique
-[FAIL] arr-unique
+[SUCCESS] arr-unique
 [SUCCESS] array-unique-deep
 [FAIL] lodash.uniq
 [FAIL] lodash/uniq
@@ -217,9 +217,9 @@
 {
   'array-hyper-unique': { success: 15, fail: 0, error: 0 },
   'array-unique-deep': { success: 11, fail: 4, error: 0 },
+  'arr-unique': { success: 8, fail: 7, error: 0 },
   'array-uniq': { success: 7, fail: 8, error: 0 },
   'just-unique': { success: 7, fail: 8, error: 0 },
-  'arr-unique': { success: 7, fail: 8, error: 0 },
   'lodash.uniq': { success: 7, fail: 8, error: 0 },
   'lodash/uniq': { success: 7, fail: 8, error: 0 },
   'array-unique': { success: 6, fail: 9, error: 0 },

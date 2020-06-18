@@ -1,6 +1,7 @@
 
 import _equals from 'deep-eql';
 import { IOptions } from './types';
+import { findLastIndex, findIndex } from 'lodash';
 
 export function equals<T>(a1: T, a2: T): boolean
 export function equals<T>(a1: T, a2: unknown): a2 is T
@@ -15,9 +16,11 @@ export function defaultFilter<T>(options: IOptions<T> = {})
 	const checker = options.checker || defaultChecker;
 	const filter = options.filter || null;
 
+	const find = options.removeFromFirst ? findLastIndex : findIndex;
+
 	const cb = <K extends any[]>(val: K[keyof K], index: number, arr: K) =>
 	{
-		let i = arr.findIndex(a => checker(a, val, arr, arr));
+		let i = find(arr, a => checker(a, val, arr, arr));
 		return i == index && (!filter || filter(val));
 	};
 

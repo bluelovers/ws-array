@@ -7,4 +7,5 @@ export declare type IOptions<T> = {
     overwrite?: boolean;
     filter?(v: T[keyof T]): boolean;
     filter?<R>(v: R[keyof R]): boolean;
+    removeFromFirst?: boolean;
 };

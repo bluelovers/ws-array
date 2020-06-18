@@ -57,7 +57,8 @@
     "sort-package-json": "ynpx --quiet yarn-tool -- sort"
   },
   "dependencies": {
-    "deep-eql": "^4.0.0"
+    "deep-eql": "^4.0.0",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@arr/unique": "^1.0.1",
@@ -66,7 +67,6 @@
     "array-unique": "^0.3.2",
     "array-unique-deep": "^1.0.1",
     "just-unique": "^3.2.0",
-    "lodash": "^4.17.15",
     "lodash.uniq": "^4.5.0",
     "tfk-unique-array": "^2.0.0"
   },
