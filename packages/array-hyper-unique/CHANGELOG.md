@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.6...array-hyper-unique@1.1.7) (2020-06-18)
+
+
+### ✨　Features
+
+* add support remove item form start ([cc89ec5](https://github.com/bluelovers/ws-array/commit/cc89ec5304b107a6d61b3ae0fd607ae9fcd34735))
+
+
+### 🚨　Tests
+
+* update test ([1808424](https://github.com/bluelovers/ws-array/commit/1808424b11efc07a60ea70e15b2fe3e45e9adca5))
+
+
+
+
+
 ## [1.1.6](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.5...array-hyper-unique@1.1.6) (2020-06-16)
 
 
