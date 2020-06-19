@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@1.0.7...@bluelovers/string-natural-compare@1.1.1) (2020-06-19)
+
+
+### 🐛　Bug Fixes
+
+* **typescript:** avoid https://github.com/microsoft/TypeScript/issues/39149 ([44a5863](https://github.com/bluelovers/ws-array/commit/44a586363f01f66ac4d061b71bdefd0a17d4d2b6))
+
+
+
+
+
 ## [1.0.7](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@1.0.6...@bluelovers/string-natural-compare@1.0.7) (2020-06-16)
 
 
