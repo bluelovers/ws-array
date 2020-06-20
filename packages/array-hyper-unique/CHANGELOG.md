@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.7...array-hyper-unique@1.1.8) (2020-06-20)
+
+
+### 📦　Code Refactoring
+
+* rename ([afe0647](https://github.com/bluelovers/ws-array/commit/afe0647f9899e2f5dc74bc099fb15e347e81460a))
+* rename ([2e3b531](https://github.com/bluelovers/ws-array/commit/2e3b53175c85c5535c069da13b7811a4563a8d5f))
+* rename ([cdf982b](https://github.com/bluelovers/ws-array/commit/cdf982b5c665d06ad9e467c1500d82e1c233c671))
+
+
+
+
+
 ## [1.1.7](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.6...array-hyper-unique@1.1.7) (2020-06-18)
 
 
