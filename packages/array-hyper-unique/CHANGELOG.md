@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.8...array-hyper-unique@1.1.9) (2020-07-01)
+
+
+### ♻️　Chores
+
+* update deps ([549fec1](https://github.com/bluelovers/ws-array/commit/549fec1f8672294300ad5653001882e0795363ed))
+
+
+
+
+
 ## [1.1.8](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@1.1.7...array-hyper-unique@1.1.8) (2020-06-20)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@1.1.1...@bluelovers/string-natural-compare@1.1.2) (2020-07-01)
+
+
+### ✨　Features
+
+* add caseInsensitive ([b76abcd](https://github.com/bluelovers/ws-array/commit/b76abcd86398add2929b0822521471fcc0848ad4))
+
+
+
+
+
 ## [1.1.1](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@1.0.7...@bluelovers/string-natural-compare@1.1.1) (2020-06-19)
 
 
