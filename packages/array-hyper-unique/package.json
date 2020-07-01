@@ -50,9 +50,9 @@
     "test": "jest",
     "build:lib:chk": "ts-node test/lib.chk",
     "prepublishOnly": "yarn run test && yarn run build:lib:chk",
+    "prepublishOnly_": "yarn run prepublishOnly:check-bin && yarn run test",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
-    "prepublishOnly_": "yarn run prepublishOnly:check-bin && yarn run test",
     "ncu": "ynpx --quiet yarn-tool -- ncu -u",
     "sort-package-json": "ynpx --quiet yarn-tool -- sort"
   },

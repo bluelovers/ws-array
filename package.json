@@ -21,12 +21,12 @@
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.19",
     "@types/array-unique": "^0.3.0",
-    "@types/jest": "^26.0.0",
-    "@types/lodash": "^4.14.155",
+    "@types/jest": "^26.0.3",
+    "@types/lodash": "^4.14.157",
     "@types/lodash.uniq": "^4.5.6",
     "@types/node": "*",
-    "jest": "^26.0.1",
-    "ts-jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.1"
   },
   "peerDependencies": {
     "lerna": "^3.22.1"
