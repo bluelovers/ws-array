@@ -78,8 +78,11 @@ export const compareCaseInsensitive = createNew({
 	caseInsensitive: true,
 })
 
+export { compareCaseInsensitive as caseInsensitive }
+
 naturalCompare.createNew = createNew;
 naturalCompare.compareCaseInsensitive = compareCaseInsensitive;
+naturalCompare.caseInsensitive = compareCaseInsensitive;
 naturalCompare.default = naturalCompare;
 
 Object.defineProperty(naturalCompare, "__esModule", { value: true });

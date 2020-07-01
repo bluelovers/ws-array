@@ -6,7 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.compareCaseInsensitive = exports.createNew = exports.naturalCompare = void 0;
+exports.caseInsensitive = exports.compareCaseInsensitive = exports.createNew = exports.naturalCompare = void 0;
 const string_natural_compare_1 = __importDefault(require("string-natural-compare"));
 /**
  * Compare alphanumeric strings the same way a human would,
@@ -51,8 +51,10 @@ exports.createNew = createNew;
 exports.compareCaseInsensitive = createNew({
     caseInsensitive: true,
 });
+exports.caseInsensitive = exports.compareCaseInsensitive;
 naturalCompare.createNew = createNew;
 naturalCompare.compareCaseInsensitive = exports.compareCaseInsensitive;
+naturalCompare.caseInsensitive = exports.compareCaseInsensitive;
 naturalCompare.default = naturalCompare;
 Object.defineProperty(naturalCompare, "__esModule", { value: true });
 exports.default = naturalCompare;

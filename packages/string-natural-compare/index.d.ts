@@ -25,6 +25,7 @@ export declare function naturalCompare(a: any, b: any, opts?: IOptionsNaturalCom
 export declare namespace naturalCompare {
     export var createNew: typeof import(".").createNew;
     export var compareCaseInsensitive: (a: any, b: any) => number;
+    export var caseInsensitive: (a: any, b: any) => number;
     var _a: typeof naturalCompare;
     export { _a as default };
 }
@@ -36,4 +37,5 @@ export declare function createNew(opts?: IOptionsNaturalCompare): (a: any, b: an
  * compare strings case-insensitively
  */
 export declare const compareCaseInsensitive: (a: any, b: any) => number;
+export { compareCaseInsensitive as caseInsensitive };
 export default naturalCompare;
