@@ -58,15 +58,16 @@
   },
   "dependencies": {
     "deep-eql": "^4.0.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21",
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@arr/unique": "^1.0.1",
     "arr-unique": "^1.0.2",
-    "array-uniq": "^2.1.0",
+    "array-uniq": "<3 >=2.1",
     "array-unique": "^0.3.2",
     "array-unique-deep": "^1.0.1",
-    "just-unique": "^3.2.0",
+    "just-unique": "^3.3.0",
     "lodash.uniq": "^4.5.0",
     "tfk-unique-array": "^2.0.0"
   },

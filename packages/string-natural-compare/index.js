@@ -2,12 +2,10 @@
 /**
  * Created by user on 2020/6/4.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.caseInsensitive = exports.compareCaseInsensitive = exports.createNew = exports.naturalCompare = void 0;
-const string_natural_compare_1 = __importDefault(require("string-natural-compare"));
+const tslib_1 = require("tslib");
+const string_natural_compare_1 = (0, tslib_1.__importDefault)(require("string-natural-compare"));
 /**
  * Compare alphanumeric strings the same way a human would,
  * using a natural order algorithm
@@ -30,7 +28,7 @@ function naturalCompare(a, b, opts) {
         if (a === b) {
             return 0;
         }
-        i = string_natural_compare_1.default(a, b, opts);
+        i = (0, string_natural_compare_1.default)(a, b, opts);
     }
     if (i !== 0 && (opts === null || opts === void 0 ? void 0 : opts.desc)) {
         i = 0 - i;

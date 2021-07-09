@@ -1,4 +1,4 @@
-import { ITSRequireAtLeastOne } from 'ts-type';
+import { ITSRequireAtLeastOne } from 'ts-type/lib/type/record';
 
 /**
  * same as T[][]

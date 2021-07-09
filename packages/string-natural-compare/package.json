@@ -30,7 +30,8 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
-    "string-natural-compare": "^3.0.1"
+    "string-natural-compare": "^3.0.1",
+    "tslib": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"
