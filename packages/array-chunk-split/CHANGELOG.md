@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/bluelovers/ws-array/compare/array-chunk-split@1.0.5...array-chunk-split@1.0.6) (2021-07-09)
+
+
+### ♻️　Chores
+
+* update deps and use tslib with importHelpers ([7364982](https://github.com/bluelovers/ws-array/commit/7364982d9e8ebff5dc9b9742f187e3dc5d216f38))
+
+
+
+
+
 ## [1.0.5](https://github.com/bluelovers/ws-array/compare/array-chunk-split@1.0.4...array-chunk-split@1.0.5) (2020-06-16)
 
 
