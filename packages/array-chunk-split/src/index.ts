@@ -93,19 +93,21 @@ export function arrayChunkMap<T, R = T>(options: IOptions<T> & {
 		throw new TypeError(`maxChunkLength or maxChunkSize is required`)
 	}
 
-	if (typeof mapMethod != 'function')
+	if (typeof mapMethod !== 'function')
 	{
 		if (mapMethod)
 		{
+			// @ts-ignore
 			mapMethod = (value) => value[value.length - 1];
 		}
 		else
 		{
+			// @ts-ignore
 			mapMethod = (value) => value[0];
 		}
 	}
 
-	return result.map(mapMethod) as any as R[];
+	return result.map(mapMethod as any) as any as R[];
 }
 
 /**

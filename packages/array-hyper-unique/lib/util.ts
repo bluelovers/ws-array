@@ -1,4 +1,4 @@
-
+// @ts-ignore
 import _equals from 'deep-eql';
 import { IOptions } from './types';
 import { findLastIndex, findIndex } from 'lodash';
@@ -6,7 +6,7 @@ import { findLastIndex, findIndex } from 'lodash';
 export function equals<T>(a1: T, a2: T): boolean
 export function equals<T>(a1: T, a2: unknown): a2 is T
 export function equals<T>(a1: unknown, a2: T): a1 is T
-export function equals(a1, a2): boolean
+export function equals(a1: any, a2: any): boolean
 {
 	return _equals(a1, a2)
 }
@@ -27,6 +27,7 @@ export function defaultFilter<T>(options: IOptions<T> = {})
 	return cb;
 }
 
+// @ts-ignore
 export function defaultChecker<T, R>(element: T, value: R, arr_new?: Array<T | R>, arr_old?: Array<T | R>): boolean
 {
 	return _equals(element, value);

@@ -1,4 +1,4 @@
-import { arrayChunkSplit, arrayChunkMap, arrayChunkBySize } from '../index';
+import { arrayChunkSplit, arrayChunkMap, arrayChunkBySize } from '../src/index';
 
 describe(`arrayChunkSplit`, () =>
 {

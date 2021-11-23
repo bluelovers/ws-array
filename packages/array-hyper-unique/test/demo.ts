@@ -2,7 +2,7 @@
  * Created by user on 2018/5/30/030.
  */
 
-import { array_unique, default as lazy_unique } from '../index';
+import { array_unique, default as lazy_unique } from '../src/index';
 
 _testIt([
 		1,

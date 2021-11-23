@@ -1,6 +1,6 @@
 {
   "name": "array-hyper-unique",
-  "version": "1.1.10",
+  "version": "2.0.0",
   "description": "Get unique values of an array. Really, like deeply unique.",
   "keywords": [
     "Array.prototype.unique",
@@ -41,25 +41,41 @@
   },
   "license": "ISC",
   "author": "bluelovers",
-  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "build:lib:chk": "ts-node test/lib.chk",
-    "prepublishOnly": "yarn run test && yarn run build:lib:chk",
-    "prepublishOnly_": "yarn run prepublishOnly:check-bin && yarn run test",
-    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "coverage": "yarn run test -- --coverage",
+    "lint": "ynpx --quiet eslint -- **/*.ts",
+    "test": "jest --passWithNoTests",
+    "test:jest": "jest --passWithNoTests",
+    "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "posttest": "yarn run build",
+    "build": "yarn run build:tsdx && yarn run build:dts",
+    "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --external-inlines ts-type --export-referenced-types false & echo build:dts",
+    "build:tsdx": "tsdx build --target node --name index",
+    "preversion": "echo preversion && yarn run test",
+    "version": "echo version",
+    "postversion": "echo postversion",
+    "prepublish": "echo prepublish",
+    "prepublishOnly": "echo prepublishOnly",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
-    "ncu": "ynpx --quiet yarn-tool -- ncu -u",
-    "sort-package-json": "ynpx --quiet yarn-tool -- sort"
+    "publish": "echo publish",
+    "postpublish": "echo postpublish",
+    "postpublishOnly": "echo postpublishOnly",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
     "deep-eql": "^4.0.0",
     "lodash": "^4.17.21",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
     "@arr/unique": "^1.0.1",
@@ -67,7 +83,7 @@
     "array-uniq": "<3 >=2.1",
     "array-unique": "^0.3.2",
     "array-unique-deep": "^1.0.1",
-    "just-unique": "^3.3.0",
+    "just-unique": "^4.0.1",
     "lodash.uniq": "^4.5.0",
     "tfk-unique-array": "^2.0.0"
   },

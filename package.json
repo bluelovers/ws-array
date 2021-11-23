@@ -6,28 +6,50 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "yt ws run test",
-    "lerna:publish": "npx lerna publish",
-    "lerna:publish:yes": "npx lerna publish --yes --cd-version patch",
-    "ncu": "npx yarn-tool ncu -u && npx yarn-tool ws exec yarn-tool ncu -- -u",
-    "sort-package-json": "npx yarn-tool sort && npx yarn-tool ws exec yarn-tool sort"
+    "test": "yarn-tool ws run test",
+    "install:reset-lockfile": "yarn-tool install --reset-lockfile",
+    "test:all": "lerna run test --concurrency 1",
+    "build:all": "lerna run build --concurrency 1",
+    "lerna:publish": "yarn run prepublishOnly:root && lerna publish && yarn run postpublishOnly",
+    "lerna:publish:yes": "yarn run prepublishOnly:root && lerna publish --yes --bump patch && yarn run postpublishOnly",
+    "preversion": "yt ws run test",
+    "version": "echo workspaces version",
+    "postversion": "echo workspaces postversion",
+    "prepublish": "echo workspaces prepublish",
+    "prepare:fix-ws-links": "ynpx --quiet @yarn-tool/fix-ws-links",
+    "prepublishOnly": "echo workspaces prepublishOnly",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:lockfile": "ynpx --quiet sync-lockfile",
+    "prepublishOnly:root": "yarn run prepublishOnly:check-bin && yarn run prepare:fix-ws-links",
+    "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "publish": "echo workspaces publish",
+    "postpublish": "echo workspaces postpublish",
+    "postpublishOnly": "yarn run postpublishOnly:ws-root-changelog & echo postpublishOnly",
+    "postpublishOnly:ws-root-changelog": "ynpx ws-root-changelog & git add ./CHANGELOG.md & git commit ./CHANGELOG.md -m \"chore(changelog): update changelog toc in workspaces root\" & echo update changelog toc in workspaces root",
+    "ncu": "yarn run ncu:root && yarn run ncu:ws",
+    "ncu:root": "yarn-tool ncu -u",
+    "ncu:ws": "yarn-tool ws exec yarn-tool ncu -- -u",
+    "sort-package-json": "yarn run sort-package-json:root && yarn run sort-package-json:ws",
+    "sort-package-json:root": "yarn-tool sort",
+    "sort-package-json:ws": "yarn-tool ws sort",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "resolutions": {},
   "dependencies": {
-    "debug-color2": "^1.2.3",
+    "debug-color2": "^1.2.7",
     "deep-eql": "^4.0.0",
     "strip-ansi": "<7 >=6",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.24",
+    "@bluelovers/tsconfig": "^1.0.26",
     "@types/array-unique": "^0.3.0",
-    "@types/jest": "^26.0.24",
-    "@types/lodash": "^4.14.171",
+    "@types/jest": "^27.0.3",
+    "@types/lodash": "^4.14.177",
     "@types/lodash.uniq": "^4.5.6",
     "@types/node": "*",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.3"
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7"
   },
   "peerDependencies": {
     "lerna": "^4.0.0"

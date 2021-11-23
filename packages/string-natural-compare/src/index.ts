@@ -2,6 +2,7 @@
  * Created by user on 2020/6/4.
  */
 
+// @ts-ignore
 import _naturalCompare from 'string-natural-compare';
 
 export interface IOptionsStringNaturalCompare
@@ -28,7 +29,7 @@ export interface IOptionsNaturalCompare extends IOptionsStringNaturalCompare
  * where numeric characters are sorted
  * based on their numeric values rather than their ASCII values.
  */
-export function naturalCompare(a, b, opts?: IOptionsNaturalCompare)
+export function naturalCompare(a: string | number, b: string | number, opts?: IOptionsNaturalCompare)
 {
 	let i: number;
 
@@ -68,7 +69,7 @@ export function naturalCompare(a, b, opts?: IOptionsNaturalCompare)
  */
 export function createNew(opts?: IOptionsNaturalCompare)
 {
-	return (a, b) => naturalCompare(a, b, opts)
+	return (a: string | number, b: string | number) => naturalCompare(a, b, opts)
 }
 
 /**

@@ -1,4 +1,4 @@
-import { arrayChunkMap } from '../index';
+import { arrayChunkMap } from '../src/index';
 
 describe(`arrayChunkMap`, () =>
 {
