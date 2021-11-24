@@ -1,5 +1,5 @@
 import getTestcase from './_data';
-import * as core from '../core';
+import * as core from '../src/index';
 import { inspect } from 'util';
 
 describe(`removeFromFirst`, () =>

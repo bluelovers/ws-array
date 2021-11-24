@@ -2,7 +2,7 @@
  * Created by user on 2018/5/30/030.
  */
 
-import { lazy_unique, array_unique } from '../core';
+import { lazy_unique, array_unique } from '../src/index';
 
 describe(`throw`, () =>
 {

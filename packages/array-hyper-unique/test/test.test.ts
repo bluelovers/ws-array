@@ -3,7 +3,7 @@
  */
 
 import getTestcase from './_data';
-import { lazy_unique, array_unique } from '../core';
+import { lazy_unique, array_unique } from '../src/index';
 
 describe(`suite`, () =>
 {

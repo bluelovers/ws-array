@@ -3,7 +3,7 @@
  */
 
 import getTestcase from './_data';
-import { array_unique, IOptions } from '../core';
+import { array_unique, IOptions } from '../src/index';
 
 describe(`(v) => v`, () =>
 {

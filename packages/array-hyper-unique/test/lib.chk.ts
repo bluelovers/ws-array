@@ -2,8 +2,8 @@
  * Created by user on 2018/9/23/023.
  */
 
-import { lazy_unique, array_unique as array_hyper_unique } from '../core';
-import { equals } from '../core';
+import { lazy_unique, array_unique as array_hyper_unique } from '../src/index';
+import { equals } from '../src/index';
 import getTestcase from './_data';
 import { createWriteStream } from 'fs';
 import stripAnsi from 'strip-ansi';
@@ -115,6 +115,7 @@ getTestcase()
 			}
 			catch (e)
 			{
+				// @ts-ignore
 				console.magentaBright.error(lib_data.name, e.message);
 				err = true;
 
