@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrayGroupToMap 1`] = `
+Map {
+  "18056a75" => Array [
+    Object {
+      "name": "Forest",
+    },
+    Object {
+      "name": "Forest",
+    },
+    Object {
+      "name": "Forest",
+    },
+  ],
+  "57a555ae" => Array [
+    Object {
+      "name": "Plains",
+    },
+    Object {
+      "name": "Plains",
+    },
+    Object {
+      "name": "Plains",
+    },
+  ],
+}
+`;
+
+exports[`arrayGroupToRecord 1`] = `
+Object {
+  "18056a75": Array [
+    Object {
+      "name": "Forest",
+    },
+    Object {
+      "name": "Forest",
+    },
+    Object {
+      "name": "Forest",
+    },
+  ],
+  "57a555ae": Array [
+    Object {
+      "name": "Plains",
+    },
+    Object {
+      "name": "Plains",
+    },
+    Object {
+      "name": "Plains",
+    },
+  ],
+}
+`;
