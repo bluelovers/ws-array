@@ -1,6 +1,6 @@
 {
   "name": "distribute-group-to-array",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-array/tree/master/packages/distribute-group-to-array#readme",
   "bugs": {
@@ -42,7 +42,5 @@
   "dependencies": {
     "tslib": "^2.3.1"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
   "packageManager": "yarn@^1.22.11"
 }

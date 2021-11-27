@@ -1,6 +1,6 @@
 {
   "name": "array-group-to-record",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/bluelovers/ws-array/tree/master/packages/array-group-to-record#readme",
   "bugs": {
@@ -46,6 +46,5 @@
   "devDependencies": {
     "@types/hash-sum": "^1.0.0"
   },
-  "peerDependencies": {},
   "packageManager": "yarn@^1.22.11"
 }
