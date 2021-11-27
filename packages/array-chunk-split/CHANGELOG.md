@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/bluelovers/ws-array/compare/array-chunk-split@2.0.6...array-chunk-split@2.0.7) (2021-11-27)
+
+
+### 🐛　Bug Fixes
+
+* **build:** `--export-referenced-types` can't be set false ([3041fd2](https://github.com/bluelovers/ws-array/commit/3041fd20f3d144da0be68e89364f069576661ed5))
+
+
+
+
+
 ## [2.0.6](https://github.com/bluelovers/ws-array/compare/array-chunk-split@2.0.5...array-chunk-split@2.0.6) (2021-11-27)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.4...@bluelovers/string-natural-compare@2.0.5) (2021-11-27)
+
+
+### 🐛　Bug Fixes
+
+* **build:** `--export-referenced-types` can't be set false ([3041fd2](https://github.com/bluelovers/ws-array/commit/3041fd20f3d144da0be68e89364f069576661ed5))
+
+
+
+
+
 ## [2.0.4](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.3...@bluelovers/string-natural-compare@2.0.4) (2021-11-27)
 
 
