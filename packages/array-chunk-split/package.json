@@ -13,13 +13,13 @@
   },
   "license": "ISC",
   "author": "bluelovers",
-  "directories": {
-    "test": "test"
-  },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "coverage": "yarn run test -- --coverage",
     "lint": "ynpx --quiet eslint -- **/*.ts",
