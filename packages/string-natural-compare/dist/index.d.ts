@@ -37,7 +37,7 @@ export declare function createNew(opts?: IOptionsNaturalCompare): (a: string | n
  * compare strings case-insensitively
  */
 export declare const compareCaseInsensitive: (a: string | number, b: string | number) => number;
-naturalCompare;
+export default naturalCompare;
 
 export {
 	compareCaseInsensitive as caseInsensitive,

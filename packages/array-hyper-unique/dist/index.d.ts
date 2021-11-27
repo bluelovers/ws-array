@@ -31,6 +31,6 @@ export declare namespace lazy_unique {
 	export { _a as default };
 }
 export declare function lazy_unique_overwrite<T>(...arr: Array<T | T[]>): T | (T | T[])[];
-lazy_unique;
+export default lazy_unique;
 
 export {};

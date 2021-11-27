@@ -1,10 +1,19 @@
-declare type ITSRequiredPick<T, K extends keyof T = keyof T> = {
+/**
+ * pick K and mark as Required
+ */
+export declare type ITSRequiredPick<T, K extends keyof T = keyof T> = {
 	[P in K]-?: T[P];
 };
-declare type ITSPartialPick<T, K extends keyof T = keyof T> = {
+/**
+ * pick K and mark as Partial
+ */
+export declare type ITSPartialPick<T, K extends keyof T = keyof T> = {
 	[P in K]?: T[P];
 };
-declare type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
+/**
+ * https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist
+ */
+export declare type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
 	[K in Keys]-?: ITSRequiredPick<T, K> & ITSPartialPick<T, Exclude<Keys, K>>;
 }[Keys];
 /**
@@ -79,6 +88,6 @@ export declare function arrayChunkBySize<T>(arr: T[], maxChunkSize: number): ICh
  * @example arrayChunkSplit([1, 2, 3, 4, 5, 6, 7, 8], 4); // => [[1, 2], [3, 4], [5, 6], [7, 8]]
  */
 export declare function arrayChunkSplit<T>(arr: T[], maxChunkLength: number): IChunkArray<T>;
-arrayChunkSplit;
+export default arrayChunkSplit;
 
 export {};
