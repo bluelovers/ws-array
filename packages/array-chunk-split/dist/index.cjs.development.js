@@ -37,14 +37,36 @@ function arrayChunkBySize(arr, maxChunkSize) {
     length
   } = arr;
 
-  if (typeof maxChunkSize !== 'number' || maxChunkSize < 1) {
-    throw new RangeError(`expected maxChunkSize > 0 but got ${maxChunkSize}`);
-  }
+  if (Array.isArray(maxChunkSize)) {
+    if (!maxChunkSize.filter(v => v && v < length).length) {
+      throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${length} but got ${maxChunkSize}`);
+    }
 
-  for (let i = 0; i < length; i++) {
-    let next = i + maxChunkSize;
-    result.push(arr.slice(i, next));
-    i = next - 1;
+    let cur = 0;
+    let next;
+
+    for (let i of maxChunkSize) {
+      next = cur + i;
+      result.push(arr.slice(cur, next));
+
+      if (next >= length) {
+        break;
+      }
+
+      cur = next;
+    }
+
+    if (next < length) {
+      result.push(arr.slice(cur));
+    }
+  } else if (typeof maxChunkSize !== 'number' || maxChunkSize < 1) {
+    throw new RangeError(`expected maxChunkSize > 0 but got ${maxChunkSize}`);
+  } else {
+    for (let i = 0; i < length; i++) {
+      let next = i + maxChunkSize;
+      result.push(arr.slice(i, next));
+      i = next - 1;
+    }
   }
 
   return result;

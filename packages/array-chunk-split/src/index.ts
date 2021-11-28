@@ -1,4 +1,5 @@
 import { ITSRequireAtLeastOne } from 'ts-type/lib/type/record';
+import { ITSValueOrArray } from 'ts-type';
 
 /**
  * same as T[][]
@@ -115,25 +116,56 @@ export function arrayChunkMap<T, R = T>(options: IOptions<T> & {
  *
  * @example arrayChunkBySize([1, 2, 3, 4, 5, 6, 7, 8], 5); // => [[1, 2, 3, 4, 5], [6, 7, 8]]
  */
-export function arrayChunkBySize<T>(arr: T[], maxChunkSize: number): IChunkArray<T>
+export function arrayChunkBySize<T>(arr: T[], maxChunkSize: ITSValueOrArray<number>): IChunkArray<T>
 {
 	const result: IChunkArray<T> = [];
 	//let part: T[] = [];
 
 	const { length } = arr;
 
-	if (typeof maxChunkSize !== 'number' || maxChunkSize < 1)
+	if (Array.isArray(maxChunkSize))
+	{
+		if (!maxChunkSize.filter(v => v && v < length).length)
+		{
+			throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${length} but got ${maxChunkSize}`)
+		}
+
+		let cur = 0;
+		let next: number;
+
+		for (let i of maxChunkSize)
+		{
+			next = cur + i;
+
+			result.push(arr.slice(cur, next));
+
+			if (next >= length)
+			{
+				break;
+			}
+
+			cur = next;
+		}
+
+		if (next < length)
+		{
+			result.push(arr.slice(cur));
+		}
+	}
+	else if (typeof maxChunkSize !== 'number' || maxChunkSize < 1)
 	{
 		throw new RangeError(`expected maxChunkSize > 0 but got ${maxChunkSize}`)
 	}
-
-	for (let i = 0; i < length; i++)
+	else
 	{
-		let next = i + maxChunkSize;
+		for (let i = 0; i < length; i++)
+		{
+			let next = i + maxChunkSize;
 
-		result.push(arr.slice(i, next));
+			result.push(arr.slice(i, next));
 
-		i = next - 1;
+			i = next - 1;
+		}
 	}
 
 	return result;

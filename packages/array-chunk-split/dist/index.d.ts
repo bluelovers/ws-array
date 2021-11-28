@@ -16,6 +16,7 @@ export declare type ITSPartialPick<T, K extends keyof T = keyof T> = {
 export declare type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
 	[K in Keys]-?: ITSRequiredPick<T, K> & ITSPartialPick<T, Exclude<Keys, K>>;
 }[Keys];
+export declare type ITSValueOrArray<T> = T | T[];
 /**
  * same as T[][]
  */
@@ -81,7 +82,7 @@ export declare function arrayChunkMap<T, R = T>(options: IOptions<T> & {
  *
  * @example arrayChunkBySize([1, 2, 3, 4, 5, 6, 7, 8], 5); // => [[1, 2, 3, 4, 5], [6, 7, 8]]
  */
-export declare function arrayChunkBySize<T>(arr: T[], maxChunkSize: number): IChunkArray<T>;
+export declare function arrayChunkBySize<T>(arr: T[], maxChunkSize: ITSValueOrArray<number>): IChunkArray<T>;
 /**
  * Split an array into arrays with max chunk length
  *

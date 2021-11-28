@@ -1,4 +1,4 @@
-import { arrayChunkSplit, arrayChunkMap, arrayChunkBySize } from '../src/index';
+import { arrayChunkBySize, arrayChunkSplit } from '../src/index';
 
 describe(`arrayChunkSplit`, () =>
 {
@@ -213,5 +213,61 @@ describe(`arrayChunkBySize`, () =>
 	{
 		expect(() => arrayChunkBySize([], 0)).toThrowError();
 	})
+
+	test(`[3, 2, 4]`, () =>
+	{
+
+		const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+		let actual = arrayChunkBySize(arr, [3, 2, 4]);
+		let expected = [[1, 2, 3], [4, 5], [6, 7, 8]];
+
+		expect(actual).toStrictEqual(expected);
+		//expect(actual).toBeInstanceOf(Date);
+		expect(actual).toMatchSnapshot();
+
+	});
+
+	test(`[3, 2, 1]`, () =>
+	{
+
+		const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+		let actual = arrayChunkBySize(arr, [3, 2, 1]);
+		let expected = [[1, 2, 3], [4, 5], [6], [7, 8]];
+
+		expect(actual).toStrictEqual(expected);
+		//expect(actual).toBeInstanceOf(Date);
+		expect(actual).toMatchSnapshot();
+
+	});
+
+	test(`[3, 2, 2]`, () =>
+	{
+
+		const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+		let actual = arrayChunkBySize(arr, [3, 2, 2]);
+		let expected = [[1, 2, 3], [4, 5], [6, 7], [8]];
+
+		expect(actual).toStrictEqual(expected);
+		//expect(actual).toBeInstanceOf(Date);
+		expect(actual).toMatchSnapshot();
+
+	});
+
+	test(`[3, 2, 3]`, () =>
+	{
+
+		const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+		let actual = arrayChunkBySize(arr, [3, 2, 3]);
+		let expected = [[1, 2, 3], [4, 5], [6, 7, 8]];
+
+		expect(actual).toStrictEqual(expected);
+		//expect(actual).toBeInstanceOf(Date);
+		expect(actual).toMatchSnapshot();
+
+	});
 
 });

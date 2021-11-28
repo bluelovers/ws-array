@@ -1,5 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`arrayChunkBySize [3, 2, 1] 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+  ],
+  Array [
+    6,
+  ],
+  Array [
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize [3, 2, 2] 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+  ],
+  Array [
+    6,
+    7,
+  ],
+  Array [
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize [3, 2, 3] 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+  ],
+  Array [
+    6,
+    7,
+    8,
+  ],
+]
+`;
+
+exports[`arrayChunkBySize [3, 2, 4] 1`] = `
+Array [
+  Array [
+    1,
+    2,
+    3,
+  ],
+  Array [
+    4,
+    5,
+  ],
+  Array [
+    6,
+    7,
+    8,
+  ],
+]
+`;
+
 exports[`arrayChunkBySize 1 1`] = `
 Array [
   Array [
