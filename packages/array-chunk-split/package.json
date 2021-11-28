@@ -1,6 +1,6 @@
 {
   "name": "array-chunk-split",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Split an array into arrays with max chunk length",
   "keywords": [],
   "homepage": "https://github.com/bluelovers/ws-array#readme",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://github.com/bluelovers/ws-array/compare/array-chunk-split@2.0.7...array-chunk-split@2.0.8) (2021-11-28)
+
+
+### ✨　Features
+
+* `arrayChunkBySize` support input `number[]` ([9cb5532](https://github.com/bluelovers/ws-array/commit/9cb5532e725dba4191412a3a16ec914413640229))
+
+
+
+
+
 ## [2.0.7](https://github.com/bluelovers/ws-array/compare/array-chunk-split@2.0.6...array-chunk-split@2.0.7) (2021-11-27)
 
 
