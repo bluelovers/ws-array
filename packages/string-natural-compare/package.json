@@ -2,6 +2,10 @@
   "name": "@bluelovers/string-natural-compare",
   "version": "2.0.5",
   "description": "Compare alphanumeric strings the same way a human would, using a natural order algorithm",
+  "keywords": [
+    "create-by-yarn-tool",
+    "create-by-tsdx"
+  ],
   "homepage": "https://github.com/bluelovers/ws-array/tree/master/packages/string-natural-compare#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-array/issues"
@@ -12,10 +16,20 @@
   },
   "license": "ISC",
   "author": "bluelovers",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.mjs",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "coverage": "yarn run test -- --coverage",
     "lint": "ynpx --quiet eslint -- **/*.ts",
@@ -46,5 +60,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44"
+  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44",
+  "packageManager": "yarn@^1.22.11"
 }

@@ -65,4 +65,4 @@ function distributeGroupToArray(group, options) {
 }
 
 export { _createGroupArray, distributeGroupToArray as default, distributeGroupToArray, distributeGroupToArrayCore, mapToRecord };
-//# sourceMappingURL=index.esm.js.map
+//# sourceMappingURL=index.esm.mjs.map

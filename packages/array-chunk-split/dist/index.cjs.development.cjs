@@ -84,4 +84,4 @@ exports.arrayChunkBySize = arrayChunkBySize;
 exports.arrayChunkMap = arrayChunkMap;
 exports.arrayChunkSplit = arrayChunkSplit;
 exports["default"] = arrayChunkSplit;
-//# sourceMappingURL=index.cjs.development.js.map
+//# sourceMappingURL=index.cjs.development.cjs.map

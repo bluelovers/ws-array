@@ -1,9 +1,17 @@
-import hashSum from 'hash-sum';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var hashSum = require('hash-sum');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var hashSum__default = /*#__PURE__*/_interopDefaultLegacy(hashSum);
 
 function handleOptions(options) {
   var _options$getKey;
 
-  const getKey = (_options$getKey = options === null || options === void 0 ? void 0 : options.getKey) !== null && _options$getKey !== void 0 ? _options$getKey : item => hashSum(item);
+  const getKey = (_options$getKey = options === null || options === void 0 ? void 0 : options.getKey) !== null && _options$getKey !== void 0 ? _options$getKey : item => hashSum__default["default"](item);
   return { ...options,
     getKey
   };
@@ -52,5 +60,9 @@ function sumGroup(group) {
   return len;
 }
 
-export { arrayGroupToMap, arrayGroupToRecord, arrayGroupToRecord as default, handleOptions, sumGroup };
-//# sourceMappingURL=index.esm.js.map
+exports.arrayGroupToMap = arrayGroupToMap;
+exports.arrayGroupToRecord = arrayGroupToRecord;
+exports["default"] = arrayGroupToRecord;
+exports.handleOptions = handleOptions;
+exports.sumGroup = sumGroup;
+//# sourceMappingURL=index.cjs.development.cjs.map

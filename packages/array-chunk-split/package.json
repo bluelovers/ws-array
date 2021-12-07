@@ -2,7 +2,10 @@
   "name": "array-chunk-split",
   "version": "2.0.8",
   "description": "Split an array into arrays with max chunk length",
-  "keywords": [],
+  "keywords": [
+    "create-by-yarn-tool",
+    "create-by-tsdx"
+  ],
   "homepage": "https://github.com/bluelovers/ws-array#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-array/issues"
@@ -13,8 +16,15 @@
   },
   "license": "ISC",
   "author": "bluelovers",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.mjs",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "directories": {
@@ -44,8 +54,9 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^2.0.1",
+    "ts-type": "^2.0.3",
     "tslib": "^2.3.1"
   },
-  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44"
+  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44",
+  "packageManager": "yarn@^1.22.11"
 }

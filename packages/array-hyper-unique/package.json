@@ -29,7 +29,9 @@
     "unique",
     "util",
     "utility",
-    "utils"
+    "utils",
+    "create-by-yarn-tool",
+    "create-by-tsdx"
   ],
   "homepage": "https://github.com/bluelovers/ws-array/tree/master/packages/array-hyper-unique#readme",
   "bugs": {
@@ -41,8 +43,15 @@
   },
   "license": "ISC",
   "author": "bluelovers",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.mjs",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "directories": {
@@ -87,5 +96,6 @@
     "lodash.uniq": "^4.5.0",
     "tfk-unique-array": "^2.0.0"
   },
-  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44"
+  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44",
+  "packageManager": "yarn@^1.22.11"
 }

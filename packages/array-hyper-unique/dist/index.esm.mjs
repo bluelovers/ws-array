@@ -75,4 +75,4 @@ Object.defineProperty(lazy_unique, "__esModule", {
 });
 
 export { array_unique, array_unique_overwrite, lazy_unique as default, defaultChecker, defaultFilter, equals, lazy_unique, lazy_unique_overwrite };
-//# sourceMappingURL=index.esm.js.map
+//# sourceMappingURL=index.esm.mjs.map

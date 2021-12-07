@@ -73,4 +73,4 @@ exports["default"] = distributeGroupToArray;
 exports.distributeGroupToArray = distributeGroupToArray;
 exports.distributeGroupToArrayCore = distributeGroupToArrayCore;
 exports.mapToRecord = mapToRecord;
-//# sourceMappingURL=index.cjs.development.js.map
+//# sourceMappingURL=index.cjs.development.cjs.map

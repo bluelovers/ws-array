@@ -77,4 +77,4 @@ function arrayChunkSplit(arr, maxChunkLength) {
 }
 
 export { arrayChunkBySize, arrayChunkMap, arrayChunkSplit, arrayChunkSplit as default };
-//# sourceMappingURL=index.esm.js.map
+//# sourceMappingURL=index.esm.mjs.map

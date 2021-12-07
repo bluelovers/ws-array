@@ -1,4 +1,12 @@
-import _naturalCompare from 'string-natural-compare';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var _naturalCompare = require('string-natural-compare');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var _naturalCompare__default = /*#__PURE__*/_interopDefaultLegacy(_naturalCompare);
 
 function naturalCompare(a, b, opts) {
   let i;
@@ -16,7 +24,7 @@ function naturalCompare(a, b, opts) {
       return 0;
     }
 
-    i = _naturalCompare(a, b, opts);
+    i = _naturalCompare__default["default"](a, b, opts);
   }
 
   if (i !== 0 && opts !== null && opts !== void 0 && opts.desc) {
@@ -39,5 +47,9 @@ Object.defineProperty(naturalCompare, "__esModule", {
   value: true
 });
 
-export { compareCaseInsensitive as caseInsensitive, compareCaseInsensitive, createNew, naturalCompare as default, naturalCompare };
-//# sourceMappingURL=index.esm.js.map
+exports.caseInsensitive = compareCaseInsensitive;
+exports.compareCaseInsensitive = compareCaseInsensitive;
+exports.createNew = createNew;
+exports["default"] = naturalCompare;
+exports.naturalCompare = naturalCompare;
+//# sourceMappingURL=index.cjs.development.cjs.map
