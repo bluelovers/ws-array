@@ -1,55 +1,38 @@
-import hashSum from 'hash-sum';
+import r from "hash-sum";
 
-function handleOptions(options) {
-  var _options$getKey;
-
-  const getKey = (_options$getKey = options === null || options === void 0 ? void 0 : options.getKey) !== null && _options$getKey !== void 0 ? _options$getKey : item => hashSum(item);
-  return { ...options,
-    getKey
+function handleOptions(o) {
+  var n;
+  const e = null !== (n = null == o ? void 0 : o.getKey) && void 0 !== n ? n : o => r(o);
+  return {
+    ...o,
+    getKey: e
   };
 }
-function arrayGroupToRecord(arr, options) {
-  var _init;
 
-  const {
-    getKey,
-    init
-  } = handleOptions(options);
-  return arr.reduce((map, item, index, arr) => {
-    var _map$id;
-
-    const id = getKey(item, index, arr);
-    (_map$id = map[id]) !== null && _map$id !== void 0 ? _map$id : map[id] = [];
-    map[id].push(item);
-    return map;
-  }, (_init = init === null || init === void 0 ? void 0 : init()) !== null && _init !== void 0 ? _init : {});
+function arrayGroupToRecord(r, o) {
+  var n;
+  const {getKey: e, init: u} = handleOptions(o);
+  return r.reduce(((r, o, n, u) => {
+    var t;
+    const a = e(o, n, u);
+    return null !== (t = r[a]) && void 0 !== t || (r[a] = []), r[a].push(o), r;
+  }), null !== (n = null == u ? void 0 : u()) && void 0 !== n ? n : {});
 }
-function arrayGroupToMap(arr, options) {
-  var _init2;
 
-  const {
-    getKey,
-    init
-  } = handleOptions(options);
-  return arr.reduce((map, item, index, arr) => {
-    var _map$get;
-
-    const id = getKey(item, index, arr);
-    const a = (_map$get = map.get(id)) !== null && _map$get !== void 0 ? _map$get : [];
-    a.push(item);
-    map.set(id, a);
-    return map;
-  }, (_init2 = init === null || init === void 0 ? void 0 : init()) !== null && _init2 !== void 0 ? _init2 : new Map());
+function arrayGroupToMap(r, o) {
+  var n;
+  const {getKey: e, init: u} = handleOptions(o);
+  return r.reduce(((r, o, n, u) => {
+    var t;
+    const a = e(o, n, u), l = null !== (t = r.get(a)) && void 0 !== t ? t : [];
+    return l.push(o), r.set(a, l), r;
+  }), null !== (n = null == u ? void 0 : u()) && void 0 !== n ? n : new Map);
 }
-function sumGroup(group) {
-  let len = 0;
 
-  if (typeof group.forEach === 'undefined') {
-    group = Object.values(group);
-  }
-
-  group.forEach(b => len += b.length);
-  return len;
+function sumGroup(r) {
+  let o = 0;
+  return void 0 === r.forEach && (r = Object.values(r)), r.forEach((r => o += r.length)), 
+  o;
 }
 
 export { arrayGroupToMap, arrayGroupToRecord, arrayGroupToRecord as default, handleOptions, sumGroup };
