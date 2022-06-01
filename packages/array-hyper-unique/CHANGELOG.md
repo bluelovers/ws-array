@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.0.7...array-hyper-unique@2.0.8) (2022-06-01)
+
+
+### 🐛　Bug Fixes
+
+* avoid https://github.com/chaijs/deep-eql/issues/85 ([4ab1cda](https://github.com/bluelovers/ws-array/commit/4ab1cdade5ffb43cdee0d4ca07b9b4884b406bcf))
+
+
+
+
+
 ## [2.0.7](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.0.6...array-hyper-unique@2.0.7) (2022-06-01)
 
 
