@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.6...@bluelovers/string-natural-compare@2.0.7) (2022-06-01)
+
+
+### 🔖　Miscellaneous
+
+* . ([52d4958](https://github.com/bluelovers/ws-array/commit/52d4958aec6d9ffda276a73ad4ec2b6e7204d3e8))
+
+
+
+
+
 ## [2.0.6](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.5...@bluelovers/string-natural-compare@2.0.6) (2022-06-01)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/bluelovers/ws-array/compare/array-group-to-record@1.0.4...array-group-to-record@1.0.5) (2022-06-01)
+
+
+### 🔖　Miscellaneous
+
+* . ([52d4958](https://github.com/bluelovers/ws-array/commit/52d4958aec6d9ffda276a73ad4ec2b6e7204d3e8))
+
+
+
+
+
 ## [1.0.4](https://github.com/bluelovers/ws-array/compare/array-group-to-record@1.0.3...array-group-to-record@1.0.4) (2022-06-01)
 
 
