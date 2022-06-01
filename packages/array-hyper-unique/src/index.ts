@@ -1,9 +1,9 @@
-import { defaultFilter, equals, defaultChecker } from '../lib/util';
+import { defaultFilter, equals, defaultChecker } from './util';
 
-import { IOptions } from '../lib/types';
+import { IOptions } from './types';
 
-export * from '../lib/types';
-export * from '../lib/util';
+export * from './types';
+export * from './util';
 
 export function array_unique<T>(arr: T, options: IOptions<T> = {}): T
 {

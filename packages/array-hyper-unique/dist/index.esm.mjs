@@ -1,77 +1,51 @@
-import _equals from 'deep-eql';
-import { findLastIndex, findIndex } from 'lodash-es';
+import e from "deep-eql";
 
-function equals(a1, a2) {
-  return _equals(a1, a2);
-}
-function defaultFilter(options = {}) {
-  const checker = options.checker || defaultChecker;
-  const filter = options.filter || null;
-  const find = options.removeFromFirst ? findLastIndex : findIndex;
+import { findLastIndex as u, findIndex as r } from "lodash-es";
 
-  const cb = (val, index, arr) => {
-    let i = find(arr, a => checker(a, val, arr, arr));
-    return i == index && (!filter || filter(val));
-  };
-
-  return cb;
-}
-function defaultChecker(element, value, arr_new, arr_old) {
-  return _equals(element, value);
+function equals(u, r) {
+  return e(u, r);
 }
 
-function array_unique(arr, options = {}) {
-  if (!Array.isArray(arr)) {
-    throw new TypeError(`Expected an Array but got ${typeof arr}.`);
+function defaultFilter(e = {}) {
+  const a = e.checker || defaultChecker, i = e.filter || null, t = e.removeFromFirst ? u : r;
+  return (e, u, r) => t(r, (u => a(u, e, r, r))) == u && (!i || i(e));
+}
+
+function defaultChecker(u, r, a, i) {
+  return e(u, r);
+}
+
+function array_unique(e, u = {}) {
+  if (!Array.isArray(e)) throw new TypeError(`Expected an Array but got ${typeof e}.`);
+  const r = defaultFilter(u);
+  if (u.overwrite) {
+    let u = e.length;
+    for (;u--; ) r(e[u], u, e) || e.splice(u, 1);
+    return e;
   }
-
-  const cb = defaultFilter(options);
-
-  if (options.overwrite) {
-    let index = arr.length;
-
-    while (index--) {
-      let val = arr[index];
-
-      if (!cb(val, index, arr)) {
-        arr.splice(index, 1);
-      }
-    }
-
-    return arr;
-  }
-
-  return arr.filter(cb);
+  return e.filter(r);
 }
-function array_unique_overwrite(arr, options = {}) {
-  return array_unique(arr, { ...options,
-    overwrite: true
+
+function array_unique_overwrite(e, u = {}) {
+  return array_unique(e, {
+    ...u,
+    overwrite: !0
   });
 }
-function lazy_unique(...arr) {
-  if (arr.length > 1) {
-    return array_unique(arr);
-  }
 
-  return array_unique(arr[0]);
+function lazy_unique(...e) {
+  return array_unique(e.length > 1 ? e : e[0]);
 }
-function lazy_unique_overwrite(...arr) {
-  if (arr.length > 1) {
-    return array_unique_overwrite(arr);
-  }
 
-  return array_unique_overwrite(arr[0]);
+function lazy_unique_overwrite(...e) {
+  return array_unique_overwrite(e.length > 1 ? e : e[0]);
 }
-lazy_unique.array_unique = array_unique;
-lazy_unique.array_unique_overwrite = array_unique_overwrite;
-lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite;
-lazy_unique.equals = equals;
-lazy_unique.defaultFilter = defaultFilter;
-lazy_unique.defaultChecker = defaultChecker;
-lazy_unique.lazy_unique = lazy_unique;
-lazy_unique.default = lazy_unique;
-Object.defineProperty(lazy_unique, "__esModule", {
-  value: true
+
+lazy_unique.array_unique = array_unique, lazy_unique.array_unique_overwrite = array_unique_overwrite, 
+lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite, lazy_unique.equals = equals, 
+lazy_unique.defaultFilter = defaultFilter, lazy_unique.defaultChecker = defaultChecker, 
+lazy_unique.lazy_unique = lazy_unique, lazy_unique.default = lazy_unique, Object.defineProperty(lazy_unique, "__esModule", {
+  value: !0
 });
 
 export { array_unique, array_unique_overwrite, lazy_unique as default, defaultChecker, defaultFilter, equals, lazy_unique, lazy_unique_overwrite };
