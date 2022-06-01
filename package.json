@@ -37,21 +37,21 @@
   "resolutions": {},
   "dependencies": {
     "debug-color2": "^1.2.7",
-    "deep-eql": "^4.0.0",
+    "deep-eql": "^4.0.1",
     "strip-ansi": "<7 >=6",
-    "tslib": "^2.3.1"
+    "tslib": "^2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.26",
+    "@bluelovers/tsconfig": "^1.0.30",
     "@types/array-unique": "^0.3.0",
-    "@types/jest": "^27.0.3",
-    "@types/lodash": "^4.14.177",
-    "@types/lodash.uniq": "^4.5.6",
+    "@types/jest": "^27.5.1",
+    "@types/lodash": "^4.14.182",
+    "@types/lodash.uniq": "^4.5.7",
     "@types/node": "*",
-    "jest": "^27.3.1",
-    "ts-jest": "^27.0.7"
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.3"
   },
   "peerDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^5.0.0"
   }
 }
