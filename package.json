@@ -37,7 +37,7 @@
   "resolutions": {},
   "dependencies": {
     "debug-color2": "^1.2.7",
-    "deep-eql": "^4.0.1",
+    "deep-eql": "= 4.0.0",
     "strip-ansi": "<7 >=6",
     "tslib": "^2"
   },

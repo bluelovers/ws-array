@@ -97,7 +97,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "deep-eql": "^4.0.1",
+    "deep-eql": "= 4.0.0",
     "lodash": "^4.17.21",
     "tslib": "^2"
   },

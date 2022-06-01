@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bug-symbol.spec TypeError: Cannot convert a Symbol value to a string 1`] = `
+Array [
+  "https://bafybeicm5clh7fl4up4prnbfqksou6vsp5voth54rcsxhsjysimm3o77fq.on.fleek.co/",
+  "https://bafybeicm5clh7fl4up4prnbfqksou6vsp5voth54rcsxhsjysimm3o77fq.ipfs.dweb.link/",
+]
+`;
