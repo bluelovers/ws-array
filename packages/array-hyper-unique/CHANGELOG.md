@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.0.6...array-hyper-unique@2.0.7) (2022-06-01)
+
+
+### 🛠　Build System
+
+* update tsdx ([2fd45ba](https://github.com/bluelovers/ws-array/commit/2fd45ba88a6190b28828eecff56a1d8152817ccb))
+
+
+### ♻️　Chores
+
+* **deps:** update deps for fix deep symbol comparison ([f5af93a](https://github.com/bluelovers/ws-array/commit/f5af93aa5f8c9b491f52aa47fb2690ac51b5cc39))
+
+
+
+
+
 ## [2.0.6](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.0.5...array-hyper-unique@2.0.6) (2021-11-27)
 
 

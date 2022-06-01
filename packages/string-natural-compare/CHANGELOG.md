@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.5...@bluelovers/string-natural-compare@2.0.6) (2022-06-01)
+
+
+### 🛠　Build System
+
+* update tsdx ([2fd45ba](https://github.com/bluelovers/ws-array/commit/2fd45ba88a6190b28828eecff56a1d8152817ccb))
+
+
+### ♻️　Chores
+
+* **deps:** update deps ([b49fe32](https://github.com/bluelovers/ws-array/commit/b49fe32dd2967e3912a35f620ba7534097425a2a))
+
+
+
+
+
 ## [2.0.5](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.4...@bluelovers/string-natural-compare@2.0.5) (2021-11-27)
 
 
