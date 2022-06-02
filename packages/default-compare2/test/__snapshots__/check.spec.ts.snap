@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check.spec mixin 1`] = `
+Array [
+  Object {
+    "name": "c",
+    "title": "C",
+  },
+  Object {
+    "name": "a",
+    "title": "A",
+  },
+  Object {
+    "title": "G",
+  },
+  Object {
+    "name": "b",
+    "title": "B",
+  },
+  Object {
+    "name": "d",
+    "title": "D",
+  },
+  Object {
+    "name": null,
+    "title": "F",
+  },
+  Object {
+    "name": "e",
+    "title": "E",
+  },
+  null,
+  undefined,
+]
+`;
+
+exports[`check.spec mixin with symbol 1`] = `
+Array [
+  Symbol(),
+  Symbol(Symbol.iterator),
+  Symbol(Symbol.iterator),
+  Symbol(iterator),
+  Object {
+    "name": "c",
+    "title": "C",
+  },
+  Object {
+    "name": "a",
+    "title": "A",
+  },
+  Object {
+    "title": "G",
+  },
+  Object {
+    "name": "b",
+    "title": "B",
+  },
+  Object {
+    "name": "d",
+    "title": "D",
+  },
+  Object {
+    "name": null,
+    "title": "F",
+  },
+  Object {
+    "name": "e",
+    "title": "E",
+  },
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "https://bafybeicm5clh7fl4up4prnbfqksou6vsp5voth54rcsxhsjysimm3o77fq.on.fleek.co/",
+  null,
+  null,
+  undefined,
+  undefined,
+]
+`;
