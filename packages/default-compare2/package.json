@@ -1,6 +1,6 @@
 {
   "name": "default-compare-with-symbol",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic sort algorithm that has similar behavior to Array.prototype.sort for null and undefined, but also support symbol.",
   "keywords": [
     "compare",
@@ -86,8 +86,5 @@
     "sort-package-json": "yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {},
   "packageManager": "yarn@^1.22.11"
 }
