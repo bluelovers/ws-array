@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-array.git"
+    "url": "git+https://github.com/bluelovers/ws-array.git",
+    "directory": "packages/string-natural-compare"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -21,7 +22,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.mjs",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.esm.mjs",
@@ -35,7 +37,9 @@
     "lint": "ynpx --quiet eslint -- **/*.ts",
     "test": "jest --passWithNoTests",
     "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "test:snapshot": "yarn run test -- -u",
     "posttest": "yarn run build",
     "build": "yarn run build:tsdx && yarn run build:dts",
     "build:dts": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --external-inlines ts-type & echo build:dts",
@@ -57,9 +61,9 @@
     "string-natural-compare": "^3.0.1",
     "tslib": "^2"
   },
+  "packageManager": "yarn@^1.22.11",
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44",
-  "packageManager": "yarn@^1.22.11"
+  "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44"
 }
