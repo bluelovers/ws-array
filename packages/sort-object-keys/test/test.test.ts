@@ -2,10 +2,10 @@
  * Created by user on 2018/2/4/004.
  */
 
-import { sortObject } from '../core';
+import { sortObject } from '../src/core';
 import sortObject2 from '../';
 import sortObject3 from '../index';
-import sortObject4 from '../core';
+import sortObject4 from '../src/core';
 
 sortObject([]);
 sortObject2([]);
