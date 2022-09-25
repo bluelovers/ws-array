@@ -1,0 +1,57 @@
+{
+  "name": "sort-object-keys2",
+  "version": "2.0.3",
+  "description": "Sort an object's keys, including an optional key list",
+  "keywords": [
+    "arr",
+    "array",
+    "deep",
+    "deterministic",
+    "function",
+    "js",
+    "key",
+    "keys",
+    "obj",
+    "object",
+    "order",
+    "re",
+    "re-order",
+    "recursive",
+    "recursively",
+    "sort",
+    "source",
+    "stable",
+    "util",
+    "utils"
+  ],
+  "homepage": "https://github.com/bluelovers/sort-object-keys#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/sort-object-keys/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/sort-object-keys.git"
+  },
+  "license": "MIT",
+  "author": "Keith Cirkel <npm@keithcirkel.co.uk> (http://keithcirkel.co.uk/)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "npm:publish": "npm publish",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && npx yarn-tool install && yarn run test",
+    "postpublish": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.19",
+    "@types/jest": "^25.2.1",
+    "jest": "^26.0.1",
+    "ts-jest": "^25.5.1"
+  }
+}
