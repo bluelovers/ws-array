@@ -2,15 +2,9 @@
  * Created by user on 2018/2/4/004.
  */
 
-import { sortObject } from '../src/core';
-import sortObject2 from '../';
-import sortObject3 from '../index';
-import sortObject4 from '../src/core';
+import { sortObjectKeys as sortObject } from '../src';
 
-sortObject([]);
-sortObject2([]);
-sortObject3([]);
-sortObject4([]);
+sortObject([] as any);
 
 it(`sort object`, function ()
 {
@@ -218,6 +212,18 @@ it('sort object v3', function ()
 	}, ['b', 'c', 'a', 'd'])
 
 	expect(Object.keys(actual)).toStrictEqual(['b', 'c', 'a', 'd']);
+	expect(Object.keys(actual)).toMatchSnapshot();
+	expect(actual).toMatchSnapshot();
+});
+
+it('extra keys', function ()
+{
+	let actual = sortObject({
+		b: 1,
+		a: 1,
+	}, ['a', 'b', 'c', 'd'])
+
+	expect(Object.keys(actual)).toStrictEqual(['a', 'b']);
 	expect(Object.keys(actual)).toMatchSnapshot();
 	expect(actual).toMatchSnapshot();
 });

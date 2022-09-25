@@ -1,21 +1,22 @@
+import { array_unique_indexOf } from '@lazy-array/util-unique';
 
-export function sortObject<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T
-export function sortObject<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T
-export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'keys' | 'onlyKeys'> & {
+export function sortObjectKeys<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T
+export function sortObjectKeys<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T
+export function sortObjectKeys<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'keys' | 'onlyKeys'> & {
 	keys: IOptions<T>["keys"],
 	onlyKeys: true,
 }): Partial<T>
-export function sortObject<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
+export function sortObjectKeys<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, 'useSource'> & {
 	useSource: true,
 }): T
-export function sortObject<T extends Record<any, any>>(object: T, options?: IOptions<T>): T
-export function sortObject<T extends Record<any, any>>(object: T, sortWith): T | Partial<T>
+export function sortObjectKeys<T extends Record<any, any>>(object: T, options?: IOptions<T>): T
+export function sortObjectKeys<T extends Record<any, any>>(object: T, sortWith: unknown): T | Partial<T>
 {
 	let options: IOptions<T> = {};
 
 	if (typeof sortWith === 'function')
 	{
-		options.sort = sortWith;
+		options.sort = sortWith as IOptions<T>["sort"];
 	}
 	else if (Array.isArray(sortWith))
 	{
@@ -47,7 +48,7 @@ export function sortObject<T extends Record<any, any>>(object: T, sortWith): T |
 		;
 	}
 
-	keys = array_unique(keys);
+	keys = array_unique_indexOf(keys);
 
 	if (options.desc)
 	{
@@ -67,7 +68,7 @@ export function sortObject<T extends Record<any, any>>(object: T, sortWith): T |
 	if (useSource)
 	{
 		(Object.keys(ret) as IOptions<T>["keys"])
-			.forEach(function (key, index, array)
+			.forEach(function (key)
 			{
 				delete object[key];
 				object[key] = ret[key];
@@ -110,19 +111,10 @@ export interface IOptions<T extends Record<any, any> = Record<any, any> , K exte
 	useSource?: boolean,
 }
 
-sortObject.sortObjectKeys = sortObject;
+export { sortObjectKeys as sortObject }
 
-// @ts-ignore
-(sortObject as any).default = sortObject;
+Object.defineProperty(sortObjectKeys, 'sortObjectKeys', { value: sortObjectKeys });
+Object.defineProperty(sortObjectKeys, 'sortObject', { value: sortObjectKeys });
+Object.defineProperty(sortObjectKeys, 'default', { value: sortObjectKeys });
 
-export { sortObject as sortObjectKeys }
-
-function array_unique(array: any[])
-{
-	return array.filter(function (el, index, arr)
-	{
-		return index === arr.indexOf(el);
-	});
-}
-
-export default sortObject;
+export default sortObjectKeys;

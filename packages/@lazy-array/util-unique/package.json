@@ -1,42 +1,22 @@
 {
-  "name": "sort-object-keys2",
-  "version": "3.0.0",
-  "description": "Sort an object's keys, including an optional key list",
+  "name": "@lazy-array/util-unique",
+  "version": "1.0.0",
+  "description": "",
   "keywords": [
-    "arr",
-    "array",
-    "deep",
-    "deterministic",
-    "function",
-    "js",
-    "key",
-    "keys",
-    "obj",
-    "object",
-    "order",
-    "re",
-    "re-order",
-    "recursive",
-    "recursively",
-    "sort",
-    "source",
-    "stable",
-    "util",
-    "utils",
     "create-by-yarn-tool",
     "create-by-tsdx"
   ],
-  "homepage": "https://github.com/bluelovers/ws-array/tree/master/packages/sort-object-keys#readme",
+  "homepage": "https://github.com/bluelovers/ws-array/tree/master/packages/@lazy-array/util-unique#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-array/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bluelovers/ws-array.git",
-    "directory": "packages/sort-object-keys"
+    "directory": "packages/@lazy-array/util-unique"
   },
-  "license": "MIT",
-  "author": "Keith Cirkel <npm@keithcirkel.co.uk> (http://keithcirkel.co.uk/)",
+  "license": "ISC",
+  "author": "bluelovers",
   "sideEffects": false,
   "exports": {
     ".": {
@@ -52,46 +32,52 @@
   "module": "dist/index.esm.mjs",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
+    "review": "yarn run review:coverage",
+    "review:coverage": "yarn run lint && yarn run coverage",
+    "review:test": "yarn run lint && yarn run test",
+    "coverage": "yarn run test -- --coverage",
+    "lint": "yarn run lint:eslint",
+    "lint:eslint": "ynpx eslint --ext .ts,.tsx,.mts,.cts ./",
     "pretest": "echo pretest",
     "test": "jest --passWithNoTests",
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:mocha": "ynpx --quiet -p ts-node -p mocha mocha -- --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsdx": "ynpx @bluelovers/tsdx test --passWithNoTests",
     "posttest": "yarn run build",
     "build": "yarn run build:tsdx && yarn run build:dts:bundle",
     "build:dts:bundle": "ynpx dts-bundle-generator -o ./dist/index.d.ts ./src/index.ts --no-banner --inline-declare-global & echo build:dts:bundle",
     "build:dts:copy": "copy .\\src\\index.d.ts .\\dist\\index.d.ts & echo build:dts",
     "build:dts:tsc": "yarn run build:dts:tsc:emit && yarn run build:dts:copy",
     "build:dts:tsc:emit": "tsc --emitDeclarationOnly --declaration --noEmit false",
-    "build:tsdx": "ynpx @bluelovers/tsdx build --target node",
+    "build:microbundle": "ynpx microbundle --target node",
+    "build:tsdx": "ynpx @bluelovers/tsdx build --target node --name index",
     "ci:install": "echo ci:install",
     "ci:build": "echo ci:build",
-    "npm:publish": "npm publish",
     "preversion": "echo preversion && yarn run test",
     "version": "echo version",
     "postversion": "echo postversion",
     "prepublish": "echo prepublish",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "prepare": "echo prepare",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && npx yarn-tool install && yarn run test",
+    "prepublishOnly": "echo prepublishOnly",
     "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
     "prepack": "echo prepack",
     "pack": "echo pack",
     "postpack": "echo postpack",
     "publish": "echo publish",
-    "postpublish": "git commit -m \"chore(release): publish\" .",
+    "postpublish": "echo postpublish",
     "postpublishOnly": "echo postpublishOnly",
-    "ncu": "npx yarn-tool ncu -u",
-    "sort-package-json": "npx yarn-tool sort",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "dependencies": {
-    "@lazy-array/util-unique": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
-  "packageManager": "yarn@1.22.19"
+  "peerDependencies": {},
+  "packageManager": "yarn@1.22.19",
+  "publishConfig": {
+    "access": "public"
+  }
 }
