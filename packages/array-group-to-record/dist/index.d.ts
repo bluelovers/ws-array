@@ -10,6 +10,9 @@ export declare function handleOptions<O extends IOptionsForRecord<any> | IOption
 export declare function arrayGroupToRecord<T>(arr: T[], options?: IOptionsForRecord<T>): Record<string, T[]>;
 export declare function arrayGroupToMap<T>(arr: T[], options?: IOptionsForMap<T>): Map<any, T[]>;
 export declare function sumGroup<T extends Record<any, any[]> | Map<any, any[]>>(group: T): number;
-export default arrayGroupToRecord;
+
+export {
+	arrayGroupToRecord as default,
+};
 
 export {};

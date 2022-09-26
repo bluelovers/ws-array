@@ -29,7 +29,7 @@ export interface IMapCallback<T, R = T> {
 	(value: T[], index: number, array: IChunkArray<T>): R;
 	(value: T[], index: number, array: IChunkArray<T>): T;
 }
-export declare type IOptions<T> = {
+export type IOptions<T> = {
 	/**
 	 * source array
 	 */
@@ -89,6 +89,9 @@ export declare function arrayChunkBySize<T>(arr: T[], maxChunkSize: ITSValueOrAr
  * @example arrayChunkSplit([1, 2, 3, 4, 5, 6, 7, 8], 4); // => [[1, 2], [3, 4], [5, 6], [7, 8]]
  */
 export declare function arrayChunkSplit<T>(arr: T[], maxChunkLength: number): IChunkArray<T>;
-export default arrayChunkSplit;
+
+export {
+	arrayChunkSplit as default,
+};
 
 export {};

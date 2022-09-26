@@ -8,6 +8,9 @@ export declare function _createGroupArray<T, N extends number = 4>(length: N): T
 export declare function distributeGroupToArrayCore<T>(group: Record<string, T[]> | Map<any, T[]>, options?: IOptionsDistributeGroupToArray<T>): T[][];
 export declare function mapToRecord<T>(map: Map<any, T[]>): Record<string, T[]>;
 export declare function distributeGroupToArray<T>(group: Record<string, T[]> | Map<any, T[]>, options?: IOptionsDistributeGroupToArray<T>): T[];
-export default distributeGroupToArray;
+
+export {
+	distributeGroupToArray as default,
+};
 
 export {};

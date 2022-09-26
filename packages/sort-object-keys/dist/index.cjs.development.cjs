@@ -61,6 +61,9 @@ Object.defineProperty(sortObjectKeys, 'sortObject', {
 Object.defineProperty(sortObjectKeys, 'default', {
   value: sortObjectKeys
 });
+Object.defineProperty(sortObjectKeys, "__esModule", {
+  value: true
+});
 
 module.exports = sortObjectKeys;
 //# sourceMappingURL=index.cjs.development.cjs.map

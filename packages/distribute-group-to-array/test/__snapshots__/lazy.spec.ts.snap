@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`distributeGroupToArray 1`] = `
-Array [
-  Object {
+[
+  {
     "name": "Forest",
   },
-  Object {
+  {
     "name": "Plains",
   },
-  Object {
+  {
     "name": "Forest",
   },
-  Object {
+  {
     "name": "Plains",
   },
-  Object {
+  {
     "name": "Forest",
   },
-  Object {
+  {
     "name": "Plains",
   },
 ]

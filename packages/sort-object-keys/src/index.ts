@@ -116,5 +116,6 @@ export { sortObjectKeys as sortObject }
 Object.defineProperty(sortObjectKeys, 'sortObjectKeys', { value: sortObjectKeys });
 Object.defineProperty(sortObjectKeys, 'sortObject', { value: sortObjectKeys });
 Object.defineProperty(sortObjectKeys, 'default', { value: sortObjectKeys });
+Object.defineProperty(sortObjectKeys, "__esModule", { value: true });
 
 export default sortObjectKeys;

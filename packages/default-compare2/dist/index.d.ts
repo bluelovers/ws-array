@@ -15,9 +15,9 @@ export declare function stringCompareLocale(a: string, b: string): number;
 export declare function defaultCompareBasic(a: unknown, b: unknown): EnumSortCompareResult;
 export declare function defaultCompareWithSymbol(a: unknown, b: unknown): EnumSortCompareResult;
 export declare function arraySortWithSymbol<T extends any[]>(arr: T): T;
-export default defaultCompareWithSymbol;
 
 export {
+	defaultCompareWithSymbol as default,
 	defaultCompareWithSymbol as defaultCompare,
 };
 

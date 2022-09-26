@@ -2,25 +2,25 @@
 
 exports[`arrayGroupToMap 1`] = `
 Map {
-  "18056a75" => Array [
-    Object {
+  "18056a75" => [
+    {
       "name": "Forest",
     },
-    Object {
+    {
       "name": "Forest",
     },
-    Object {
+    {
       "name": "Forest",
     },
   ],
-  "57a555ae" => Array [
-    Object {
+  "57a555ae" => [
+    {
       "name": "Plains",
     },
-    Object {
+    {
       "name": "Plains",
     },
-    Object {
+    {
       "name": "Plains",
     },
   ],
@@ -28,26 +28,26 @@ Map {
 `;
 
 exports[`arrayGroupToRecord 1`] = `
-Object {
-  "18056a75": Array [
-    Object {
+{
+  "18056a75": [
+    {
       "name": "Forest",
     },
-    Object {
+    {
       "name": "Forest",
     },
-    Object {
+    {
       "name": "Forest",
     },
   ],
-  "57a555ae": Array [
-    Object {
+  "57a555ae": [
+    {
       "name": "Plains",
     },
-    Object {
+    {
       "name": "Plains",
     },
-    Object {
+    {
       "name": "Plains",
     },
   ],
