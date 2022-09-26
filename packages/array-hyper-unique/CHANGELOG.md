@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.0.8...array-hyper-unique@2.1.1) (2022-09-26)
+
+
+
+### 📦　Code Refactoring
+
+* use cts ([fcac84f](https://github.com/bluelovers/ws-array/commit/fcac84f2e853f9dfd3715231fb583e8381756370))
+
+
+### ♻️　Chores
+
+* update metadata ([70abe28](https://github.com/bluelovers/ws-array/commit/70abe28fffd0462a7627ad5709c5edf0bb07096d))
+
+
+
 ## [2.0.8](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.0.7...array-hyper-unique@2.0.8) (2022-06-01)
 
 
