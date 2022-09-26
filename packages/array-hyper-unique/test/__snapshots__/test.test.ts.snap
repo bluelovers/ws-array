@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`overwrite source input ArrayBuffer 1`] = `
-Array [
+[
   ArrayBuffer [],
   ArrayBuffer [],
 ]
 `;
 
 exports[`overwrite source input ArrayBuffer 2`] = `
-Array [
+[
   ArrayBuffer [],
   ArrayBuffer [],
 ]
 `;
 
 exports[`overwrite source input Buffer & ArrayBuffer 1`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -26,22 +26,22 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
+  {},
   ArrayBuffer [],
 ]
 `;
 
 exports[`overwrite source input Buffer & ArrayBuffer 2`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -50,22 +50,22 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
+  {},
   ArrayBuffer [],
 ]
 `;
 
 exports[`overwrite source input Buffer 1`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -74,21 +74,21 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
+  {},
 ]
 `;
 
 exports[`overwrite source input Buffer 2`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -97,25 +97,25 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
+  {},
 ]
 `;
 
 exports[`overwrite source input Map 1`] = `
-Array [
+[
   Map {
     "a" => 1,
     "b" => 2,
     "c" => 3,
   },
-  Object {
+  {
     "a": 1,
     "b": 2,
     "c": 3,
@@ -124,13 +124,13 @@ Array [
 `;
 
 exports[`overwrite source input Map 2`] = `
-Array [
+[
   Map {
     "a" => 1,
     "b" => 2,
     "c" => 3,
   },
-  Object {
+  {
     "a": 1,
     "b": 2,
     "c": 3,
@@ -139,39 +139,39 @@ Array [
 `;
 
 exports[`overwrite source input RegExp 1`] = `
-Array [
+[
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
 ]
 `;
 
 exports[`overwrite source input RegExp 2`] = `
-Array [
+[
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
 ]
 `;
 
 exports[`overwrite source input boolean 1`] = `
-Array [
+[
   true,
   false,
 ]
 `;
 
 exports[`overwrite source input boolean 2`] = `
-Array [
+[
   true,
   false,
 ]
 `;
 
 exports[`overwrite source input boolean 2 1`] = `
-Array [
+[
   true,
   false,
   null,
@@ -184,7 +184,7 @@ Array [
 `;
 
 exports[`overwrite source input boolean 2 2`] = `
-Array [
+[
   true,
   false,
   null,
@@ -197,7 +197,7 @@ Array [
 `;
 
 exports[`overwrite source input function 1`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
@@ -205,7 +205,7 @@ Array [
 `;
 
 exports[`overwrite source input function 2`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
@@ -213,67 +213,67 @@ Array [
 `;
 
 exports[`overwrite source input function 2 1`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
-  Object {},
+  {},
 ]
 `;
 
 exports[`overwrite source input function 2 2`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
-  Object {},
+  {},
 ]
 `;
 
 exports[`overwrite source input main mixin test 1`] = `
-Array [
+[
   1,
   0,
   true,
   undefined,
   null,
   false,
-  Array [
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "c",
     "b",
   ],
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": undefined,
     },
   },
-  Object {
-    "a": Object {},
+  {
+    "a": {},
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
       "c": undefined,
     },
   },
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
   "1",
@@ -292,49 +292,49 @@ Array [
 `;
 
 exports[`overwrite source input main mixin test 2`] = `
-Array [
+[
   1,
   0,
   true,
   undefined,
   null,
   false,
-  Array [
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "c",
     "b",
   ],
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": undefined,
     },
   },
-  Object {
-    "a": Object {},
+  {
+    "a": {},
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
       "c": undefined,
     },
   },
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
   "1",
@@ -353,7 +353,7 @@ Array [
 `;
 
 exports[`overwrite source input number 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -362,7 +362,7 @@ Array [
 `;
 
 exports[`overwrite source input number 2`] = `
-Array [
+[
   1,
   2,
   3,
@@ -371,7 +371,7 @@ Array [
 `;
 
 exports[`overwrite source input number 2 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -382,7 +382,7 @@ Array [
 `;
 
 exports[`overwrite source input number 2 2`] = `
-Array [
+[
   1,
   2,
   3,
@@ -393,14 +393,14 @@ Array [
 `;
 
 exports[`overwrite source input object 1`] = `
-Array [
-  Object {
-    "a": Object {
+[
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
@@ -408,14 +408,14 @@ Array [
 `;
 
 exports[`overwrite source input object 2`] = `
-Array [
-  Object {
-    "a": Object {
+[
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
@@ -423,7 +423,7 @@ Array [
 `;
 
 exports[`overwrite source input string 1`] = `
-Array [
+[
   "1",
   "2",
   "3",
@@ -437,7 +437,7 @@ Array [
 `;
 
 exports[`overwrite source input string 2`] = `
-Array [
+[
   "1",
   "2",
   "3",
@@ -451,8 +451,8 @@ Array [
 `;
 
 exports[`overwrite source input string[] 1`] = `
-Array [
-  Array [
+[
+  [
     "a",
     "b",
     "c",
@@ -461,8 +461,8 @@ Array [
 `;
 
 exports[`overwrite source input string[] 2`] = `
-Array [
-  Array [
+[
+  [
     "a",
     "b",
     "c",

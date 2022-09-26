@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`(v) => v ArrayBuffer 1`] = `
-Array [
+[
   ArrayBuffer [],
   ArrayBuffer [],
 ]
 `;
 
 exports[`(v) => v ArrayBuffer 2`] = `
-Array [
+[
   ArrayBuffer [],
   ArrayBuffer [],
   ArrayBuffer [],
@@ -16,9 +16,9 @@ Array [
 `;
 
 exports[`(v) => v Buffer & ArrayBuffer 1`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -27,22 +27,22 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
+  {},
   ArrayBuffer [],
 ]
 `;
 
 exports[`(v) => v Buffer & ArrayBuffer 2`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -51,16 +51,16 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
-  Object {
-    "data": Array [
+  {},
+  {
+    "data": [
       0,
       0,
       0,
@@ -71,8 +71,8 @@ Array [
   },
   ArrayBuffer [],
   ArrayBuffer [],
-  Object {
-    "data": Array [
+  {
+    "data": [
       0,
       0,
       0,
@@ -81,7 +81,7 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
@@ -92,9 +92,9 @@ Array [
 `;
 
 exports[`(v) => v Buffer 1`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -103,21 +103,21 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
+  {},
 ]
 `;
 
 exports[`(v) => v Buffer 2`] = `
-Array [
-  Object {
-    "data": Array [
+[
+  {
+    "data": [
       0,
       0,
       0,
@@ -126,16 +126,16 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
     0,
     0,
   ],
-  Object {},
-  Object {
-    "data": Array [
+  {},
+  {
+    "data": [
       0,
       0,
       0,
@@ -144,8 +144,8 @@ Array [
     ],
     "type": "Buffer",
   },
-  Object {
-    "data": Array [
+  {
+    "data": [
       0,
       0,
       0,
@@ -154,7 +154,7 @@ Array [
     ],
     "type": "Buffer",
   },
-  Array [
+  [
     0,
     0,
     0,
@@ -165,13 +165,13 @@ Array [
 `;
 
 exports[`(v) => v Map 1`] = `
-Array [
+[
   Map {
     "a" => 1,
     "b" => 2,
     "c" => 3,
   },
-  Object {
+  {
     "a": 1,
     "b": 2,
     "c": 3,
@@ -180,7 +180,7 @@ Array [
 `;
 
 exports[`(v) => v Map 2`] = `
-Array [
+[
   Map {
     "a" => 1,
     "b" => 2,
@@ -191,12 +191,12 @@ Array [
     "b" => 2,
     "a" => 1,
   },
-  Object {
+  {
     "a": 1,
     "b": 2,
     "c": 3,
   },
-  Object {
+  {
     "a": 1,
     "b": 2,
     "c": 3,
@@ -205,35 +205,35 @@ Array [
 `;
 
 exports[`(v) => v RegExp 1`] = `
-Array [
+[
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
 ]
 `;
 
 exports[`(v) => v RegExp 2`] = `
-Array [
+[
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
 ]
 `;
 
 exports[`(v) => v boolean 1`] = `
-Array [
+[
   true,
 ]
 `;
 
 exports[`(v) => v boolean 2`] = `
-Array [
+[
   true,
   true,
   false,
@@ -243,14 +243,14 @@ Array [
 `;
 
 exports[`(v) => v boolean 2 1`] = `
-Array [
+[
   true,
   Infinity,
 ]
 `;
 
 exports[`(v) => v boolean 2 2`] = `
-Array [
+[
   true,
   true,
   false,
@@ -270,7 +270,7 @@ Array [
 `;
 
 exports[`(v) => v function 1`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
@@ -278,7 +278,7 @@ Array [
 `;
 
 exports[`(v) => v function 2`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
@@ -289,67 +289,67 @@ Array [
 `;
 
 exports[`(v) => v function 2 1`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
-  Object {},
+  {},
 ]
 `;
 
 exports[`(v) => v function 2 2`] = `
-Array [
+[
   [Function],
   [Function],
   [Function],
   [Function],
   [Function],
-  Object {},
+  {},
   [Function],
-  Object {},
+  {},
 ]
 `;
 
 exports[`(v) => v main mixin test 1`] = `
-Array [
+[
   1,
   true,
-  Array [
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "c",
     "b",
   ],
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": undefined,
     },
   },
-  Object {
-    "a": Object {},
+  {
+    "a": {},
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
       "c": undefined,
     },
   },
   /1/,
-  Object {},
+  {},
   /1/g,
   /1/i,
   "1",
@@ -366,119 +366,119 @@ Array [
 `;
 
 exports[`(v) => v main mixin test 2`] = `
-Array [
+[
   1,
   0,
   true,
   undefined,
   null,
   false,
-  Array [
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "c",
     "b",
   ],
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": undefined,
     },
   },
-  Object {
-    "a": Object {},
+  {
+    "a": {},
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
       "c": undefined,
     },
   },
   /1/,
-  Object {},
+  {},
   /1/,
   /1/g,
   /1/i,
-  Object {},
+  {},
   1,
   0,
   true,
   undefined,
   null,
   false,
-  Array [
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "c",
     "b",
   ],
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": undefined,
     },
   },
-  Object {
-    "a": Object {},
+  {
+    "a": {},
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
       "c": undefined,
     },
   },
   /1/,
-  Object {},
+  {},
   /1/,
   /1/g,
   /1/i,
-  Object {},
+  {},
   "1",
   "0",
   "true",
@@ -500,7 +500,7 @@ Array [
 `;
 
 exports[`(v) => v number 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -508,7 +508,7 @@ Array [
 `;
 
 exports[`(v) => v number 2`] = `
-Array [
+[
   1,
   2,
   3,
@@ -518,7 +518,7 @@ Array [
 `;
 
 exports[`(v) => v number 2 1`] = `
-Array [
+[
   1,
   2,
   3,
@@ -527,7 +527,7 @@ Array [
 `;
 
 exports[`(v) => v number 2 2`] = `
-Array [
+[
   1,
   2,
   3,
@@ -541,14 +541,14 @@ Array [
 `;
 
 exports[`(v) => v object 1`] = `
-Array [
-  Object {
-    "a": Object {
+[
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
@@ -556,19 +556,19 @@ Array [
 `;
 
 exports[`(v) => v object 2`] = `
-Array [
-  Object {
-    "a": Object {
+[
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 2,
     },
   },
-  Object {
-    "a": Object {
+  {
+    "a": {
       "b": 3,
     },
   },
@@ -576,7 +576,7 @@ Array [
 `;
 
 exports[`(v) => v string 1`] = `
-Array [
+[
   "1",
   "2",
   "3",
@@ -589,7 +589,7 @@ Array [
 `;
 
 exports[`(v) => v string 2`] = `
-Array [
+[
   "1",
   "2",
   "3",
@@ -606,8 +606,8 @@ Array [
 `;
 
 exports[`(v) => v string[] 1`] = `
-Array [
-  Array [
+[
+  [
     "a",
     "b",
     "c",
@@ -616,13 +616,13 @@ Array [
 `;
 
 exports[`(v) => v string[] 2`] = `
-Array [
-  Array [
+[
+  [
     "a",
     "b",
     "c",
   ],
-  Array [
+  [
     "a",
     "b",
     "c",

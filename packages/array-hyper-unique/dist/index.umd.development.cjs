@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('deep-eql'), require('lodash-es')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'deep-eql', 'lodash-es'], factory) :
-	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.index = {}, global._equals, global.lodashEs));
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ArrayHyperUnique = {}, global._equals, global.lodashEs));
 })(this, (function (exports, _equals, lodashEs) { 'use strict';
 
 	function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -69,14 +69,30 @@
 
 	  return array_unique_overwrite(arr[0]);
 	}
-	lazy_unique.array_unique = array_unique;
-	lazy_unique.array_unique_overwrite = array_unique_overwrite;
-	lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite;
-	lazy_unique.equals = equals;
-	lazy_unique.defaultFilter = defaultFilter;
-	lazy_unique.defaultChecker = defaultChecker;
-	lazy_unique.lazy_unique = lazy_unique;
-	lazy_unique.default = lazy_unique;
+	Object.defineProperty(lazy_unique, "array_unique", {
+	  value: array_unique
+	});
+	Object.defineProperty(lazy_unique, "array_unique_overwrite", {
+	  value: array_unique_overwrite
+	});
+	Object.defineProperty(lazy_unique, "lazy_unique_overwrite", {
+	  value: lazy_unique_overwrite
+	});
+	Object.defineProperty(lazy_unique, "equals", {
+	  value: equals
+	});
+	Object.defineProperty(lazy_unique, "defaultFilter", {
+	  value: defaultFilter
+	});
+	Object.defineProperty(lazy_unique, "defaultChecker", {
+	  value: defaultChecker
+	});
+	Object.defineProperty(lazy_unique, "lazy_unique", {
+	  value: lazy_unique
+	});
+	Object.defineProperty(lazy_unique, "default", {
+	  value: lazy_unique
+	});
 	Object.defineProperty(lazy_unique, "__esModule", {
 	  value: true
 	});

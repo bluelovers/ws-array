@@ -1,7 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 var _equals = require('deep-eql');
 var lodash = require('lodash');
 
@@ -70,24 +68,33 @@ function lazy_unique_overwrite(...arr) {
 
   return array_unique_overwrite(arr[0]);
 }
-lazy_unique.array_unique = array_unique;
-lazy_unique.array_unique_overwrite = array_unique_overwrite;
-lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite;
-lazy_unique.equals = equals;
-lazy_unique.defaultFilter = defaultFilter;
-lazy_unique.defaultChecker = defaultChecker;
-lazy_unique.lazy_unique = lazy_unique;
-lazy_unique.default = lazy_unique;
+Object.defineProperty(lazy_unique, "array_unique", {
+  value: array_unique
+});
+Object.defineProperty(lazy_unique, "array_unique_overwrite", {
+  value: array_unique_overwrite
+});
+Object.defineProperty(lazy_unique, "lazy_unique_overwrite", {
+  value: lazy_unique_overwrite
+});
+Object.defineProperty(lazy_unique, "equals", {
+  value: equals
+});
+Object.defineProperty(lazy_unique, "defaultFilter", {
+  value: defaultFilter
+});
+Object.defineProperty(lazy_unique, "defaultChecker", {
+  value: defaultChecker
+});
+Object.defineProperty(lazy_unique, "lazy_unique", {
+  value: lazy_unique
+});
+Object.defineProperty(lazy_unique, "default", {
+  value: lazy_unique
+});
 Object.defineProperty(lazy_unique, "__esModule", {
   value: true
 });
 
-exports.array_unique = array_unique;
-exports.array_unique_overwrite = array_unique_overwrite;
-exports["default"] = lazy_unique;
-exports.defaultChecker = defaultChecker;
-exports.defaultFilter = defaultFilter;
-exports.equals = equals;
-exports.lazy_unique = lazy_unique;
-exports.lazy_unique_overwrite = lazy_unique_overwrite;
+module.exports = lazy_unique;
 //# sourceMappingURL=index.cjs.development.cjs.map

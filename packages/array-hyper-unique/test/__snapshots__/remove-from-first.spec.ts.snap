@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`removeFromFirst array_unique mixin test 1`] = `
-Object {
-  "a1": Array [
+{
+  "a1": [
     2,
     4,
     1,
-    Object {
-      "a": Object {},
+    {
+      "a": {},
     },
     "undefined",
     "null",
@@ -19,29 +19,29 @@ Object {
     [Function],
     [Function],
     3,
-    Array [
+    [
       "a",
       "b",
       "c",
     ],
-    Array [
+    [
       "a",
       "c",
       "b",
     ],
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 2,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
         "c": undefined,
       },
     },
     /1/,
-    Object {},
+    {},
     /1/g,
     0,
     true,
@@ -49,13 +49,13 @@ Object {
     null,
     false,
     /1/i,
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": undefined,
       },
     },
@@ -63,7 +63,7 @@ Object {
     "1",
     "0",
   ],
-  "a2": Array [
+  "a2": [
     4,
     "undefined",
     "null",
@@ -75,16 +75,16 @@ Object {
     [Function],
     [Function],
     3,
-    Array [
+    [
       "a",
       "c",
       "b",
     ],
-    Object {
-      "a": Object {},
+    {
+      "a": {},
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
         "c": undefined,
       },
@@ -95,31 +95,31 @@ Object {
     undefined,
     null,
     false,
-    Array [
+    [
       "a",
       "b",
       "c",
     ],
     "true",
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 2,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": undefined,
       },
     },
     /1/i,
     /1/,
     /1/g,
-    Object {},
+    {},
     "1",
     "0",
     2,
@@ -128,14 +128,14 @@ Object {
 `;
 
 exports[`removeFromFirst array_unique simple 1`] = `
-Object {
-  "a1": Array [
+{
+  "a1": [
     2,
     4,
     3,
     1,
   ],
-  "a2": Array [
+  "a2": [
     4,
     1,
     3,
@@ -145,13 +145,13 @@ Object {
 `;
 
 exports[`removeFromFirst array_unique_overwrite mixin test 1`] = `
-Object {
-  "a1": Array [
+{
+  "a1": [
     2,
     4,
     1,
-    Object {
-      "a": Object {},
+    {
+      "a": {},
     },
     "undefined",
     "null",
@@ -163,29 +163,29 @@ Object {
     [Function],
     [Function],
     3,
-    Array [
+    [
       "a",
       "b",
       "c",
     ],
-    Array [
+    [
       "a",
       "c",
       "b",
     ],
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 2,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
         "c": undefined,
       },
     },
     /1/,
-    Object {},
+    {},
     /1/g,
     0,
     true,
@@ -193,13 +193,13 @@ Object {
     null,
     false,
     /1/i,
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": undefined,
       },
     },
@@ -207,7 +207,7 @@ Object {
     "1",
     "0",
   ],
-  "a2": Array [
+  "a2": [
     4,
     "undefined",
     "null",
@@ -219,16 +219,16 @@ Object {
     [Function],
     [Function],
     3,
-    Array [
+    [
       "a",
       "c",
       "b",
     ],
-    Object {
-      "a": Object {},
+    {
+      "a": {},
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
         "c": undefined,
       },
@@ -239,31 +239,31 @@ Object {
     undefined,
     null,
     false,
-    Array [
+    [
       "a",
       "b",
       "c",
     ],
     "true",
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 2,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": 3,
       },
     },
-    Object {
-      "a": Object {
+    {
+      "a": {
         "b": undefined,
       },
     },
     /1/i,
     /1/,
     /1/g,
-    Object {},
+    {},
     "1",
     "0",
     2,
@@ -272,14 +272,14 @@ Object {
 `;
 
 exports[`removeFromFirst array_unique_overwrite simple 1`] = `
-Object {
-  "a1": Array [
+{
+  "a1": [
     2,
     4,
     3,
     1,
   ],
-  "a2": Array [
+  "a2": [
     4,
     1,
     3,

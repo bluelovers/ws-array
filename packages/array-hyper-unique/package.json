@@ -1,6 +1,6 @@
 {
   "name": "array-hyper-unique",
-  "version": "2.0.8",
+  "version": "2.1.0",
   "description": "Get unique values of an array. Really, like deeply unique.",
   "keywords": [
     "Array.prototype.unique",
@@ -47,6 +47,11 @@
   "sideEffects": false,
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./core": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.mjs",
       "require": "./dist/index.cjs"

@@ -67,17 +67,22 @@ export function lazy_unique_overwrite<T>(...arr: Array<T | T[]>)
 	return array_unique_overwrite(arr[0]);
 }
 
-lazy_unique.array_unique = array_unique;
-lazy_unique.array_unique_overwrite = array_unique_overwrite;
+export {
+	equals,
+	defaultFilter,
+	defaultChecker,
+}
 
-lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite;
+Object.defineProperty(lazy_unique, "array_unique", { value: array_unique });
+Object.defineProperty(lazy_unique, "array_unique_overwrite", { value: array_unique_overwrite });
+Object.defineProperty(lazy_unique, "lazy_unique_overwrite", { value: lazy_unique_overwrite });
 
-lazy_unique.equals = equals;
-lazy_unique.defaultFilter = defaultFilter;
-lazy_unique.defaultChecker = defaultChecker;
+Object.defineProperty(lazy_unique, "equals", { value: equals });
+Object.defineProperty(lazy_unique, "defaultFilter", { value: defaultFilter });
+Object.defineProperty(lazy_unique, "defaultChecker", { value: defaultChecker });
 
-lazy_unique.lazy_unique = lazy_unique;
-lazy_unique.default = lazy_unique;
+Object.defineProperty(lazy_unique, "lazy_unique", { value: lazy_unique });
+Object.defineProperty(lazy_unique, "default", { value: lazy_unique });
 
 Object.defineProperty(lazy_unique, "__esModule", { value: true });
 

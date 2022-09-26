@@ -1,34 +1,34 @@
 import e from "deep-eql";
 
-import { findLastIndex as u, findIndex as r } from "lodash-es";
+import { findLastIndex as r, findIndex as u } from "lodash-es";
 
-function equals(u, r) {
-  return e(u, r);
+function equals(r, u) {
+  return e(r, u);
 }
 
 function defaultFilter(e = {}) {
-  const a = e.checker || defaultChecker, i = e.filter || null, t = e.removeFromFirst ? u : r;
-  return (e, u, r) => t(r, (u => a(u, e, r, r))) == u && (!i || i(e));
+  const t = e.checker || defaultChecker, a = e.filter || null, i = e.removeFromFirst ? r : u;
+  return (e, r, u) => i(u, (r => t(r, e, u, u))) == r && (!a || a(e));
 }
 
-function defaultChecker(u, r, a, i) {
-  return e(u, r);
+function defaultChecker(r, u, t, a) {
+  return e(r, u);
 }
 
-function array_unique(e, u = {}) {
+function array_unique(e, r = {}) {
   if (!Array.isArray(e)) throw new TypeError(`Expected an Array but got ${typeof e}.`);
-  const r = defaultFilter(u);
-  if (u.overwrite) {
-    let u = e.length;
-    for (;u--; ) r(e[u], u, e) || e.splice(u, 1);
+  const u = defaultFilter(r);
+  if (r.overwrite) {
+    let r = e.length;
+    for (;r--; ) u(e[r], r, e) || e.splice(r, 1);
     return e;
   }
-  return e.filter(r);
+  return e.filter(u);
 }
 
-function array_unique_overwrite(e, u = {}) {
+function array_unique_overwrite(e, r = {}) {
   return array_unique(e, {
-    ...u,
+    ...r,
     overwrite: !0
   });
 }
@@ -41,10 +41,23 @@ function lazy_unique_overwrite(...e) {
   return array_unique_overwrite(e.length > 1 ? e : e[0]);
 }
 
-lazy_unique.array_unique = array_unique, lazy_unique.array_unique_overwrite = array_unique_overwrite, 
-lazy_unique.lazy_unique_overwrite = lazy_unique_overwrite, lazy_unique.equals = equals, 
-lazy_unique.defaultFilter = defaultFilter, lazy_unique.defaultChecker = defaultChecker, 
-lazy_unique.lazy_unique = lazy_unique, lazy_unique.default = lazy_unique, Object.defineProperty(lazy_unique, "__esModule", {
+Object.defineProperty(lazy_unique, "array_unique", {
+  value: array_unique
+}), Object.defineProperty(lazy_unique, "array_unique_overwrite", {
+  value: array_unique_overwrite
+}), Object.defineProperty(lazy_unique, "lazy_unique_overwrite", {
+  value: lazy_unique_overwrite
+}), Object.defineProperty(lazy_unique, "equals", {
+  value: equals
+}), Object.defineProperty(lazy_unique, "defaultFilter", {
+  value: defaultFilter
+}), Object.defineProperty(lazy_unique, "defaultChecker", {
+  value: defaultChecker
+}), Object.defineProperty(lazy_unique, "lazy_unique", {
+  value: lazy_unique
+}), Object.defineProperty(lazy_unique, "default", {
+  value: lazy_unique
+}), Object.defineProperty(lazy_unique, "__esModule", {
   value: !0
 });
 

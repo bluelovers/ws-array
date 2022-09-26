@@ -1,7 +1,7 @@
 /**
  * Created by user on 2020/6/6.
  */
-export declare type IOptions<T> = {
+export type IOptions<T> = {
 	checker?(element: T[keyof T], array: T[keyof T], arr_new?: T, arr_old?: T): boolean;
 	checker?<R>(element: R[keyof R], array: R[keyof R], arr_new?: R, arr_old?: R): boolean;
 	overwrite?: boolean;
@@ -19,18 +19,10 @@ export declare function array_unique_overwrite<T>(arr: T, options?: IOptions<T>)
 export declare function lazy_unique<T extends any[]>(arr: T): T;
 export declare function lazy_unique<T, T1, T2>(a1: T1, a2: T2, ...arr: T[]): Array<T | T1 | T2>;
 export declare function lazy_unique<T>(...arr: Array<T | T[]>): T | (T | T[])[];
-export declare namespace lazy_unique {
-	export var array_unique: typeof array_unique;
-	export var array_unique_overwrite: typeof array_unique_overwrite;
-	export var lazy_unique_overwrite: typeof lazy_unique_overwrite;
-	export var equals: typeof equals;
-	export var defaultFilter: typeof defaultFilter;
-	export var defaultChecker: typeof defaultChecker;
-	export var lazy_unique: typeof lazy_unique;
-	var _a: typeof lazy_unique;
-	export { _a as default };
-}
 export declare function lazy_unique_overwrite<T>(...arr: Array<T | T[]>): T | (T | T[])[];
-export default lazy_unique;
+
+export {
+	lazy_unique as default,
+};
 
 export {};
