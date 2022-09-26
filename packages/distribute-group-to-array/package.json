@@ -1,6 +1,6 @@
 {
   "name": "distribute-group-to-array",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "keywords": [
     "create-by-yarn-tool",
@@ -58,6 +58,5 @@
     "sort-package-json": "yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
-  "dependencies": {},
   "packageManager": "yarn@^1.22.11"
 }
