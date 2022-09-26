@@ -97,5 +97,6 @@
   "dependencies": {
     "@lazy-array/util-unique": "^1.0.1"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "gitHead": "1847cf5e4d64c410da4934e8c7bc2de2f2df0960"
 }
