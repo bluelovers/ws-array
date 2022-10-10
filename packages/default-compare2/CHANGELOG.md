@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/bluelovers/ws-array/compare/default-compare-with-symbol@1.0.3...default-compare-with-symbol@1.0.4) (2022-10-10)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([2c4aa0a](https://github.com/bluelovers/ws-array/commit/2c4aa0ac4545a8f3be79a20835cb973690cfaac8))
+
+
+
 ## [1.0.3](https://github.com/bluelovers/ws-array/compare/default-compare-with-symbol@1.0.2...default-compare-with-symbol@1.0.3) (2022-09-26)
 
 

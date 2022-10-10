@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/string-natural-compare",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "Compare alphanumeric strings the same way a human would, using a natural order algorithm",
   "keywords": [
     "create-by-yarn-tool",

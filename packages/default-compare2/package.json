@@ -1,6 +1,6 @@
 {
   "name": "default-compare-with-symbol",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Basic sort algorithm that has similar behavior to Array.prototype.sort for null and undefined, but also support symbol.",
   "keywords": [
     "compare",
