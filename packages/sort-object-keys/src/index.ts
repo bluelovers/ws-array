@@ -1,4 +1,5 @@
 import { array_unique_indexOf } from '@lazy-array/util-unique';
+import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
 
 export function sortObjectKeys<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T
 export function sortObjectKeys<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T
@@ -28,9 +29,17 @@ export function sortObjectKeys<T extends Record<any, any>>(object: T, sortWith: 
 	}
 
 	let {
-		keys = [] as IOptions<T>["keys"],
+		keys = [],
 		useSource,
-	} = options;
+	} = options as {
+		keys: any[],
+		useSource: boolean,
+	};
+
+	if (Array.isArray(keys))
+	{
+		keys = keys.slice();
+	}
 
 	if (options.onlyKeys)
 	{
@@ -43,7 +52,7 @@ export function sortObjectKeys<T extends Record<any, any>>(object: T, sortWith: 
 	}
 	else
 	{
-		keys = keys.concat()
+		keys = keys
 			.concat(Object.keys(object).sort(options.sort))
 		;
 	}
@@ -86,7 +95,7 @@ export interface IOptions<T extends Record<any, any> = Record<any, any> , K exte
 	/**
 	 * key order
 	 */
-	keys?: (string | K)[],
+	keys?: ITSArrayListMaybeReadonly<string | K>,
 	/**
 	 * return Object only keys
 	 * will disable useSource

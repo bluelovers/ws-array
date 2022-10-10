@@ -1,3 +1,5 @@
+import { ITSArrayListMaybeReadonly } from 'ts-type/lib/type/base';
+
 export declare function sortObjectKeys<T extends Record<any, any>>(object: T, sortFn: IOptions<T>["sort"]): T;
 export declare function sortObjectKeys<T extends Record<any, any>>(object: T, keyOrders: IOptions<T>["keys"]): T;
 export declare function sortObjectKeys<T extends Record<any, any>>(object: T, options?: Omit<IOptions<T>, "keys" | "onlyKeys"> & {
@@ -12,7 +14,7 @@ export interface IOptions<T extends Record<any, any> = Record<any, any>, K exten
 	/**
 	 * key order
 	 */
-	keys?: (string | K)[];
+	keys?: ITSArrayListMaybeReadonly<string | K>;
 	/**
 	 * return Object only keys
 	 * will disable useSource

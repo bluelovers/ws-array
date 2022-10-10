@@ -216,6 +216,20 @@ it('sort object v3', function ()
 	expect(actual).toMatchSnapshot();
 });
 
+it('readonly', function ()
+{
+	let actual = sortObject({
+		c: 1,
+		b: 1,
+		d: 1,
+		a: 1,
+	}, Object.freeze(['b', 'c', 'a', 'd']))
+
+	expect(Object.keys(actual)).toStrictEqual(['b', 'c', 'a', 'd']);
+	expect(Object.keys(actual)).toMatchSnapshot();
+	expect(actual).toMatchSnapshot();
+});
+
 it('extra keys', function ()
 {
 	let actual = sortObject({

@@ -18,6 +18,10 @@ function sortObjectKeys(object, sortWith) {
     useSource
   } = options;
 
+  if (Array.isArray(keys)) {
+    keys = keys.slice();
+  }
+
   if (options.onlyKeys) {
     useSource = false;
 
@@ -25,7 +29,7 @@ function sortObjectKeys(object, sortWith) {
       throw new ReferenceError(`options.key is empty or not exists.`);
     }
   } else {
-    keys = keys.concat().concat(Object.keys(object).sort(options.sort));
+    keys = keys.concat(Object.keys(object).sort(options.sort));
   }
 
   keys = utilUnique.array_unique_indexOf(keys);
