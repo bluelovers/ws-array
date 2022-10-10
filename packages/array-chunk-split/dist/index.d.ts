@@ -1,22 +1,22 @@
 /**
  * pick K and mark as Required
  */
-export declare type ITSRequiredPick<T, K extends keyof T = keyof T> = {
+export type ITSRequiredPick<T, K extends keyof T = keyof T> = {
 	[P in K]-?: T[P];
 };
 /**
  * pick K and mark as Partial
  */
-export declare type ITSPartialPick<T, K extends keyof T = keyof T> = {
+export type ITSPartialPick<T, K extends keyof T = keyof T> = {
 	[P in K]?: T[P];
 };
 /**
  * https://stackoverflow.com/questions/40510611/typescript-interface-require-one-of-two-properties-to-exist
  */
-export declare type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
+export type ITSRequireAtLeastOne<T, Keys extends keyof T = keyof T> = Omit<T, Keys> & {
 	[K in Keys]-?: ITSRequiredPick<T, K> & ITSPartialPick<T, Exclude<Keys, K>>;
 }[Keys];
-export declare type ITSValueOrArray<T> = T | T[];
+export type ITSValueOrArray<T> = T | T[];
 /**
  * same as T[][]
  */
