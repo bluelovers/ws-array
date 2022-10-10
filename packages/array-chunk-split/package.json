@@ -73,7 +73,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "ts-type": "^2.1.10"
+    "ts-type": "^3.0.1"
   },
   "packageManager": "yarn@^1.22.11",
   "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44"
