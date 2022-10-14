@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/bluelovers/ws-array/compare/distribute-group-to-array@1.0.8...distribute-group-to-array@1.0.9) (2022-10-14)
+
+
+
+### 🛠　Build System
+
+* update build ([4500550](https://github.com/bluelovers/ws-array/commit/4500550b75e9bc51a3cf104530b2302c7e5e6d4c))
+
+
+
 ## [1.0.8](https://github.com/bluelovers/ws-array/compare/distribute-group-to-array@1.0.7...distribute-group-to-array@1.0.8) (2022-10-10)
 
 

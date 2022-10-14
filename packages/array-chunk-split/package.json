@@ -1,6 +1,6 @@
 {
   "name": "array-chunk-split",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "Split an array into arrays with max chunk length",
   "keywords": [
     "create-by-yarn-tool",
