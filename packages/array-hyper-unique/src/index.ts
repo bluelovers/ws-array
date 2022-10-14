@@ -73,17 +73,20 @@ export {
 	defaultChecker,
 }
 
-Object.defineProperty(lazy_unique, "array_unique", { value: array_unique });
-Object.defineProperty(lazy_unique, "array_unique_overwrite", { value: array_unique_overwrite });
-Object.defineProperty(lazy_unique, "lazy_unique_overwrite", { value: lazy_unique_overwrite });
+if (process.env.TSDX_FORMAT !== 'esm')
+{
+	Object.defineProperty(lazy_unique, "array_unique", { value: array_unique });
+	Object.defineProperty(lazy_unique, "array_unique_overwrite", { value: array_unique_overwrite });
+	Object.defineProperty(lazy_unique, "lazy_unique_overwrite", { value: lazy_unique_overwrite });
 
-Object.defineProperty(lazy_unique, "equals", { value: equals });
-Object.defineProperty(lazy_unique, "defaultFilter", { value: defaultFilter });
-Object.defineProperty(lazy_unique, "defaultChecker", { value: defaultChecker });
+	Object.defineProperty(lazy_unique, "equals", { value: equals });
+	Object.defineProperty(lazy_unique, "defaultFilter", { value: defaultFilter });
+	Object.defineProperty(lazy_unique, "defaultChecker", { value: defaultChecker });
 
-Object.defineProperty(lazy_unique, "lazy_unique", { value: lazy_unique });
-Object.defineProperty(lazy_unique, "default", { value: lazy_unique });
+	Object.defineProperty(lazy_unique, "lazy_unique", { value: lazy_unique });
+	Object.defineProperty(lazy_unique, "default", { value: lazy_unique });
 
-Object.defineProperty(lazy_unique, "__esModule", { value: true });
+	Object.defineProperty(lazy_unique, "__esModule", { value: true });
+}
 
 export default lazy_unique

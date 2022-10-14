@@ -21,7 +21,7 @@ export function defaultFilter<T>(options: IOptions<T> = {})
 	const cb = <K extends any[]>(val: K[keyof K], index: number, arr: K) =>
 	{
 		let i = find(arr, a => checker(a, val, arr, arr));
-		return i == index && (!filter || filter(val));
+		return i === index && (!filter || filter(val));
 	};
 
 	return cb;

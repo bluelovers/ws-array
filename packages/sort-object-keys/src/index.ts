@@ -122,9 +122,14 @@ export interface IOptions<T extends Record<any, any> = Record<any, any> , K exte
 
 export { sortObjectKeys as sortObject }
 
-Object.defineProperty(sortObjectKeys, 'sortObjectKeys', { value: sortObjectKeys });
-Object.defineProperty(sortObjectKeys, 'sortObject', { value: sortObjectKeys });
-Object.defineProperty(sortObjectKeys, 'default', { value: sortObjectKeys });
-Object.defineProperty(sortObjectKeys, "__esModule", { value: true });
+if (process.env.TSDX_FORMAT !== 'esm')
+{
+
+	Object.defineProperty(sortObjectKeys, 'sortObjectKeys', { value: sortObjectKeys });
+	Object.defineProperty(sortObjectKeys, 'sortObject', { value: sortObjectKeys });
+	Object.defineProperty(sortObjectKeys, 'default', { value: sortObjectKeys });
+	Object.defineProperty(sortObjectKeys, "__esModule", { value: true });
+
+}
 
 export default sortObjectKeys;
