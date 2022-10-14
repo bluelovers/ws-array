@@ -59,7 +59,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "string-natural-compare": "^3.0.1"
+    "string-natural-compare2": "^3.0.1"
   },
   "packageManager": "yarn@^1.22.11",
   "publishConfig": {

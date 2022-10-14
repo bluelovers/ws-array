@@ -1,4 +1,4 @@
-import naturalCompare, { createNew } from '../src/index';
+import { naturalCompare, createNew } from '../src/index';
 
 test(`number`, () =>
 {

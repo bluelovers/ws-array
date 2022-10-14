@@ -1,21 +1,6 @@
-/**
- * Created by user on 2020/6/4.
- */
+import { naturalCompare as _naturalCompare, IOptions as IOptionsStringNaturalCompare } from 'string-natural-compare2';
 
-// @ts-ignore
-import _naturalCompare from 'string-natural-compare';
-
-export interface IOptionsStringNaturalCompare
-{
-	/**
-	 * Set to true to compare strings case-insensitively. Default: false.
-	 */
-	caseInsensitive?: boolean,
-	/**
-	 * A string of characters that define a custom character ordering. Default: undefined.
-	 */
-	alphabet?: string,
-}
+export type { IOptionsStringNaturalCompare }
 
 export interface IOptionsNaturalCompare extends IOptionsStringNaturalCompare
 {
@@ -32,18 +17,21 @@ export interface IOptionsNaturalCompare extends IOptionsStringNaturalCompare
 export function naturalCompare(a: string | number, b: string | number, opts?: IOptionsNaturalCompare)
 {
 	let i: number;
+	const typeA = typeof a === 'number';
+	const typeB = typeof b === 'number';
 
-	if (typeof a === 'number' && typeof b === 'number')
+	if (typeA && typeB)
 	{
+		// @ts-ignore
 		i = a - b
 	}
 	else
 	{
-		if (typeof a === 'number')
+		if (typeA)
 		{
 			a = String(a);
 		}
-		else if (typeof b === 'number')
+		if (typeB)
 		{
 			b = String(b);
 		}
@@ -53,7 +41,7 @@ export function naturalCompare(a: string | number, b: string | number, opts?: IO
 			return 0
 		}
 
-		i = _naturalCompare(a, b, opts)
+		i = _naturalCompare(a as any, b as any, opts)
 	}
 
 	if (i !== 0 && opts?.desc)
@@ -64,10 +52,12 @@ export function naturalCompare(a: string | number, b: string | number, opts?: IO
 	return i
 }
 
+export type ICompareFn = (a: string | number, b: string | number) => number;
+
 /**
  * create compare with preset options
  */
-export function createNew(opts?: IOptionsNaturalCompare)
+export function createNew(opts?: IOptionsNaturalCompare): ICompareFn
 {
 	return (a: string | number, b: string | number) => naturalCompare(a, b, opts)
 }
@@ -81,11 +71,17 @@ export const compareCaseInsensitive = createNew({
 
 export { compareCaseInsensitive as caseInsensitive }
 
-naturalCompare.createNew = createNew;
-naturalCompare.compareCaseInsensitive = compareCaseInsensitive;
-naturalCompare.caseInsensitive = compareCaseInsensitive;
-naturalCompare.default = naturalCompare;
+// @ts-ignore
+if (process.env.TSDX_FORMAT !== 'esm')
+{
+	Object.defineProperty(naturalCompare, "__esModule", { value: true });
 
-Object.defineProperty(naturalCompare, "__esModule", { value: true });
+	Object.defineProperty(naturalCompare, "default", { value: naturalCompare });
+	Object.defineProperty(naturalCompare, "naturalCompare", { value: naturalCompare });
+
+	Object.defineProperty(naturalCompare, "createNew", { value: createNew });
+	Object.defineProperty(naturalCompare, "compareCaseInsensitive", { value: compareCaseInsensitive });
+	Object.defineProperty(naturalCompare, "caseInsensitive", { value: compareCaseInsensitive });
+}
 
 export default naturalCompare

@@ -1,27 +1,22 @@
-import e from "string-natural-compare";
+import { naturalCompare as e } from "string-natural-compare2";
 
-function naturalCompare(a, r, t) {
+function naturalCompare(r, a, t) {
   let n;
-  if ("number" == typeof a && "number" == typeof r) n = a - r; else {
-    if ("number" == typeof a ? a = String(a) : "number" == typeof r && (r = String(r)), 
-    a === r) return 0;
-    n = e(a, r, t);
+  const o = "number" == typeof r, u = "number" == typeof a;
+  if (o && u) n = r - a; else {
+    if (o && (r = String(r)), u && (a = String(a)), r === a) return 0;
+    n = e(r, a, t);
   }
   return 0 !== n && null != t && t.desc && (n = 0 - n), n;
 }
 
 function createNew(e) {
-  return (a, r) => naturalCompare(a, r, e);
+  return (r, a) => naturalCompare(r, a, e);
 }
 
-const a = createNew({
+const r = createNew({
   caseInsensitive: !0
 });
 
-naturalCompare.createNew = createNew, naturalCompare.compareCaseInsensitive = a, 
-naturalCompare.caseInsensitive = a, naturalCompare.default = naturalCompare, Object.defineProperty(naturalCompare, "__esModule", {
-  value: !0
-});
-
-export { a as caseInsensitive, a as compareCaseInsensitive, createNew, naturalCompare as default, naturalCompare };
+export { r as caseInsensitive, r as compareCaseInsensitive, createNew, naturalCompare as default, naturalCompare };
 //# sourceMappingURL=index.esm.mjs.map

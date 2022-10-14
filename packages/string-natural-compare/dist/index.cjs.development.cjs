@@ -1,36 +1,28 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var _naturalCompare = require('string-natural-compare');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var _naturalCompare__default = /*#__PURE__*/_interopDefaultLegacy(_naturalCompare);
+var stringNaturalCompare2 = require('string-natural-compare2');
 
 function naturalCompare(a, b, opts) {
   let i;
-
-  if (typeof a === 'number' && typeof b === 'number') {
+  const typeA = typeof a === 'number';
+  const typeB = typeof b === 'number';
+  if (typeA && typeB) {
     i = a - b;
   } else {
-    if (typeof a === 'number') {
+    if (typeA) {
       a = String(a);
-    } else if (typeof b === 'number') {
+    }
+    if (typeB) {
       b = String(b);
     }
-
     if (a === b) {
       return 0;
     }
-
-    i = _naturalCompare__default["default"](a, b, opts);
+    i = stringNaturalCompare2.naturalCompare(a, b, opts);
   }
-
   if (i !== 0 && opts !== null && opts !== void 0 && opts.desc) {
     i = 0 - i;
   }
-
   return i;
 }
 function createNew(opts) {
@@ -39,17 +31,27 @@ function createNew(opts) {
 const compareCaseInsensitive = /*#__PURE__*/createNew({
   caseInsensitive: true
 });
-naturalCompare.createNew = createNew;
-naturalCompare.compareCaseInsensitive = compareCaseInsensitive;
-naturalCompare.caseInsensitive = compareCaseInsensitive;
-naturalCompare.default = naturalCompare;
-Object.defineProperty(naturalCompare, "__esModule", {
-  value: true
-});
+{
+  Object.defineProperty(naturalCompare, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(naturalCompare, "default", {
+    value: naturalCompare
+  });
+  Object.defineProperty(naturalCompare, "naturalCompare", {
+    value: naturalCompare
+  });
+  Object.defineProperty(naturalCompare, "createNew", {
+    value: createNew
+  });
+  Object.defineProperty(naturalCompare, "compareCaseInsensitive", {
+    value: compareCaseInsensitive
+  });
+  Object.defineProperty(naturalCompare, "caseInsensitive", {
+    value: compareCaseInsensitive
+  });
+}
 
-exports.caseInsensitive = compareCaseInsensitive;
-exports.compareCaseInsensitive = compareCaseInsensitive;
-exports.createNew = createNew;
-exports["default"] = naturalCompare;
-exports.naturalCompare = naturalCompare;
+// @ts-ignore
+module.exports = naturalCompare;
 //# sourceMappingURL=index.cjs.development.cjs.map
