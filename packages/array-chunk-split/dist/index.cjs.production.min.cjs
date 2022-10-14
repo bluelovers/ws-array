@@ -1,2 +1,39 @@
-"use strict";function arrayChunkBySize(e,r){const t=[],{length:n}=e;if(Array.isArray(r)){if(!r.filter((e=>e&&e<n)).length)throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${n} but got ${r}`);let a,u=0;for(let h of r){if(a=u+h,t.push(e.slice(u,a)),a>=n)break;u=a}a<n&&t.push(e.slice(u))}else{if("number"!=typeof r||r<1)throw new RangeError(`expected maxChunkSize > 0 but got ${r}`);for(let a=0;a<n;a++){let n=a+r;t.push(e.slice(a,n)),a=n-1}}return t}function arrayChunkSplit(e,r){if("number"!=typeof r||r<1)throw new RangeError(`expected maxChunkLength > 0 but got ${r}`);return arrayChunkBySize(e,Math.max(Math.round(e.length/r),1))}Object.defineProperty(exports,"__esModule",{value:!0}),exports.arrayChunkBySize=arrayChunkBySize,exports.arrayChunkMap=function arrayChunkMap(e){const{inputArray:r,maxChunkLength:t,maxChunkSize:n}=e;let a,{mapMethod:u}=e;if(null!=t)a=arrayChunkSplit(r,t);else{if(null==n)throw new TypeError("maxChunkLength or maxChunkSize is required");a=arrayChunkBySize(r,n)}return"function"!=typeof u&&(u=u?e=>e[e.length-1]:e=>e[0]),a.map(u)},exports.arrayChunkSplit=arrayChunkSplit,exports.default=arrayChunkSplit;
+"use strict";
+
+function arrayChunkBySize(e, r) {
+  const t = [], {length: n} = e;
+  if (Array.isArray(r)) {
+    if (!r.filter((e => e && e < n)).length) throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${n} but got ${r}`);
+    let a, u = 0;
+    for (let h of r) {
+      if (a = u + h, t.push(e.slice(u, a)), a >= n) break;
+      u = a;
+    }
+    a < n && t.push(e.slice(u));
+  } else {
+    if ("number" != typeof r || r < 1) throw new RangeError(`expected maxChunkSize > 0 but got ${r}`);
+    for (let a = 0; a < n; a++) {
+      let n = a + r;
+      t.push(e.slice(a, n)), a = n - 1;
+    }
+  }
+  return t;
+}
+
+function arrayChunkSplit(e, r) {
+  if ("number" != typeof r || r < 1) throw new RangeError(`expected maxChunkLength > 0 but got ${r}`);
+  return arrayChunkBySize(e, Math.max(Math.round(e.length / r), 1));
+}
+
+Object.defineProperty(exports, "__esModule", {
+  value: !0
+}), exports.arrayChunkBySize = arrayChunkBySize, exports.arrayChunkMap = function arrayChunkMap(e) {
+  const {inputArray: r, maxChunkLength: t, maxChunkSize: n} = e;
+  let a, {mapMethod: u} = e;
+  if (null != t) a = arrayChunkSplit(r, t); else {
+    if (null == n) throw new TypeError("maxChunkLength or maxChunkSize is required");
+    a = arrayChunkBySize(r, n);
+  }
+  return "function" != typeof u && (u = u ? e => e[e.length - 1] : e => e[0]), a.map(u);
+}, exports.arrayChunkSplit = arrayChunkSplit, exports.default = arrayChunkSplit;
 //# sourceMappingURL=index.cjs.production.min.cjs.map
