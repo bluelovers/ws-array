@@ -1,6 +1,6 @@
 {
   "name": "sort-object-keys2",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Sort an object's keys, including an optional key list",
   "keywords": [
     "arr",
@@ -96,7 +96,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@lazy-array/util-unique": "^1.0.3"
+    "@lazy-array/util-unique": "^1.0.4"
   },
   "packageManager": "yarn@1.22.19",
   "gitHead": "7b52de45e7022cc53fa1411f639b598b824b2cdc"

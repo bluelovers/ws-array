@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/bluelovers/ws-array/compare/@lazy-array/util-unique@1.0.3...@lazy-array/util-unique@1.0.4) (2022-10-25)
+
+
+
+### ✨　Features
+
+* `array_unique_by_set` ([c1e04c6](https://github.com/bluelovers/ws-array/commit/c1e04c686285a0fc3abc1882899c37c8119a04ab))
+
+
+
 ## [1.0.3](https://github.com/bluelovers/ws-array/compare/@lazy-array/util-unique@1.0.2...@lazy-array/util-unique@1.0.3) (2022-10-14)
 
 
