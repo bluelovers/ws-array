@@ -80,6 +80,7 @@
     "lodash.uniq": "^4.5.0",
     "strip-ansi": "<7 >=6",
     "tfk-unique-array": "^2.0.0",
+    "tsd": "^0.24.1",
     "tslib": "^2"
   },
   "devDependencies": {
