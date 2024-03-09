@@ -1,6 +1,6 @@
 {
   "name": "@lazy-array/array-hyper-unique-decorator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "decorator with array-hyper-unique",
   "keywords": [
     "decorator",
@@ -78,10 +78,8 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.1.4"
+    "array-hyper-unique": "^2.1.5"
   },
-  "devDependencies": {},
-  "peerDependencies": {},
   "packageManager": "yarn@1.22.19",
   "publishConfig": {
     "access": "public"
