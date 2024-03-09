@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`decorator async1 1`] = `
+[
+  "a",
+  "b",
+  "c",
+]
+`;
+
+exports[`decorator async2 1`] = `
+[
+  "b",
+  "c",
+  "a",
+]
+`;
+
+exports[`decorator sync1 1`] = `
+[
+  "a",
+  "b",
+  "c",
+]
+`;
+
+exports[`decorator sync2 1`] = `
+[
+  "b",
+  "c",
+  "a",
+]
+`;
