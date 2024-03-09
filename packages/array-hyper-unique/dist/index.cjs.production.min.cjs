@@ -2,21 +2,13 @@
 
 var e = require("deep-eql"), r = require("lodash");
 
-function _interopDefaultLegacy(e) {
-  return e && "object" == typeof e && "default" in e ? e : {
-    default: e
-  };
-}
-
-var u = _interopDefaultLegacy(e);
-
 function defaultFilter(e = {}) {
   const u = e.checker || defaultChecker, t = e.filter || null, n = e.removeFromFirst ? r.findLastIndex : r.findIndex;
-  return (e, r, a) => n(a, (r => u(r, e, a, a))) === r && (!t || t(e));
+  return (e, r, i) => n(i, (r => u(r, e, i, i))) === r && (!t || t(e));
 }
 
-function defaultChecker(e, r, t, n) {
-  return u.default(e, r);
+function defaultChecker(r, u, t, n) {
+  return e(r, u);
 }
 
 function array_unique(e, r = {}) {
@@ -50,8 +42,8 @@ Object.defineProperty(lazy_unique, "array_unique", {
     return array_unique_overwrite(e.length > 1 ? e : e[0]);
   }
 }), Object.defineProperty(lazy_unique, "equals", {
-  value: function equals(e, r) {
-    return u.default(e, r);
+  value: function equals(r, u) {
+    return e(r, u);
   }
 }), Object.defineProperty(lazy_unique, "defaultFilter", {
   value: defaultFilter

@@ -14,7 +14,7 @@ function createNew(e) {
   return (r, a) => naturalCompare(r, a, e);
 }
 
-const r = createNew({
+const r = /*#__PURE__*/ createNew({
   caseInsensitive: !0
 });
 

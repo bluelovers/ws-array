@@ -1,36 +1,30 @@
-!function(e, u) {
-  "object" == typeof exports && "undefined" != typeof module ? u(exports, require("deep-eql"), require("lodash-es")) : "function" == typeof define && define.amd ? define([ "exports", "deep-eql", "lodash-es" ], u) : u((e = "undefined" != typeof globalThis ? globalThis : e || self).ArrayHyperUnique = {}, e._equals, e.lodashEs);
-}(this, (function(e, u, r) {
+!function(e, r) {
+  "object" == typeof exports && "undefined" != typeof module ? r(exports, require("deep-eql"), require("lodash-es")) : "function" == typeof define && define.amd ? define([ "exports", "deep-eql", "lodash-es" ], r) : r((e = "undefined" != typeof globalThis ? globalThis : e || self).ArrayHyperUnique = {}, e._equals, e.lodashEs);
+}(this, (function(e, r, u) {
   "use strict";
-  function _interopDefaultLegacy(e) {
-    return e && "object" == typeof e && "default" in e ? e : {
-      default: e
-    };
-  }
-  var t = _interopDefaultLegacy(u);
   function equals(e, u) {
-    return t.default(e, u);
+    return r(e, u);
   }
   function defaultFilter(e = {}) {
-    const u = e.checker || defaultChecker, t = e.filter || null, a = e.removeFromFirst ? r.findLastIndex : r.findIndex;
-    return (e, r, i) => a(i, (r => u(r, e, i, i))) === r && (!t || t(e));
+    const r = e.checker || defaultChecker, t = e.filter || null, i = e.removeFromFirst ? u.findLastIndex : u.findIndex;
+    return (e, u, n) => i(n, (u => r(u, e, n, n))) === u && (!t || t(e));
   }
-  function defaultChecker(e, u, r, a) {
-    return t.default(e, u);
+  function defaultChecker(e, u, t, i) {
+    return r(e, u);
   }
-  function array_unique(e, u = {}) {
+  function array_unique(e, r = {}) {
     if (!Array.isArray(e)) throw new TypeError(`Expected an Array but got ${typeof e}.`);
-    const r = defaultFilter(u);
-    if (u.overwrite) {
-      let u = e.length;
-      for (;u--; ) r(e[u], u, e) || e.splice(u, 1);
+    const u = defaultFilter(r);
+    if (r.overwrite) {
+      let r = e.length;
+      for (;r--; ) u(e[r], r, e) || e.splice(r, 1);
       return e;
     }
-    return e.filter(r);
+    return e.filter(u);
   }
-  function array_unique_overwrite(e, u = {}) {
+  function array_unique_overwrite(e, r = {}) {
     return array_unique(e, {
-      ...u,
+      ...r,
       overwrite: !0
     });
   }

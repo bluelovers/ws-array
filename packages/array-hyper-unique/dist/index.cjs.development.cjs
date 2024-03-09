@@ -3,12 +3,9 @@
 var _equals = require('deep-eql');
 var lodash = require('lodash');
 
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var _equals__default = /*#__PURE__*/_interopDefaultLegacy(_equals);
-
+// @ts-ignore
 function equals(a1, a2) {
-  return _equals__default["default"](a1, a2);
+  return _equals(a1, a2);
 }
 function defaultFilter(options = {}) {
   const checker = options.checker || defaultChecker;
@@ -20,8 +17,9 @@ function defaultFilter(options = {}) {
   };
   return cb;
 }
+// @ts-ignore
 function defaultChecker(element, value, arr_new, arr_old) {
-  return _equals__default["default"](element, value);
+  return _equals(element, value);
 }
 
 function array_unique(arr, options = {}) {
@@ -39,6 +37,7 @@ function array_unique(arr, options = {}) {
     }
     return arr;
   }
+  // @ts-ignore
   return arr.filter(cb);
 }
 function array_unique_overwrite(arr, options = {}) {
@@ -47,6 +46,7 @@ function array_unique_overwrite(arr, options = {}) {
     overwrite: true
   });
 }
+// @ts-ignore
 function lazy_unique(...arr) {
   if (arr.length > 1) {
     return array_unique(arr);

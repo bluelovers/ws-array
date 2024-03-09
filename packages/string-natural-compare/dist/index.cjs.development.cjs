@@ -7,6 +7,7 @@ function naturalCompare(a, b, opts) {
   const typeA = typeof a === 'number';
   const typeB = typeof b === 'number';
   if (typeA && typeB) {
+    // @ts-ignore
     i = a - b;
   } else {
     if (typeA) {
@@ -31,6 +32,7 @@ function createNew(opts) {
 const compareCaseInsensitive = /*#__PURE__*/createNew({
   caseInsensitive: true
 });
+// @ts-ignore
 {
   Object.defineProperty(naturalCompare, "__esModule", {
     value: true

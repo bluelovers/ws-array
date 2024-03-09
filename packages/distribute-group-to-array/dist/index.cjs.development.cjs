@@ -11,10 +11,12 @@ function _createGroupArray(length) {
 }
 function distributeGroupToArrayCore(group, options) {
   var _options$init, _options$init2, _options$groupArraySi;
+  // @ts-ignore
   if (typeof group.entries !== 'undefined') {
     group = mapToRecord(group);
   }
-  const arr = (_options$init = options === null || options === void 0 ? void 0 : (_options$init2 = options.init) === null || _options$init2 === void 0 ? void 0 : _options$init2.call(options)) !== null && _options$init !== void 0 ? _options$init : _createGroupArray((_options$groupArraySi = options === null || options === void 0 ? void 0 : options.groupArraySize) !== null && _options$groupArraySi !== void 0 ? _options$groupArraySi : 4);
+  // @ts-ignore
+  const arr = (_options$init = options === null || options === void 0 || (_options$init2 = options.init) === null || _options$init2 === void 0 ? void 0 : _options$init2.call(options)) !== null && _options$init !== void 0 ? _options$init : _createGroupArray((_options$groupArraySi = options === null || options === void 0 ? void 0 : options.groupArraySize) !== null && _options$groupArraySi !== void 0 ? _options$groupArraySi : 4);
   const len = arr.length;
   const {
     names,
@@ -57,7 +59,7 @@ function distributeGroupToArray(group, options) {
 }
 
 exports._createGroupArray = _createGroupArray;
-exports["default"] = distributeGroupToArray;
+exports.default = distributeGroupToArray;
 exports.distributeGroupToArray = distributeGroupToArray;
 exports.distributeGroupToArrayCore = distributeGroupToArrayCore;
 exports.mapToRecord = mapToRecord;

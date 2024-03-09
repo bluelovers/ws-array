@@ -22,7 +22,7 @@ export declare function createNew(opts?: IOptionsNaturalCompare): ICompareFn;
 export declare const compareCaseInsensitive: ICompareFn;
 
 export {
-	IOptions as IOptionsStringNaturalCompare,
+	IOptionsStringNaturalCompare,
 	compareCaseInsensitive as caseInsensitive,
 	naturalCompare as default,
 };

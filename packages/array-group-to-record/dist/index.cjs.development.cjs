@@ -4,13 +4,9 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var hashSum = require('hash-sum');
 
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-var hashSum__default = /*#__PURE__*/_interopDefaultLegacy(hashSum);
-
 function handleOptions(options) {
   var _options$getKey;
-  const getKey = (_options$getKey = options === null || options === void 0 ? void 0 : options.getKey) !== null && _options$getKey !== void 0 ? _options$getKey : item => hashSum__default["default"](item);
+  const getKey = (_options$getKey = options === null || options === void 0 ? void 0 : options.getKey) !== null && _options$getKey !== void 0 ? _options$getKey : item => hashSum(item);
   return {
     ...options,
     getKey
@@ -48,15 +44,17 @@ function arrayGroupToMap(arr, options) {
 function sumGroup(group) {
   let len = 0;
   if (typeof group.forEach === 'undefined') {
+    // @ts-ignore
     group = Object.values(group);
   }
+  // @ts-ignore
   group.forEach(b => len += b.length);
   return len;
 }
 
 exports.arrayGroupToMap = arrayGroupToMap;
 exports.arrayGroupToRecord = arrayGroupToRecord;
-exports["default"] = arrayGroupToRecord;
+exports.default = arrayGroupToRecord;
 exports.handleOptions = handleOptions;
 exports.sumGroup = sumGroup;
 //# sourceMappingURL=index.cjs.development.cjs.map

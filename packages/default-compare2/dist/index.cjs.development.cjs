@@ -17,30 +17,30 @@ exports.EnumSortCompareResult = void 0;
 })(exports.EnumSortCompareResult || (exports.EnumSortCompareResult = {}));
 function numberCompare(a, b) {
   if (a < b) {
-    return -1;
+    return -1 /* EnumSortCompareResult.LEFT */;
   } else if (a > b) {
-    return 1;
+    return 1 /* EnumSortCompareResult.RIGHT */;
   }
-  return 0;
+  return 0 /* EnumSortCompareResult.KEEP */;
 }
 function nullCompare(a, b) {
   const typeA = _typeOf(a);
   const typeB = _typeOf(b);
   if (typeA === 'null') {
-    return typeB === 'null' ? 0 : typeB === 'undefined' ? -1 : 1;
+    return typeB === 'null' ? 0 /* EnumSortCompareResult.KEEP */ : typeB === 'undefined' ? -1 /* EnumSortCompareResult.LEFT */ : 1 /* EnumSortCompareResult.RIGHT */;
   } else if (typeA === 'undefined') {
-    return typeB === 'null' ? 1 : typeB === 'undefined' ? 0 : 1;
+    return typeB === 'null' ? 1 /* EnumSortCompareResult.RIGHT */ : typeB === 'undefined' ? 0 /* EnumSortCompareResult.KEEP */ : 1 /* EnumSortCompareResult.RIGHT */;
   } else if (typeB === 'null' || typeB === 'undefined') {
-    return -1;
+    return -1 /* EnumSortCompareResult.LEFT */;
   }
 }
 function symbolCompare(a, b) {
   const typeA = _typeOf(a);
   const typeB = _typeOf(b);
   if (typeA === 'symbol') {
-    return typeB === 'symbol' ? numberCompare(String(a), String(b)) : -1;
+    return typeB === 'symbol' ? numberCompare(String(a), String(b)) : -1 /* EnumSortCompareResult.LEFT */;
   } else if (typeB === 'symbol') {
-    return 1;
+    return 1 /* EnumSortCompareResult.RIGHT */;
   }
   return numberCompare(a, b);
 }
@@ -72,7 +72,7 @@ function arraySortWithSymbol(arr) {
 exports._typeOf = _typeOf;
 exports.arraySortWithSymbol = arraySortWithSymbol;
 exports.dateCompare = dateCompare;
-exports["default"] = defaultCompareWithSymbol;
+exports.default = defaultCompareWithSymbol;
 exports.defaultCompare = defaultCompareWithSymbol;
 exports.defaultCompareBasic = defaultCompareBasic;
 exports.defaultCompareWithSymbol = defaultCompareWithSymbol;

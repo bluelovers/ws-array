@@ -21,13 +21,20 @@ function arrayChunkMap(options) {
   }
   if (typeof mapMethod !== 'function') {
     if (mapMethod) {
+      // @ts-ignore
       mapMethod = value => value[value.length - 1];
     } else {
+      // @ts-ignore
       mapMethod = value => value[0];
     }
   }
   return result.map(mapMethod);
 }
+/**
+ * Split an array into arrays of chunk with max size
+ *
+ * @example arrayChunkBySize([1, 2, 3, 4, 5, 6, 7, 8], 5); // => [[1, 2, 3, 4, 5], [6, 7, 8]]
+ */
 function arrayChunkBySize(arr, maxChunkSize) {
   const result = [];
   const {
@@ -61,6 +68,11 @@ function arrayChunkBySize(arr, maxChunkSize) {
   }
   return result;
 }
+/**
+ * Split an array into arrays with max chunk length
+ *
+ * @example arrayChunkSplit([1, 2, 3, 4, 5, 6, 7, 8], 4); // => [[1, 2], [3, 4], [5, 6], [7, 8]]
+ */
 function arrayChunkSplit(arr, maxChunkLength) {
   if (typeof maxChunkLength !== 'number' || maxChunkLength < 1) {
     throw new RangeError(`expected maxChunkLength > 0 but got ${maxChunkLength}`);
@@ -72,5 +84,5 @@ function arrayChunkSplit(arr, maxChunkLength) {
 exports.arrayChunkBySize = arrayChunkBySize;
 exports.arrayChunkMap = arrayChunkMap;
 exports.arrayChunkSplit = arrayChunkSplit;
-exports["default"] = arrayChunkSplit;
+exports.default = arrayChunkSplit;
 //# sourceMappingURL=index.cjs.development.cjs.map

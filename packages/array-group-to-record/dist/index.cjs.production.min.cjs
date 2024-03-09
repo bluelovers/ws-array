@@ -1,48 +1,42 @@
 "use strict";
 
-function _interopDefaultLegacy(e) {
-  return e && "object" == typeof e && "default" in e ? e : {
-    default: e
-  };
-}
-
 Object.defineProperty(exports, "__esModule", {
   value: !0
 });
 
-var e = _interopDefaultLegacy(require("hash-sum"));
+var r = require("hash-sum");
 
-function handleOptions(r) {
+function handleOptions(e) {
   var o;
-  const t = null !== (o = null == r ? void 0 : r.getKey) && void 0 !== o ? o : r => e.default(r);
+  const n = null !== (o = null == e ? void 0 : e.getKey) && void 0 !== o ? o : e => r(e);
   return {
-    ...r,
-    getKey: t
+    ...e,
+    getKey: n
   };
 }
 
-function arrayGroupToRecord(e, r) {
+function arrayGroupToRecord(r, e) {
   var o;
-  const {getKey: t, init: n} = handleOptions(r);
-  return e.reduce(((e, r, o, n) => {
+  const {getKey: n, init: t} = handleOptions(e);
+  return r.reduce(((r, e, o, t) => {
     var u;
-    const a = t(r, o, n);
-    return null !== (u = e[a]) && void 0 !== u || (e[a] = []), e[a].push(r), e;
-  }), null !== (o = null == n ? void 0 : n()) && void 0 !== o ? o : {});
+    const a = n(e, o, t);
+    return null !== (u = r[a]) && void 0 !== u || (r[a] = []), r[a].push(e), r;
+  }), null !== (o = null == t ? void 0 : t()) && void 0 !== o ? o : {});
 }
 
-exports.arrayGroupToMap = function arrayGroupToMap(e, r) {
+exports.arrayGroupToMap = function arrayGroupToMap(r, e) {
   var o;
-  const {getKey: t, init: n} = handleOptions(r);
-  return e.reduce(((e, r, o, n) => {
+  const {getKey: n, init: t} = handleOptions(e);
+  return r.reduce(((r, e, o, t) => {
     var u;
-    const a = t(r, o, n), l = null !== (u = e.get(a)) && void 0 !== u ? u : [];
-    return l.push(r), e.set(a, l), e;
-  }), null !== (o = null == n ? void 0 : n()) && void 0 !== o ? o : new Map);
+    const a = n(e, o, t), l = null !== (u = r.get(a)) && void 0 !== u ? u : [];
+    return l.push(e), r.set(a, l), r;
+  }), null !== (o = null == t ? void 0 : t()) && void 0 !== o ? o : new Map);
 }, exports.arrayGroupToRecord = arrayGroupToRecord, exports.default = arrayGroupToRecord, 
-exports.handleOptions = handleOptions, exports.sumGroup = function sumGroup(e) {
-  let r = 0;
-  return void 0 === e.forEach && (e = Object.values(e)), e.forEach((e => r += e.length)), 
-  r;
+exports.handleOptions = handleOptions, exports.sumGroup = function sumGroup(r) {
+  let e = 0;
+  return void 0 === r.forEach && (r = Object.values(r)), r.forEach((r => e += r.length)), 
+  e;
 };
 //# sourceMappingURL=index.cjs.production.min.cjs.map
