@@ -9,5 +9,6 @@ Please see the individual package changelogs for what's new:
 * 🌏 [`distribute-group-to-array`](./packages/distribute-group-to-array/CHANGELOG.md "packages/distribute-group-to-array") *packages/distribute-group-to-array*
 * 🌏 [`sort-object-keys2`](./packages/sort-object-keys/CHANGELOG.md "packages/sort-object-keys") *packages/sort-object-keys*
 * 🌏 [`@bluelovers/string-natural-compare`](./packages/string-natural-compare/CHANGELOG.md "packages/string-natural-compare") *packages/string-natural-compare*
+* 🌏 [`@lazy-array/array-hyper-unique-decorator`](./packages/@lazy-array/array-hyper-unique-decorator/CHANGELOG.md "packages/@lazy-array/array-hyper-unique-decorator") *packages/@lazy-array/array-hyper-unique-decorator*
 * 🌏 [`@lazy-array/util-unique`](./packages/@lazy-array/util-unique/CHANGELOG.md "packages/@lazy-array/util-unique") *packages/@lazy-array/util-unique*
 
