@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.7](https://github.com/bluelovers/ws-array/compare/sort-object-keys2@3.0.6...sort-object-keys2@3.0.7) (2024-03-09)
+
+
+
+### ♻️　Chores
+
+* **release:** publish ([9a88607](https://github.com/bluelovers/ws-array/commit/9a88607ae9d79f92751ca50c78663d691c85d538))
+
+
+
 ## [3.0.6](https://github.com/bluelovers/ws-array/compare/sort-object-keys2@3.0.5...sort-object-keys2@3.0.6) (2024-03-09)
 
 

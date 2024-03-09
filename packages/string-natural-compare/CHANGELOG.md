@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.13](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.12...@bluelovers/string-natural-compare@2.0.13) (2024-03-09)
+
+
+
+### 🛠　Build System
+
+* update build ([c964084](https://github.com/bluelovers/ws-array/commit/c9640844a4f036c809056e99ab93ed96816c5515))
+
+
+
 ## [2.0.12](https://github.com/bluelovers/ws-array/compare/@bluelovers/string-natural-compare@2.0.11...@bluelovers/string-natural-compare@2.0.12) (2024-03-09)
 
 

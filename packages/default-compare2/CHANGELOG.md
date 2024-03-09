@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.7](https://github.com/bluelovers/ws-array/compare/default-compare-with-symbol@1.0.6...default-compare-with-symbol@1.0.7) (2024-03-09)
+
+
+
+### 🛠　Build System
+
+* update build ([c964084](https://github.com/bluelovers/ws-array/commit/c9640844a4f036c809056e99ab93ed96816c5515))
+
+
+
 ## [1.0.6](https://github.com/bluelovers/ws-array/compare/default-compare-with-symbol@1.0.5...default-compare-with-symbol@1.0.6) (2024-03-09)
 
 
