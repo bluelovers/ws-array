@@ -1,7 +1,7 @@
 {
   "name": "array-group-to-record",
   "version": "1.0.11",
-  "description": "",
+  "description": "將陣列元素依據自訂鍵分組為 Record 或 Map，支援 hash-sum 自動鍵生成 / Group array elements by custom key into Record or Map, supporting hash-sum auto key generation",
   "keywords": [
     "create-by-yarn-tool",
     "create-by-tsdx"

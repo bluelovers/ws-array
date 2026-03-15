@@ -1,7 +1,7 @@
 {
   "name": "sort-object-keys2",
   "version": "3.0.7",
-  "description": "Sort an object's keys, including an optional key list",
+  "description": "對物件的鍵進行排序，支援自訂排序函式、指定鍵順序和原地修改選項 / Sort object keys with custom sort functions, specified key order, and in-place modification options",
   "keywords": [
     "arr",
     "array",

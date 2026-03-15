@@ -1,7 +1,7 @@
 {
   "name": "default-compare-with-symbol",
   "version": "1.0.7",
-  "description": "Basic sort algorithm that has similar behavior to Array.prototype.sort for null and undefined, but also support symbol.",
+  "description": "基本排序演算法，行為類似 Array.prototype.sort 對 null 和 undefined 的處理，同時支援 Symbol / Basic sort algorithm with similar behavior to Array.prototype.sort for null and undefined, also supports Symbol",
   "keywords": [
     "compare",
     "default",

@@ -1,7 +1,7 @@
 {
   "name": "@lazy-array/array-hyper-unique-decorator",
   "version": "1.0.2",
-  "description": "decorator with array-hyper-unique",
+  "description": "為方法提供陣列深度去重裝飾器，支援同步和異步模式 / Provides array deep deduplication decorators for methods, supporting synchronous and asynchronous modes",
   "keywords": [
     "decorator",
     "array-hyper-unique",
