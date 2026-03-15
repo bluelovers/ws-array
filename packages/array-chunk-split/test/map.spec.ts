@@ -65,7 +65,7 @@ describe(`arrayChunkMap`, () =>
 	{
 		expect(() => arrayChunkMap({
 			inputArray: [],
-		} as any)).toThrowError();
+		} as any)).toThrow();
 	})
 
 })

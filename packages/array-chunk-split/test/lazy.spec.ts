@@ -103,7 +103,7 @@ describe(`arrayChunkSplit`, () =>
 
 	test(`throw error`, () =>
 	{
-		expect(() => arrayChunkSplit([], 0)).toThrowError();
+		expect(() => arrayChunkSplit([], 0)).toThrow();
 	})
 
 })
@@ -211,7 +211,7 @@ describe(`arrayChunkBySize`, () =>
 
 	test(`throw error`, () =>
 	{
-		expect(() => arrayChunkBySize([], 0)).toThrowError();
+		expect(() => arrayChunkBySize([], 0)).toThrow();
 	})
 
 	test(`[3, 2, 4]`, () =>

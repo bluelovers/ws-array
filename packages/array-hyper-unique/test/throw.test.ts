@@ -35,12 +35,12 @@ describe(`throw`, () =>
 			expect(function ()
 			{
 				return array_unique(...data);
-			}).toThrowError(TypeError);
+			}).toThrow(TypeError);
 
 			expect(function ()
 			{
 				return lazy_unique(...data);
-			}).toThrowError(TypeError);
+			}).toThrow(TypeError);
 
 			done()
 		});
