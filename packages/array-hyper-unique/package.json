@@ -1,6 +1,6 @@
 {
   "name": "array-hyper-unique",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "取得陣列唯一值，支援深度比較巢狀物件和陣列 / Get unique values from array with deep comparison for nested objects and arrays",
   "keywords": [
     "Array.prototype.unique",

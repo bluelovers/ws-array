@@ -1,6 +1,6 @@
 {
   "name": "sort-object-keys2",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "對物件的鍵進行排序，支援自訂排序函式、指定鍵順序和原地修改選項 / Sort object keys with custom sort functions, specified key order, and in-place modification options",
   "keywords": [
     "arr",
@@ -98,7 +98,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "@lazy-array/util-unique": "^1.0.5"
+    "@lazy-array/util-unique": "^1.0.7"
   },
   "gitHead": "77defbf96f2631c5d5df602f053c29352ac60786"
 }

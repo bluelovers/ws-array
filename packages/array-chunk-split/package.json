@@ -1,6 +1,6 @@
 {
   "name": "array-chunk-split",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "將陣列分割成多個區塊，支援固定數量或固定大小的分塊方式 / Split array into multiple chunks, supporting fixed quantity or fixed size chunking",
   "keywords": [
     "create-by-yarn-tool",
