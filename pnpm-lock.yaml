@@ -11,6 +11,9 @@ importers:
       '@arr/unique':
         specifier: ^1.0.1
         version: 1.0.1
+      '@bluelovers/conventional-changelog-bluelovers':
+        specifier: ^5.0.27
+        version: 5.0.27(@types/bluebird@3.5.42)(@types/node@25.5.0)(ts-toolbelt@9.6.0)
       arr-unique:
         specifier: ^1.0.2
         version: 1.0.2
@@ -301,6 +304,10 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@bluelovers/conventional-changelog-bluelovers@5.0.27':
+    resolution: {integrity: sha512-brOWuZDYEcYB4FWE+kvO3NgAidoAcIA/mPyeOqiOkGxXYZHU4ngEMLF6lrbAm6Tjhe+DkxhfFLzNrFbr/j3r/A==}
+    engines: {node: '>=10'}
 
   '@bluelovers/tsconfig@1.0.35':
     resolution: {integrity: sha512-KjH71atoZsWso44tMLlZTRdwR9NGz6YQhmmcL6q5AbxZDxWyQNvq5DS9PLT4pB0z2Jt7+Qqc4EqkEsPwNM3gkg==}
@@ -1582,6 +1589,9 @@ packages:
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
     engines: {node: '>=12'}
+
+  emoji-regex@10.6.0:
+    resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2952,6 +2962,14 @@ packages:
   pure-rand@7.0.1:
     resolution: {integrity: sha512-oTUZM/NAZS8p7ANR3SHh30kXB+zK2r2BPcEn/awJIbOvq82WoMN4p62AWWp3Hhw50G0xMsw1mhIBLqHw64EcNQ==}
 
+  q@1.5.1:
+    resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
+    engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
+    deprecated: |-
+      You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+
+      (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -3738,6 +3756,17 @@ snapshots:
       '@babel/helper-validator-identifier': 7.28.5
 
   '@bcoe/v8-coverage@0.2.3': {}
+
+  '@bluelovers/conventional-changelog-bluelovers@5.0.27(@types/bluebird@3.5.42)(@types/node@25.5.0)(ts-toolbelt@9.6.0)':
+    dependencies:
+      compare-func: 2.0.0
+      emoji-regex: 10.6.0
+      q: 1.5.1
+      ts-type: 2.1.10(@types/bluebird@3.5.42)(@types/node@25.5.0)(ts-toolbelt@9.6.0)
+    transitivePeerDependencies:
+      - '@types/bluebird'
+      - '@types/node'
+      - ts-toolbelt
 
   '@bluelovers/tsconfig@1.0.35':
     dependencies:
@@ -5203,6 +5232,8 @@ snapshots:
   electron-to-chromium@1.5.313: {}
 
   emittery@0.13.1: {}
+
+  emoji-regex@10.6.0: {}
 
   emoji-regex@8.0.0: {}
 
@@ -6954,6 +6985,8 @@ snapshots:
   proxy-from-env@1.1.0: {}
 
   pure-rand@7.0.1: {}
+
+  q@1.5.1: {}
 
   queue-microtask@1.2.3: {}
 

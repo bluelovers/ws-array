@@ -79,6 +79,7 @@
   "resolutions": {},
   "dependencies": {
     "@arr/unique": "^1.0.1",
+    "@bluelovers/conventional-changelog-bluelovers": "^5.0.27",
     "arr-unique": "^1.0.2",
     "array-uniq": "<3 >=2.1",
     "array-unique": "^0.3.2",

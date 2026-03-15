@@ -1,6 +1,6 @@
 {
   "name": "@lazy-array/util-unique",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "提供陣列去重的工具函式，包含 indexOf 和 Set 兩種實現方式 / Provides array deduplication utilities with indexOf and Set implementation methods",
   "keywords": [
     "create-by-yarn-tool",
