@@ -62,7 +62,6 @@
   "dependencies": {
     "string-natural-compare2": "^3.0.1"
   },
-  "packageManager": "yarn@^1.22.11",
   "publishConfig": {
     "access": "public"
   },

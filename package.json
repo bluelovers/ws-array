@@ -39,9 +39,12 @@
     "build:all": "yarn-tool ws run build --concurrency 1",
     "build:since": "yarn run build:all -- --since",
     "ci:install": "yarn install --frozen-lockfile && yarn add -W typescript@next jest ts-jest ts-node ynpx lerna yarn-tool",
+    "ci:install:pnpm": "pnpm install --frozen-lockfile && pnpm add --workspace yarn-tool lerna ynpx pnpm typescript ts-node tsx ts-jest jest @bluelovers/jest-config @bluelovers/tsconfig @yarn-tool/require-resolve",
+    "ci:install:yarn": "yarn install --frozen-lockfile && yarn add -W yarn-tool lerna ynpx pnpm typescript ts-node tsx ts-jest jest @bluelovers/jest-config @bluelovers/tsconfig @yarn-tool/require-resolve",
     "ci:build": "echo ci:build",
     "lerna:publish": "yarn run prepublishOnly:root && lerna publish && yarn run postpublishOnly",
     "lerna:publish:yes": "yarn run prepublishOnly:root && lerna publish --yes --bump patch && yarn run postpublishOnly",
+    "lerna:publish:yes:force": "lerna publish --no-private --yes --bump patch --force-publish",
     "lerna:publish:yes:major": "yarn run prepublishOnly:root && lerna publish --no-private --yes --bump major && yarn run postpublishOnly",
     "lerna:publish:yes:minor": "yarn run prepublishOnly:root && lerna publish --no-private --yes --bump minor && yarn run postpublishOnly",
     "lerna:publish:yes:patch": "yarn run prepublishOnly:root && lerna publish --no-private --yes --bump patch && yarn run postpublishOnly",
@@ -86,21 +89,22 @@
     "lodash.uniq": "^4.5.0",
     "strip-ansi": "<7 >=6",
     "tfk-unique-array": "^2.0.0",
-    "tsd": "^0.30.7",
-    "tslib": "^2.6.2"
+    "tsd": "^0.33.0",
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.35",
     "@types/array-unique": "^0.3.3",
-    "@types/jest": "^29.5.12",
-    "@types/lodash": "^4.14.202",
+    "@types/jest": "^30.0.0",
+    "@types/lodash": "^4.17.24",
     "@types/lodash.uniq": "^4.5.9",
-    "@types/node": "^20.11.25",
-    "@yarn-tool/ws-find-up-paths": "^1.0.12",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.2"
+    "@types/node": "^25.5.0",
+    "@yarn-tool/require-resolve": "*",
+    "@yarn-tool/ws-find-up-paths": "^1.0.19",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.6"
   },
   "peerDependencies": {
-    "lerna": "^8.1.2"
+    "lerna": "^9.0.7"
   }
 }

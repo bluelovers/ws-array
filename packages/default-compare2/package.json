@@ -90,6 +90,5 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort",
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
-  },
-  "packageManager": "yarn@^1.22.11"
+  }
 }
