@@ -1,7 +1,7 @@
 function array_unique_indexOf(n) {
-  return n.filter((function(n, e, r) {
+  return n.filter(function(n, e, r) {
     return e === r.indexOf(n);
-  }));
+  });
 }
 
 function array_unique_by_set(n) {

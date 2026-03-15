@@ -10,12 +10,12 @@ function sortObjectKeys(t, r) {
     if (c = !1, "number" != typeof o.length || 0 === o.length) throw new ReferenceError("options.key is empty or not exists.");
   } else o = o.concat(Object.keys(t).sort(s.sort));
   o = e.array_unique_indexOf(o), s.desc && (o = o.reverse());
-  let y = o.reduce((function(e, r) {
+  let y = o.reduce(function(e, r) {
     return (s.allowNotExists || r in t) && (e[r] = t[r]), e;
-  }), {});
-  return c ? (Object.keys(y).forEach((function(e) {
+  }, {});
+  return c ? (Object.keys(y).forEach(function(e) {
     delete t[e], t[e] = y[e];
-  })), t) : y;
+  }), t) : y;
 }
 
 Object.defineProperty(sortObjectKeys, "sortObjectKeys", {

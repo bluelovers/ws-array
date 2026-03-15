@@ -2,6 +2,16 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+/**
+ * 建立指定長度的群組陣列
+ * Create group array with specified length
+ *
+ * @param length - 群組數量 / Number of groups
+ * @returns 指定數量的空陣列 / Array of specified number of empty arrays
+ *
+ * @example
+ * _createGroupArray(4); // => [[], [], [], []]
+ */
 function _createGroupArray(length) {
   const arr = [];
   for (let i = 0; i < length; i++) {
@@ -9,6 +19,30 @@ function _createGroupArray(length) {
   }
   return arr;
 }
+/**
+ * 將群組資料分發到多個陣列中
+ * Distribute group data into multiple arrays
+ *
+ * 應用情境：
+ * - 將分組資料均匀分發到多個處理佇列
+ * - 负载均衡：將任務均匀分配到多個worker
+ * - 資料分頁：將資料分發到多個頁面
+ * - Distribute grouped data evenly across multiple processing queues
+ * - Load balancing: Distribute tasks evenly across multiple workers
+ * - Data pagination: Distribute data across multiple pages
+ *
+ * @param group - 群組資料（Record 或 Map）/ Group data (Record or Map)
+ * @param options - 分發選項 / Distribution options
+ * @returns 分發後的群組陣列 / Distributed group arrays
+ *
+ * @example
+ * // 將兩個群組的資料交替分發
+ * distributeGroupToArrayCore({
+ *   groupA: ['a1', 'a2', 'a3'],
+ *   groupB: ['b1', 'b2']
+ * });
+ * // => [['a1', 'b1', 'a3'], ['a2', 'b2']]
+ */
 function distributeGroupToArrayCore(group, options) {
   var _options$init, _options$init2, _options$groupArraySi;
   // @ts-ignore
@@ -47,6 +81,17 @@ function distributeGroupToArrayCore(group, options) {
   } while (Object.keys(record).length);
   return arr;
 }
+/**
+ * 將 Map 轉換為 Record
+ * Convert Map to Record
+ *
+ * @param map - 要轉換的 Map / Map to convert
+ * @returns 轉換後的 Record / Converted Record
+ *
+ * @example
+ * const map = new Map([['a', [1, 2]], ['b', [3, 4]]]);
+ * mapToRecord(map); // => { a: [1, 2], b: [3, 4] }
+ */
 function mapToRecord(map) {
   const record = {};
   for (let [k, v] of map.entries()) {
@@ -54,6 +99,25 @@ function mapToRecord(map) {
   }
   return record;
 }
+/**
+ * 將群組資料分發並扁平化為單一陣列
+ * Distribute group data and flatten into single array
+ *
+ * 應用情境：
+ * - 產生均匀分布的單一資料序列
+ * - Generate evenly distributed single data sequence
+ *
+ * @param group - 群組資料（Record 或 Map）/ Group data (Record or Map)
+ * @param options - 分發選項 / Distribution options
+ * @returns 扁平化的分發結果 / Flattened distributed result
+ *
+ * @example
+ * distributeGroupToArray({
+ *   groupA: ['a1', 'a2', 'a3'],
+ *   groupB: ['b1', 'b2']
+ * });
+ * // => ['a1', 'b1', 'a2', 'b2', 'a3']
+ */
 function distributeGroupToArray(group, options) {
   return distributeGroupToArrayCore(group, options).flat();
 }

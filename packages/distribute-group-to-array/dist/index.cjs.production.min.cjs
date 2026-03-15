@@ -9,8 +9,8 @@ function _createGroupArray(r) {
 function distributeGroupToArrayCore(r, e) {
   var o, t, u;
   void 0 !== r.entries && (r = mapToRecord(r));
-  const i = null !== (o = null == e || null === (t = e.init) || void 0 === t ? void 0 : t.call(e)) && void 0 !== o ? o : _createGroupArray(null !== (u = null == e ? void 0 : e.groupArraySize) && void 0 !== u ? u : 4), n = i.length, {names: s, record: a} = Object.entries(r).reduce(((r, [e, o]) => (r.names.push(e), 
-  r.record[e] = o.slice(), r)), {
+  const i = null !== (o = null == e || null === (t = e.init) || void 0 === t ? void 0 : t.call(e)) && void 0 !== o ? o : _createGroupArray(null !== (u = null == e ? void 0 : e.groupArraySize) && void 0 !== u ? u : 4), n = i.length, {names: s, record: a} = Object.entries(r).reduce((r, [e, o]) => (r.names.push(e), 
+  r.record[e] = o.slice(), r), {
     names: [],
     record: {}
   });

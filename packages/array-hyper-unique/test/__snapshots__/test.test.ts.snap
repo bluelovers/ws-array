@@ -1,16 +1,42 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`overwrite source input ArrayBuffer 1`] = `
 [
-  ArrayBuffer [],
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
 ]
 `;
 
 exports[`overwrite source input ArrayBuffer 2`] = `
 [
-  ArrayBuffer [],
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
 ]
 `;
 
@@ -34,7 +60,13 @@ exports[`overwrite source input Buffer & ArrayBuffer 1`] = `
     0,
   ],
   {},
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
 ]
 `;
 
@@ -58,7 +90,13 @@ exports[`overwrite source input Buffer & ArrayBuffer 2`] = `
     0,
   ],
   {},
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
 ]
 `;
 

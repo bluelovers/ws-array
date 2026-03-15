@@ -1,11 +1,11 @@
 !function(e, r) {
   "object" == typeof exports && "undefined" != typeof module ? r(exports) : "function" == typeof define && define.amd ? define([ "exports" ], r) : r((e = "undefined" != typeof globalThis ? globalThis : e || self).ArrayChunkSplit = {});
-}(this, (function(e) {
+}(this, function(e) {
   "use strict";
   function arrayChunkBySize(e, r) {
     const n = [], {length: t} = e;
     if (Array.isArray(r)) {
-      if (!r.filter((e => e && e < t)).length) throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${t} but got ${r}`);
+      if (!r.filter(e => e && e < t).length) throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${t} but got ${r}`);
       let a, u = 0;
       for (let i of r) {
         if (a = u + i, n.push(e.slice(u, a)), a >= t) break;
@@ -36,5 +36,5 @@
   }, e.arrayChunkSplit = arrayChunkSplit, e.default = arrayChunkSplit, Object.defineProperty(e, "__esModule", {
     value: !0
   });
-}));
+});
 //# sourceMappingURL=index.umd.production.min.cjs.map

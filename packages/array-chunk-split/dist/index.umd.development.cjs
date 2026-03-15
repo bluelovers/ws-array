@@ -33,9 +33,25 @@
 	  return result.map(mapMethod);
 	}
 	/**
-	 * Split an array into arrays of chunk with max size
+	 * 根據區塊大小分割陣列
+	 * Split array into chunks by size
 	 *
-	 * @example arrayChunkBySize([1, 2, 3, 4, 5, 6, 7, 8], 5); // => [[1, 2, 3, 4, 5], [6, 7, 8]]
+	 * 應用情境：
+	 * - 固定大小的資料批次
+	 * - 每 N 個元素一組的處理
+	 * - Fixed-size data batches
+	 * - Process every N elements as a group
+	 *
+	 * @param arr - 要分割的陣列 / Array to split
+	 * @param maxChunkSize - 每個區塊的大小 / Size of each chunk
+	 * @returns 分塊後的陣列 / Chunked array
+	 *
+	 * @example
+	 * // 固定區塊大小
+	 * arrayChunkBySize([1, 2, 3, 4, 5, 6, 7, 8], 5); // => [[1, 2, 3, 4, 5], [6, 7, 8]]
+	 *
+	 * // 多個區塊大小
+	 * arrayChunkBySize([1, 2, 3, 4, 5], [2, 3]); // => [[1, 2], [3, 4, 5]]
 	 */
 	function arrayChunkBySize(arr, maxChunkSize) {
 	  const result = [];
@@ -71,9 +87,25 @@
 	  return result;
 	}
 	/**
-	 * Split an array into arrays with max chunk length
+	 * 根據區塊數量分割陣列
+	 * Split array into specified number of chunks
 	 *
-	 * @example arrayChunkSplit([1, 2, 3, 4, 5, 6, 7, 8], 4); // => [[1, 2], [3, 4], [5, 6], [7, 8]]
+	 * 應用情境：
+	 * - 均分資料到 N 個處理器
+	 * - 將資料均勻分配到多個頁面
+	 * - Distribute data evenly to N processors
+	 * - Distribute data evenly across multiple pages
+	 *
+	 * @param arr - 要分割的陣列 / Array to split
+	 * @param maxChunkLength - 區塊數量 / Number of chunks
+	 * @returns 分塊後的陣列 / Chunked array
+	 *
+	 * @example
+	 * // 分成 4 個區塊
+	 * arrayChunkSplit([1, 2, 3, 4, 5, 6, 7, 8], 4); // => [[1, 2], [3, 4], [5, 6], [7, 8]]
+	 *
+	 * // 分成 3 個區塊
+	 * arrayChunkSplit([1, 2, 3, 4, 5], 3); // => [[1, 2], [3, 4], [5]]
 	 */
 	function arrayChunkSplit(arr, maxChunkLength) {
 	  if (typeof maxChunkLength !== 'number' || maxChunkLength < 1) {

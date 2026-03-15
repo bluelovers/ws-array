@@ -8,12 +8,12 @@ function sortObjectKeys(t, r) {
     if (n = !1, "number" != typeof o.length || 0 === o.length) throw new ReferenceError("options.key is empty or not exists.");
   } else o = o.concat(Object.keys(t).sort(s.sort));
   o = e(o), s.desc && (o = o.reverse());
-  let c = o.reduce((function(e, r) {
+  let c = o.reduce(function(e, r) {
     return (s.allowNotExists || r in t) && (e[r] = t[r]), e;
-  }), {});
-  return n ? (Object.keys(c).forEach((function(e) {
+  }, {});
+  return n ? (Object.keys(c).forEach(function(e) {
     delete t[e], t[e] = c[e];
-  })), t) : c;
+  }), t) : c;
 }
 
 export { sortObjectKeys as default, sortObjectKeys as sortObject, sortObjectKeys };

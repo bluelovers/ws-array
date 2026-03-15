@@ -3,7 +3,7 @@
 function arrayChunkBySize(e, r) {
   const t = [], {length: n} = e;
   if (Array.isArray(r)) {
-    if (!r.filter((e => e && e < n)).length) throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${n} but got ${r}`);
+    if (!r.filter(e => e && e < n).length) throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${n} but got ${r}`);
     let a, u = 0;
     for (let h of r) {
       if (a = u + h, t.push(e.slice(u, a)), a >= n) break;

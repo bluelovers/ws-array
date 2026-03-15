@@ -1,6 +1,6 @@
 !function(e, o) {
   "object" == typeof exports && "undefined" != typeof module ? o(exports) : "function" == typeof define && define.amd ? define([ "exports" ], o) : o((e = "undefined" != typeof globalThis ? globalThis : e || self).DefaultCompareWithSymbol = {});
-}(this, (function(e) {
+}(this, function(e) {
   "use strict";
   function _typeOf(e) {
     return null === e ? "null" : typeof e;
@@ -36,5 +36,5 @@
   }, e.symbolCompare = symbolCompare, Object.defineProperty(e, "__esModule", {
     value: !0
   });
-}));
+});
 //# sourceMappingURL=index.umd.production.min.cjs.map

@@ -18,25 +18,25 @@ function handleOptions(e) {
 function arrayGroupToRecord(r, e) {
   var o;
   const {getKey: n, init: t} = handleOptions(e);
-  return r.reduce(((r, e, o, t) => {
+  return r.reduce((r, e, o, t) => {
     var u;
     const a = n(e, o, t);
     return null !== (u = r[a]) && void 0 !== u || (r[a] = []), r[a].push(e), r;
-  }), null !== (o = null == t ? void 0 : t()) && void 0 !== o ? o : {});
+  }, null !== (o = null == t ? void 0 : t()) && void 0 !== o ? o : {});
 }
 
 exports.arrayGroupToMap = function arrayGroupToMap(r, e) {
   var o;
   const {getKey: n, init: t} = handleOptions(e);
-  return r.reduce(((r, e, o, t) => {
+  return r.reduce((r, e, o, t) => {
     var u;
     const a = n(e, o, t), l = null !== (u = r.get(a)) && void 0 !== u ? u : [];
     return l.push(e), r.set(a, l), r;
-  }), null !== (o = null == t ? void 0 : t()) && void 0 !== o ? o : new Map);
+  }, null !== (o = null == t ? void 0 : t()) && void 0 !== o ? o : new Map);
 }, exports.arrayGroupToRecord = arrayGroupToRecord, exports.default = arrayGroupToRecord, 
 exports.handleOptions = handleOptions, exports.sumGroup = function sumGroup(r) {
   let e = 0;
-  return void 0 === r.forEach && (r = Object.values(r)), r.forEach((r => e += r.length)), 
+  return void 0 === r.forEach && (r = Object.values(r)), r.forEach(r => e += r.length), 
   e;
 };
 //# sourceMappingURL=index.cjs.production.min.cjs.map

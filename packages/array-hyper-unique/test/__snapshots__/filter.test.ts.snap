@@ -1,17 +1,49 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`(v) => v ArrayBuffer 1`] = `
 [
-  ArrayBuffer [],
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
 ]
 `;
 
 exports[`(v) => v ArrayBuffer 2`] = `
 [
-  ArrayBuffer [],
-  ArrayBuffer [],
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
 ]
 `;
 
@@ -35,7 +67,13 @@ exports[`(v) => v Buffer & ArrayBuffer 1`] = `
     0,
   ],
   {},
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
 ]
 `;
 
@@ -69,8 +107,20 @@ exports[`(v) => v Buffer & ArrayBuffer 2`] = `
     ],
     "type": "Buffer",
   },
-  ArrayBuffer [],
-  ArrayBuffer [],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+  ArrayBuffer [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
   {
     "data": [
       0,

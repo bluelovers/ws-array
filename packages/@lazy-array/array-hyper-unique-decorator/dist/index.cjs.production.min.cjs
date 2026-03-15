@@ -19,7 +19,7 @@ function _coreAsync(r, e) {
   return (n, t, o) => {
     const u = o.value;
     o.value = function(...n) {
-      return u.apply(this, n).then((n => r(n, e)));
+      return u.apply(this, n).then(n => r(n, e));
     };
   };
 }

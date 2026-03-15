@@ -11,7 +11,7 @@ function arrayChunkMap(e) {
 function arrayChunkBySize(e, r) {
   const n = [], {length: t} = e;
   if (Array.isArray(r)) {
-    if (!r.filter((e => e && e < t)).length) throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${t} but got ${r}`);
+    if (!r.filter(e => e && e < t).length) throw new RangeError(`expected maxChunkSize.length > 0 and each values < ${t} but got ${r}`);
     let a, u = 0;
     for (let h of r) {
       if (a = u + h, n.push(e.slice(u, a)), a >= t) break;
