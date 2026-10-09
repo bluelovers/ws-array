@@ -61,6 +61,7 @@
     "test": "test"
   },
   "scripts": {
+    "coverage": "pnpm run test --coverage",
     "test": "jest --passWithNoTests",
     "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "pnpm run test:jest --coverage",
@@ -75,7 +76,8 @@
     "build:dts:tsc:emit": "tsc --emitDeclarationOnly --declaration --noEmit false",
     "build:tsdx": "ynpx @bluelovers/tsdx build --target node",
     "preversion": "echo preversion && pnpm run test",
-    "version": "echo version"
+    "version": "echo version",
+    "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
     "@lazy-array/util-unique": "^1.0.7"
