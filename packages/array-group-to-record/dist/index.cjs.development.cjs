@@ -5,6 +5,14 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var hashSum = require('hash-sum');
 
 /**
+ * 將陣列元素分組為 Record 的選項
+ * Options for grouping array elements into Record
+ *
+ * @property getKey - 取得分組鍵的函式 / Function to get grouping key
+ * @property init - 初始化 Record 的函式 / Function to initialize Record
+ */
+
+/**
  * 處理選項，回填預設值
  * Handle options, fill in defaults
  *

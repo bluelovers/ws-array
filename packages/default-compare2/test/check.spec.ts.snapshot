@@ -1,0 +1,79 @@
+exports[`defaultCompare > mixin 1`] = `
+[
+  {
+    "name": "c",
+    "title": "C"
+  },
+  {
+    "name": "a",
+    "title": "A"
+  },
+  {
+    "title": "G"
+  },
+  {
+    "name": "b",
+    "title": "B"
+  },
+  {
+    "name": "d",
+    "title": "D"
+  },
+  {
+    "name": null,
+    "title": "F"
+  },
+  {
+    "name": "e",
+    "title": "E"
+  },
+  null,
+  null
+]
+`;
+
+exports[`defaultCompare > mixin with symbol 1`] = `
+[
+  null,
+  null,
+  null,
+  null,
+  {
+    "name": "c",
+    "title": "C"
+  },
+  {
+    "name": "a",
+    "title": "A"
+  },
+  {
+    "title": "G"
+  },
+  {
+    "name": "b",
+    "title": "B"
+  },
+  {
+    "name": "d",
+    "title": "D"
+  },
+  {
+    "name": null,
+    "title": "F"
+  },
+  {
+    "name": "e",
+    "title": "E"
+  },
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "https://bafybeicm5clh7fl4up4prnbfqksou6vsp5voth54rcsxhsjysimm3o77fq.on.fleek.co/",
+  null,
+  null,
+  null,
+  null
+]
+`;

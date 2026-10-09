@@ -36,12 +36,12 @@ function _typeOf(target) {
  * @property RIGHT - 排在右邊（較大）/ Place on right (greater)
  * @property LEFT - 排在左邊（較小）/ Place on left (smaller)
  */
-exports.EnumSortCompareResult = void 0;
-(function (EnumSortCompareResult) {
+let EnumSortCompareResult = /*#__PURE__*/function (EnumSortCompareResult) {
   EnumSortCompareResult[EnumSortCompareResult["KEEP"] = 0] = "KEEP";
   EnumSortCompareResult[EnumSortCompareResult["RIGHT"] = 1] = "RIGHT";
   EnumSortCompareResult[EnumSortCompareResult["LEFT"] = -1] = "LEFT";
-})(exports.EnumSortCompareResult || (exports.EnumSortCompareResult = {}));
+  return EnumSortCompareResult;
+}({});
 /**
  * 數值比較函式
  * Number compare function
@@ -58,11 +58,11 @@ exports.EnumSortCompareResult = void 0;
  */
 function numberCompare(a, b) {
   if (a < b) {
-    return -1 /* EnumSortCompareResult.LEFT */;
+    return EnumSortCompareResult.LEFT;
   } else if (a > b) {
-    return 1 /* EnumSortCompareResult.RIGHT */;
+    return EnumSortCompareResult.RIGHT;
   }
-  return 0 /* EnumSortCompareResult.KEEP */;
+  return EnumSortCompareResult.KEEP;
 }
 /**
  * null 和 undefined 比較函式
@@ -85,11 +85,11 @@ function nullCompare(a, b) {
   const typeA = _typeOf(a);
   const typeB = _typeOf(b);
   if (typeA === 'null') {
-    return typeB === 'null' ? 0 /* EnumSortCompareResult.KEEP */ : typeB === 'undefined' ? -1 /* EnumSortCompareResult.LEFT */ : 1 /* EnumSortCompareResult.RIGHT */;
+    return typeB === 'null' ? EnumSortCompareResult.KEEP : typeB === 'undefined' ? EnumSortCompareResult.LEFT : EnumSortCompareResult.RIGHT;
   } else if (typeA === 'undefined') {
-    return typeB === 'null' ? 1 /* EnumSortCompareResult.RIGHT */ : typeB === 'undefined' ? 0 /* EnumSortCompareResult.KEEP */ : 1 /* EnumSortCompareResult.RIGHT */;
+    return typeB === 'null' ? EnumSortCompareResult.RIGHT : typeB === 'undefined' ? EnumSortCompareResult.KEEP : EnumSortCompareResult.RIGHT;
   } else if (typeB === 'null' || typeB === 'undefined') {
-    return -1 /* EnumSortCompareResult.LEFT */;
+    return EnumSortCompareResult.LEFT;
   }
 }
 /**
@@ -110,9 +110,9 @@ function symbolCompare(a, b) {
   const typeA = _typeOf(a);
   const typeB = _typeOf(b);
   if (typeA === 'symbol') {
-    return typeB === 'symbol' ? numberCompare(String(a), String(b)) : -1 /* EnumSortCompareResult.LEFT */;
+    return typeB === 'symbol' ? numberCompare(String(a), String(b)) : EnumSortCompareResult.LEFT;
   } else if (typeB === 'symbol') {
-    return 1 /* EnumSortCompareResult.RIGHT */;
+    return EnumSortCompareResult.RIGHT;
   }
   return numberCompare(a, b);
 }
@@ -215,6 +215,7 @@ function arraySortWithSymbol(arr) {
   return arr.sort(defaultCompareWithSymbol);
 }
 
+exports.EnumSortCompareResult = EnumSortCompareResult;
 exports._typeOf = _typeOf;
 exports.arraySortWithSymbol = arraySortWithSymbol;
 exports.dateCompare = dateCompare;

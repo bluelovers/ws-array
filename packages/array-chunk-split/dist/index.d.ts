@@ -1,23 +1,38 @@
 /**
- * 選擇指定鍵並設為必填
- * Pick specified keys and mark as Required
+ * Makes the selected properties of a type required.
+ *
+ * This is the standard version and is intended for a single object type.
  *
  * @example
- * interface User { name?: string; age?: number; email?: string; }
- * type RequiredName = ITSRequiredPick<User, 'name'>;
- * // type RequiredName = { name: string; age?: number; email?: string; }
+ * type User = {
+ *   name?: string;
+ *   age?: number;
+ * };
+ *
+ * type Result = ITSRequiredPick<User, "name">;
+ * // {
+ * //   name: string;
+ * //   age?: number;
+ * // }
  */
 export type ITSRequiredPick<T, K extends keyof T = keyof T> = {
 	[P in K]-?: T[P];
 };
 /**
- * 選擇指定鍵並設為可選
- * Pick specified keys and mark as Partial
+ * Makes the selected properties of a type optional.
+ *
+ * This is the standard version and is intended for a single object type.
  *
  * @example
- * interface User { name: string; age: number; email: string; }
- * type PartialName = ITSPartialPick<User, 'name'>;
- * // type PartialName = { name?: string; age: number; email: string; }
+ * type User = {
+ *   name: string;
+ *   age: number;
+ * };
+ *
+ * type Result = ITSPartialPick<User, "name">;
+ * // {
+ * //   name?: string;
+ * // }
  */
 export type ITSPartialPick<T, K extends keyof T = keyof T> = {
 	[P in K]?: T[P];

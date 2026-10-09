@@ -3,6 +3,14 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /**
+ * 分發群組到陣列的選項介面
+ * Options interface for distributing groups to array
+ *
+ * @property init - 初始化群組陣列的函式 / Function to initialize group array
+ * @property groupArraySize - 群組陣列的大小 / Size of group array
+ */
+
+/**
  * 建立指定長度的群組陣列
  * Create group array with specified length
  *

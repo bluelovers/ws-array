@@ -1,23 +1,21 @@
 //@noUnusedParameters:false
 
-import { basename, extname } from 'path';
+
+
 import { defaultCompare } from '../src/index';
+import assert from 'node:assert/strict';
+import { describe, it, TestContext, test } from 'node:test';
 
-beforeAll(async () =>
-{
-
-});
-
-describe(basename(__filename, extname(__filename)), () =>
+describe('defaultCompare', () =>
 {
 
 	it('should sort an array with null and undefined values', function ()
 	{
 		const arr = ['c', 'a', undefined, 'b', 'd', null, 'e'];
-		expect(arr.sort(defaultCompare)).toStrictEqual(['a', 'b', 'c', 'd', 'e', null, undefined]);
+		assert.deepStrictEqual(arr.sort(defaultCompare), ['a', 'b', 'c', 'd', 'e', null, undefined]);
 	});
 
-	test(`mixin`, () =>
+	test(`mixin`, (t) =>
 	{
 		const arr = [
 			{ name: 'c', title: 'C' },
@@ -33,11 +31,11 @@ describe(basename(__filename, extname(__filename)), () =>
 
 		let actual = arr.sort(defaultCompare);
 
-		expect(actual).toMatchSnapshot();
+		t.assert.snapshot(actual);
 
 	});
 
-	test(`mixin with symbol`, () =>
+	test(`mixin with symbol`, (t: TestContext) =>
 	{
 		const arr = [
 			'c', 'a', undefined, 'b', 'd', null, 'e',
@@ -59,7 +57,7 @@ describe(basename(__filename, extname(__filename)), () =>
 
 		let actual = arr.sort(defaultCompare);
 
-		expect(actual).toMatchSnapshot();
+		t.assert.snapshot(actual);
 
 	});
 

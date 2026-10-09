@@ -1,0 +1,214 @@
+exports[`sortObjectKeys > extra keys 1`] = `
+[
+  "a",
+  "b"
+]
+`;
+
+exports[`sortObjectKeys > extra keys 2`] = `
+{
+  "a": 1,
+  "b": 1
+}
+`;
+
+exports[`sortObjectKeys > readonly 1`] = `
+[
+  "b",
+  "c",
+  "a",
+  "d"
+]
+`;
+
+exports[`sortObjectKeys > readonly 2`] = `
+{
+  "b": 1,
+  "c": 1,
+  "a": 1,
+  "d": 1
+}
+`;
+
+exports[`sortObjectKeys > should add extra keys to object 1`] = `
+[
+  "a",
+  "b",
+  "c",
+  "d"
+]
+`;
+
+exports[`sortObjectKeys > should add extra keys to object 2`] = `
+{
+  "a": 1,
+  "b": 1
+}
+`;
+
+exports[`sortObjectKeys > should follow sort function 1`] = `
+[
+  "key-1",
+  "key-2",
+  "key-3",
+  "key-10"
+]
+`;
+
+exports[`sortObjectKeys > should follow sort function 2`] = `
+{
+  "key-1": 1,
+  "key-2": 1,
+  "key-3": 1,
+  "key-10": 1
+}
+`;
+
+exports[`sortObjectKeys > should not add extra keys to object 1`] = `
+[
+  "a",
+  "b"
+]
+`;
+
+exports[`sortObjectKeys > should not add extra keys to object 2`] = `
+{
+  "a": 1,
+  "b": 1
+}
+`;
+
+exports[`sortObjectKeys > sort object 1`] = `
+[
+  "a",
+  "b",
+  "c",
+  "d"
+]
+`;
+
+exports[`sortObjectKeys > sort object 2`] = `
+{
+  "a": 1,
+  "b": 1,
+  "c": 1,
+  "d": 1
+}
+`;
+
+exports[`sortObjectKeys > sort object v2 1`] = `
+[
+  "b",
+  "c",
+  "a",
+  "d"
+]
+`;
+
+exports[`sortObjectKeys > sort object v2 2`] = `
+{
+  "b": 1,
+  "c": 1,
+  "a": 1,
+  "d": 1
+}
+`;
+
+exports[`sortObjectKeys > sort object v3 1`] = `
+[
+  "b",
+  "c",
+  "a",
+  "d"
+]
+`;
+
+exports[`sortObjectKeys > sort object v3 2`] = `
+{
+  "b": 1,
+  "c": 1,
+  "a": 1,
+  "d": 1
+}
+`;
+
+exports[`sortObjectKeys > source will change order 1`] = `
+[
+  "a",
+  "b",
+  "c",
+  "d",
+  "e"
+]
+`;
+
+exports[`sortObjectKeys > source will change order 2`] = `
+{
+  "a": 1,
+  "b": 3,
+  "c": 2,
+  "d": 4,
+  "e": 5
+}
+`;
+
+exports[`sortObjectKeys > source will not change order 1`] = `
+[
+  "a",
+  "b",
+  "c",
+  "d",
+  "e"
+]
+`;
+
+exports[`sortObjectKeys > source will not change order 2`] = `
+{
+  "a": 1,
+  "b": 3,
+  "c": 2,
+  "d": 4,
+  "e": 5
+}
+`;
+
+exports[`sortObjectKeys > with desc 1`] = `
+[
+  "d",
+  "a",
+  "c",
+  "b"
+]
+`;
+
+exports[`sortObjectKeys > with desc 2`] = `
+{
+  "d": 1,
+  "a": 1,
+  "c": 1,
+  "b": 1
+}
+`;
+
+exports[`sortObjectKeys > with onlyKeys 1`] = `
+[
+  "b",
+  "d"
+]
+`;
+
+exports[`sortObjectKeys > with onlyKeys 2`] = `
+[
+  "c",
+  "b",
+  "d",
+  "a"
+]
+`;
+
+exports[`sortObjectKeys > with onlyKeys 3`] = `
+{
+  "b": 1,
+  "d": 1
+}
+`;

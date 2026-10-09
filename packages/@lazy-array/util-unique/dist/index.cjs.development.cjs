@@ -3,6 +3,14 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /**
+ * 取得 Tuple 類型的所有元素（除了最後一個）
+ * Get all elements of a Tuple type except the last one
+ *
+ * @example
+ * type T = ITSValueOfTuple<readonly [1, 2, 3]>; // => [1, 2]
+ */
+
+/**
  * 使用 indexOf 過濾陣列取得唯一值
  * Get unique values from array using indexOf filter
  *

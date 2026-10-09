@@ -4,40 +4,44 @@ function _typeOf(e) {
   return null === e ? "null" : typeof e;
 }
 
-var e;
-
-function numberCompare(e, o) {
-  return e < o ? -1 : e > o ? 1 : 0;
-}
-
-function nullCompare(e, o) {
-  const r = _typeOf(e), t = _typeOf(o);
-  return "null" === r ? "null" === t ? 0 : "undefined" === t ? -1 : 1 : "undefined" === r ? "null" === t ? 1 : "undefined" === t ? 0 : 1 : "null" === t || "undefined" === t ? -1 : void 0;
-}
-
-function symbolCompare(e, o) {
-  const r = _typeOf(e), t = _typeOf(o);
-  return "symbol" === r ? "symbol" === t ? numberCompare(String(e), String(o)) : -1 : "symbol" === t ? 1 : numberCompare(e, o);
-}
-
-function defaultCompareWithSymbol(e, o) {
-  const r = nullCompare(e, o);
-  return "number" == typeof r ? r : symbolCompare(e, o);
-}
-
 Object.defineProperty(exports, "__esModule", {
   value: !0
-}), exports.EnumSortCompareResult = void 0, (e = exports.EnumSortCompareResult || (exports.EnumSortCompareResult = {}))[e.KEEP = 0] = "KEEP", 
-e[e.RIGHT = 1] = "RIGHT", e[e.LEFT = -1] = "LEFT", exports._typeOf = _typeOf, exports.arraySortWithSymbol = function arraySortWithSymbol(e) {
+});
+
+let e = /*#__PURE__*/ function(e) {
+  return e[e.KEEP = 0] = "KEEP", e[e.RIGHT = 1] = "RIGHT", e[e.LEFT = -1] = "LEFT", 
+  e;
+}({});
+
+function numberCompare(r, o) {
+  return r < o ? e.LEFT : r > o ? e.RIGHT : e.KEEP;
+}
+
+function nullCompare(r, o) {
+  const t = _typeOf(r), n = _typeOf(o);
+  return "null" === t ? "null" === n ? e.KEEP : "undefined" === n ? e.LEFT : e.RIGHT : "undefined" === t ? "null" === n ? e.RIGHT : "undefined" === n ? e.KEEP : e.RIGHT : "null" === n || "undefined" === n ? e.LEFT : void 0;
+}
+
+function symbolCompare(r, o) {
+  const t = _typeOf(r), n = _typeOf(o);
+  return "symbol" === t ? "symbol" === n ? numberCompare(String(r), String(o)) : e.LEFT : "symbol" === n ? e.RIGHT : numberCompare(r, o);
+}
+
+function defaultCompareWithSymbol(e, r) {
+  const o = nullCompare(e, r);
+  return "number" == typeof o ? o : symbolCompare(e, r);
+}
+
+exports.EnumSortCompareResult = e, exports._typeOf = _typeOf, exports.arraySortWithSymbol = function arraySortWithSymbol(e) {
   return e.sort(defaultCompareWithSymbol);
-}, exports.dateCompare = function dateCompare(e, o) {
-  return e.getTime() - o.getTime();
+}, exports.dateCompare = function dateCompare(e, r) {
+  return e.getTime() - r.getTime();
 }, exports.default = defaultCompareWithSymbol, exports.defaultCompare = defaultCompareWithSymbol, 
-exports.defaultCompareBasic = function defaultCompareBasic(e, o) {
-  const r = nullCompare(e, o);
-  return "number" == typeof r ? r : numberCompare(e, o);
+exports.defaultCompareBasic = function defaultCompareBasic(e, r) {
+  const o = nullCompare(e, r);
+  return "number" == typeof o ? o : numberCompare(e, r);
 }, exports.defaultCompareWithSymbol = defaultCompareWithSymbol, exports.nullCompare = nullCompare, 
-exports.numberCompare = numberCompare, exports.stringCompareLocale = function stringCompareLocale(e, o) {
-  return e.localeCompare(o);
+exports.numberCompare = numberCompare, exports.stringCompareLocale = function stringCompareLocale(e, r) {
+  return e.localeCompare(r);
 }, exports.symbolCompare = symbolCompare;
 //# sourceMappingURL=index.cjs.production.min.cjs.map

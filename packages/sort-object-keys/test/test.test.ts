@@ -1,255 +1,294 @@
 /**
- * Created by user on 2018/2/4/004.
+ * `sortObjectKeys` 測試（Node.js 原生測試）
+ * Tests for `sortObjectKeys` (Node.js native test runner)
+ *
+ * 執行 / Run: node --run test:node
+ *
+ * 說明：`test:node` 帶有 `--test-update-snapshots`，快照會自我更新，
+ * 因此除了 `t.assert.snapshot` 之外另外以 `deepStrictEqual` 釘住預期值，
+ * 才能在行為改變時真正失敗。
  */
+
+import { describe, it, TestContext } from 'node:test';
 
 import { sortObjectKeys as sortObject } from '../src';
 
-sortObject([] as any);
-
-it(`sort object`, function ()
+describe('sortObjectKeys', () =>
 {
-	let actual = sortObject({
-		c: 1,
-		b: 1,
-		d: 1,
-		a: 1,
-	});
-
-	let expected = {
-		a: 1,
-		b: 1,
-		c: 1,
-		d: 1,
-	};
-
-	expect(actual).toStrictEqual(expected);
-	strictStringify(actual, expected);
-
-	strictKeys(actual, expected);
-
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-});
-
-it('sort object v2', function ()
-{
-	let actual = sortObject({
-		c: 1,
-		b: 1,
-		d: 1,
-		a: 1,
-	}, {
-		keys: ['b', 'c', 'a', 'd'],
-		onlyKeys: true,
-	})
-
-	expect(Object.keys(actual)).toStrictEqual(['b', 'c', 'a', 'd']);
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-});
-
-it(`source will not change order`, function ()
-{
-	let source = { a: 1, c: 2, e: 5, d: 4, b: 3 };
-	let actual = sortObject(source, {
-		keys: ['a', 'b'],
-	});
-	let expected = { a: 1, b: 3, c: 2, d: 4, e: 5 };
-
-	expect(actual).toStrictEqual(expected);
-	expect(actual).toStrictEqual(source);
-
-	strictKeys(actual, source, true);
-	strictKeys(actual, expected);
-
-	expect(actual === source).toStrictEqual(false);
-
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-});
-
-it(`source will change order`, function ()
-{
-	let source = { a: 1, c: 2, e: 5, d: 4, b: 3 };
-	let actual = sortObject(source, {
-		keys: ['a', 'b'],
-		useSource: true,
-	});
-	let expected = { a: 1, b: 3, c: 2, d: 4, e: 5 };
-
-	expect(actual).toStrictEqual(expected);
-	expect(actual).toStrictEqual(source);
-
-	strictKeys(actual, source);
-	strictKeys(actual, expected);
-
-	expect(actual === source).toStrictEqual(true);
-
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-});
-
-it('should not add extra keys to object', function ()
-{
-	let actual = sortObject({
-		b: 1,
-		a: 1,
-	}, ['a', 'b', 'c', 'd'])
-
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(Object.keys(actual)).toStrictEqual([
-		'a',
-		'b',
-	]);
-	expect(actual).toMatchSnapshot();
-});
-
-it('should follow sort function', function ()
-{
-	let actual = sortObject({
-		"key-1": 1,
-		"key-3": 1,
-		"key-10": 1,
-		"key-2": 1,
-	}, removeKeyAncCompareIndex)
-
-	strictKeys(actual, {
-		"key-1": 1,
-		"key-2": 1,
-		"key-3": 1,
-		"key-10": 1,
-	});
-
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-
-	function removeKeyAncCompareIndex(keyA, keyB)
+	it('傳入陣列不會拋錯', (t: TestContext) =>
 	{
-		let a = parseInt(keyA.slice(4));
-		let b = parseInt(keyB.slice(4));
-		return a - b;
+		// 原本在模組載入時直接呼叫的煙霧測試；空陣列沒有任何 key，回傳空物件
+		const actual = sortObject([] as any);
+
+		t.assert.deepStrictEqual(actual, {});
+	});
+
+	it(`sort object`, (t: TestContext) =>
+	{
+		let actual = sortObject({
+			c: 1,
+			b: 1,
+			d: 1,
+			a: 1,
+		});
+
+		let expected = {
+			a: 1,
+			b: 1,
+			c: 1,
+			d: 1,
+		};
+
+		t.assert.deepStrictEqual(actual, expected);
+		strictStringify(t, actual, expected);
+
+		strictKeys(t, actual, expected);
+
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+	});
+
+	it('sort object v2', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			c: 1,
+			b: 1,
+			d: 1,
+			a: 1,
+		}, {
+			keys: ['b', 'c', 'a', 'd'],
+			onlyKeys: true,
+		})
+
+		t.assert.deepStrictEqual(Object.keys(actual), ['b', 'c', 'a', 'd']);
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+	});
+
+	it(`source will not change order`, (t: TestContext) =>
+	{
+		let source = { a: 1, c: 2, e: 5, d: 4, b: 3 };
+		let actual = sortObject(source, {
+			keys: ['a', 'b'],
+		});
+		let expected = { a: 1, b: 3, c: 2, d: 4, e: 5 };
+
+		t.assert.deepStrictEqual(actual, expected);
+		t.assert.deepStrictEqual(actual, source);
+
+		// 未使用 useSource：回傳新物件，key 順序已重排，與來源不同
+		strictKeys(t, actual, source, true);
+		strictKeys(t, actual, expected);
+
+		t.assert.notStrictEqual(actual, source);
+
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+	});
+
+	it(`source will change order`, (t: TestContext) =>
+	{
+		let source = { a: 1, c: 2, e: 5, d: 4, b: 3 };
+		let actual = sortObject(source, {
+			keys: ['a', 'b'],
+			useSource: true,
+		});
+		let expected = { a: 1, b: 3, c: 2, d: 4, e: 5 };
+
+		t.assert.deepStrictEqual(actual, expected);
+		t.assert.deepStrictEqual(actual, source);
+
+		// useSource：直接改寫原物件並回傳同一個參照
+		strictKeys(t, actual, source);
+		strictKeys(t, actual, expected);
+
+		t.assert.strictEqual(actual, source);
+
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+	});
+
+	it('should not add extra keys to object', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			b: 1,
+			a: 1,
+		}, ['a', 'b', 'c', 'd'])
+
+		t.assert.snapshot(Object.keys(actual));
+		// 預設不會補上不存在的 key
+		t.assert.deepStrictEqual(Object.keys(actual), [
+			'a',
+			'b',
+		]);
+		t.assert.snapshot(actual);
+	});
+
+	it('should follow sort function', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			"key-1": 1,
+			"key-3": 1,
+			"key-10": 1,
+			"key-2": 1,
+		}, removeKeyAncCompareIndex)
+
+		strictKeys(t, actual, {
+			"key-1": 1,
+			"key-2": 1,
+			"key-3": 1,
+			"key-10": 1,
+		});
+
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+
+		function removeKeyAncCompareIndex(keyA, keyB)
+		{
+			let a = parseInt(keyA.slice(4));
+			let b = parseInt(keyB.slice(4));
+			return a - b;
+		}
+	});
+
+	it('should add extra keys to object', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			b: 1,
+			a: 1,
+		}, {
+			keys: ['a', 'b', 'c', 'd'],
+			allowNotExists: true,
+		})
+
+		t.assert.snapshot(Object.keys(actual));
+
+		t.assert.deepStrictEqual(Object.keys(actual), ['a', 'b', 'c', 'd']);
+		t.assert.snapshot(actual);
+	});
+
+	it('with onlyKeys', (t: TestContext) =>
+	{
+		let source = {
+			c: 1,
+			b: 1,
+			d: 1,
+			a: 1,
+		};
+		let actual = sortObject(source, {
+			keys: ['b', 'd'],
+			onlyKeys: true,
+			useSource: true,
+		})
+
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(Object.keys(source));
+
+		// onlyKeys 會停用 useSource，因此只回傳指定的 key，且不動到 source
+		t.assert.deepStrictEqual(Object.keys(actual), ['b', 'd']);
+		t.assert.deepStrictEqual(Object.keys(source), ['c', 'b', 'd', 'a']);
+		t.assert.snapshot(actual);
+	});
+
+	it('with onlyKeys v2', (t: TestContext) =>
+	{
+		let source = {
+			c: 1,
+			b: 1,
+			d: 1,
+			a: 1,
+		};
+
+		// onlyKeys 但未提供 keys，會拋出 ReferenceError
+		t.assert.throws(() => sortObject(source, {
+			onlyKeys: true,
+		}), ReferenceError)
+	});
+
+	it('with desc', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			c: 1,
+			b: 1,
+			d: 1,
+			a: 1,
+		}, {
+			keys: ['b', 'c', 'a', 'd'],
+			desc: true,
+		})
+
+		let keys = Object.keys(actual);
+		t.assert.snapshot(keys);
+
+		// desc 會把 keys 整個反轉，因此順序為指定順序的逆序
+		t.assert.deepStrictEqual(keys, ['d', 'a', 'c', 'b']);
+		t.assert.snapshot(actual);
+	});
+
+	it('sort object v3', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			c: 1,
+			b: 1,
+			d: 1,
+			a: 1,
+		}, ['b', 'c', 'a', 'd'])
+
+		t.assert.deepStrictEqual(Object.keys(actual), ['b', 'c', 'a', 'd']);
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+	});
+
+	it('readonly', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			c: 1,
+			b: 1,
+			d: 1,
+			a: 1,
+		}, Object.freeze(['b', 'c', 'a', 'd']))
+
+		t.assert.deepStrictEqual(Object.keys(actual), ['b', 'c', 'a', 'd']);
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+	});
+
+	it('extra keys', (t: TestContext) =>
+	{
+		let actual = sortObject({
+			b: 1,
+			a: 1,
+		}, ['a', 'b', 'c', 'd'])
+
+		t.assert.deepStrictEqual(Object.keys(actual), ['a', 'b']);
+		t.assert.snapshot(Object.keys(actual));
+		t.assert.snapshot(actual);
+	});
+});
+
+function strictStringify(t: TestContext, actual: unknown, expected: unknown, not?: boolean)
+{
+	let a = JSON.stringify(actual);
+	let b = JSON.stringify(expected);
+
+	if (not)
+	{
+		t.assert.notStrictEqual(a, b);
 	}
-});
-
-it('should add extra keys to object', function ()
-{
-	let actual = sortObject({
-		b: 1,
-		a: 1,
-	}, {
-		keys: ['a', 'b', 'c', 'd'],
-		allowNotExists: true,
-	})
-
-	expect(Object.keys(actual)).toMatchSnapshot();
-
-	expect(Object.keys(actual)).toStrictEqual(['a', 'b', 'c', 'd']);
-	expect(actual).toMatchSnapshot();
-});
-
-it('with onlyKeys', function ()
-{
-	let source = {
-		c: 1,
-		b: 1,
-		d: 1,
-		a: 1,
-	};
-	let actual = sortObject(source, {
-		keys: ['b', 'd'],
-		onlyKeys: true,
-		useSource: true,
-	})
-
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(Object.keys(source)).toMatchSnapshot();
-
-	expect(Object.keys(actual)).toStrictEqual(['b', 'd']);
-	expect(Object.keys(source)).toStrictEqual(['c', 'b', 'd', 'a']);
-	expect(actual).toMatchSnapshot();
-});
-
-it('with onlyKeys v2', function ()
-{
-	let source = {
-		c: 1,
-		b: 1,
-		d: 1,
-		a: 1,
-	};
-
-	expect(() => sortObject(source, {
-		onlyKeys: true,
-	})).toThrow()
-});
-
-it('with desc', function ()
-{
-	let actual = sortObject({
-		c: 1,
-		b: 1,
-		d: 1,
-		a: 1,
-	}, {
-		keys: ['b', 'c', 'a', 'd'],
-		desc: true,
-	})
-
-	let keys = Object.keys(actual);
-	expect(keys).toMatchSnapshot();
-
-	expect(keys).toStrictEqual(['d', 'a', 'c', 'b']);
-	expect(actual).toMatchSnapshot();
-});
-
-it('sort object v3', function ()
-{
-	let actual = sortObject({
-		c: 1,
-		b: 1,
-		d: 1,
-		a: 1,
-	}, ['b', 'c', 'a', 'd'])
-
-	expect(Object.keys(actual)).toStrictEqual(['b', 'c', 'a', 'd']);
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-});
-
-it('readonly', function ()
-{
-	let actual = sortObject({
-		c: 1,
-		b: 1,
-		d: 1,
-		a: 1,
-	}, Object.freeze(['b', 'c', 'a', 'd']))
-
-	expect(Object.keys(actual)).toStrictEqual(['b', 'c', 'a', 'd']);
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-});
-
-it('extra keys', function ()
-{
-	let actual = sortObject({
-		b: 1,
-		a: 1,
-	}, ['a', 'b', 'c', 'd'])
-
-	expect(Object.keys(actual)).toStrictEqual(['a', 'b']);
-	expect(Object.keys(actual)).toMatchSnapshot();
-	expect(actual).toMatchSnapshot();
-});
-
-function strictStringify(actual, expected, not?: boolean)
-{
-	let ex = expect(JSON.stringify(actual))
-	return (not ? ex.not : ex).toStrictEqual(JSON.stringify(expected));
+	else
+	{
+		t.assert.strictEqual(a, b);
+	}
 }
 
-function strictKeys(actual, expected, not?: boolean)
+function strictKeys(t: TestContext, actual: object, expected: object, not?: boolean)
 {
-	let ex = expect(Object.keys(actual));
-	return (not ? ex.not : ex).toStrictEqual(Object.keys(expected));
+	if (not)
+	{
+		t.assert.notDeepStrictEqual(Object.keys(actual), Object.keys(expected));
+	}
+	else
+	{
+		t.assert.deepStrictEqual(Object.keys(actual), Object.keys(expected));
+	}
 }

@@ -5,24 +5,26 @@
   function _typeOf(e) {
     return null === e ? "null" : typeof e;
   }
-  var o;
-  function numberCompare(e, o) {
-    return e < o ? -1 : e > o ? 1 : 0;
+  let o = /*#__PURE__*/ function(e) {
+    return e[e.KEEP = 0] = "KEEP", e[e.RIGHT = 1] = "RIGHT", e[e.LEFT = -1] = "LEFT", 
+    e;
+  }({});
+  function numberCompare(e, t) {
+    return e < t ? o.LEFT : e > t ? o.RIGHT : o.KEEP;
   }
-  function nullCompare(e, o) {
-    const t = _typeOf(e), r = _typeOf(o);
-    return "null" === t ? "null" === r ? 0 : "undefined" === r ? -1 : 1 : "undefined" === t ? "null" === r ? 1 : "undefined" === r ? 0 : 1 : "null" === r || "undefined" === r ? -1 : void 0;
+  function nullCompare(e, t) {
+    const n = _typeOf(e), r = _typeOf(t);
+    return "null" === n ? "null" === r ? o.KEEP : "undefined" === r ? o.LEFT : o.RIGHT : "undefined" === n ? "null" === r ? o.RIGHT : "undefined" === r ? o.KEEP : o.RIGHT : "null" === r || "undefined" === r ? o.LEFT : void 0;
   }
-  function symbolCompare(e, o) {
-    const t = _typeOf(e), r = _typeOf(o);
-    return "symbol" === t ? "symbol" === r ? numberCompare(String(e), String(o)) : -1 : "symbol" === r ? 1 : numberCompare(e, o);
+  function symbolCompare(e, t) {
+    const n = _typeOf(e), r = _typeOf(t);
+    return "symbol" === n ? "symbol" === r ? numberCompare(String(e), String(t)) : o.LEFT : "symbol" === r ? o.RIGHT : numberCompare(e, t);
   }
   function defaultCompareWithSymbol(e, o) {
     const t = nullCompare(e, o);
     return "number" == typeof t ? t : symbolCompare(e, o);
   }
-  e.EnumSortCompareResult = void 0, (o = e.EnumSortCompareResult || (e.EnumSortCompareResult = {}))[o.KEEP = 0] = "KEEP", 
-  o[o.RIGHT = 1] = "RIGHT", o[o.LEFT = -1] = "LEFT", e._typeOf = _typeOf, e.arraySortWithSymbol = function arraySortWithSymbol(e) {
+  e.EnumSortCompareResult = o, e._typeOf = _typeOf, e.arraySortWithSymbol = function arraySortWithSymbol(e) {
     return e.sort(defaultCompareWithSymbol);
   }, e.dateCompare = function dateCompare(e, o) {
     return e.getTime() - o.getTime();
