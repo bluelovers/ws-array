@@ -100,7 +100,7 @@ importers:
   packages/@lazy-array/array-hyper-unique-decorator:
     dependencies:
       array-hyper-unique:
-        specifier: ^2.1.8
+        specifier: ^2.1.9
         version: link:../../array-hyper-unique
 
   packages/@lazy-array/util-unique: {}
@@ -144,7 +144,7 @@ importers:
   packages/sort-object-keys:
     dependencies:
       '@lazy-array/util-unique':
-        specifier: ^1.0.7
+        specifier: ^1.0.8
         version: link:../@lazy-array/util-unique
 
   packages/string-natural-compare:

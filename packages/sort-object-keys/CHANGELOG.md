@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.9](https://github.com/bluelovers/ws-array/compare/sort-object-keys2@3.0.8...sort-object-keys2@3.0.9) (2026-10-09)
+
+
+
+### 🚨　Tests
+
+* **monorepo:** 導入 Node.js 原生測試執行器並更新各套件測試配置 ([b4e2fc7](https://github.com/bluelovers/ws-array/commit/b4e2fc78b74f1a02b67d620b7a1164c9ae59a08a))
+
+
+### 🛠　Build System
+
+* **config:** 優化 TypeScript 編譯配置與更新開發依賴 ([750f729](https://github.com/bluelovers/ws-array/commit/750f729c2f8343f1d5a94ccd09e1aa29829f9d82))
+
+
+### ♻️　Chores
+
+* **deps:** 將專案從 yarn 遷移至 pnpm 並更新相關配置 ([73c3eb5](https://github.com/bluelovers/ws-array/commit/73c3eb511303e35180c14d12fcf836c9ec68ffe3))
+* **monorepo:** 更新全域測試架構與忽略檔案配置 ([c812e70](https://github.com/bluelovers/ws-array/commit/c812e70fabaee9c58ba9eecb26a503d004777216))
+* **release:** publish ([dfe058f](https://github.com/bluelovers/ws-array/commit/dfe058f8c12ce4b1b988f3e1cf364840927505b1))
+
+
+
 ## [3.0.8](https://github.com/bluelovers/ws-array/compare/sort-object-keys2@3.0.7...sort-object-keys2@3.0.8) (2026-03-15)
 
 

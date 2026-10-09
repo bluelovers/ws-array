@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.9](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.1.8...array-hyper-unique@2.1.9) (2026-10-09)
+
+
+
+### ✨　Features
+
+* **array-hyper-unique:** 新增 allowDuplicate 選項並強化型別與模組導出 ([886b76a](https://github.com/bluelovers/ws-array/commit/886b76a931d1bc92e33d62c3d27beaa6e82ab1b1))
+
+
+### 📚　Documentation
+
+* **array-hyper-unique:** 更新使用說明文件與測試指令 ([4eb7646](https://github.com/bluelovers/ws-array/commit/4eb764682994f9e9be85eaa7cfc40208ca8c7c96))
+
+
+### 🛠　Build System
+
+* **array-hyper-unique:** 更新發行檔註解與型別定義說明 ([6db9434](https://github.com/bluelovers/ws-array/commit/6db943494987c5bb73809a27c5ec34690f46a7ee))
+* **array-hyper-unique:** 優化測試執行流程與型別定義構建指令 ([ac51ddd](https://github.com/bluelovers/ws-array/commit/ac51ddd905c65bea3bc8662a2a651bd9a09951c6))
+
+
+### ♻️　Chores
+
+* **deps:** 將專案從 yarn 遷移至 pnpm 並更新相關配置 ([73c3eb5](https://github.com/bluelovers/ws-array/commit/73c3eb511303e35180c14d12fcf836c9ec68ffe3))
+* **monorepo:** 更新全域測試架構與忽略檔案配置 ([c812e70](https://github.com/bluelovers/ws-array/commit/c812e70fabaee9c58ba9eecb26a503d004777216))
+
+
+
 ## [2.1.8](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.1.6...array-hyper-unique@2.1.8) (2026-03-15)
 
 

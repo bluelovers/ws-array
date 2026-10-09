@@ -1,6 +1,6 @@
 {
   "name": "@lazy-array/array-hyper-unique-decorator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "為方法提供陣列深度去重裝飾器，支援同步和異步模式 / Provides array deep deduplication decorators for methods, supporting synchronous and asynchronous modes",
   "keywords": [
     "decorator",
@@ -79,7 +79,7 @@
     "tsc:showConfig": "ynpx get-current-tsconfig -p"
   },
   "dependencies": {
-    "array-hyper-unique": "^2.1.8"
+    "array-hyper-unique": "^2.1.9"
   },
   "publishConfig": {
     "access": "public"

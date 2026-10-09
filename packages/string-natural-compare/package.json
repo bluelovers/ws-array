@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/string-natural-compare",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "自然排序比較函式，以人類直覺方式比較字母數字字串（又稱 alphanum 演算法）/ Natural sort compare function that compares alphanumeric strings the way humans would (also known as alphanum algorithm)",
   "keywords": [
     "create-by-yarn-tool",

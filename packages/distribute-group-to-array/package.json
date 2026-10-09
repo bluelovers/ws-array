@@ -1,6 +1,6 @@
 {
   "name": "distribute-group-to-array",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "將分組資料均匀分發到多個陣列中，適用於負載均衡和任務分配場景 / Distribute grouped data evenly into multiple arrays, suitable for load balancing and task distribution scenarios",
   "keywords": [
     "create-by-yarn-tool",
