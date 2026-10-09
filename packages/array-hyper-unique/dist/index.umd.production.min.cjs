@@ -6,10 +6,15 @@
     return r(e, u);
   }
   function defaultFilter(e = {}) {
-    const r = e.checker || defaultChecker, t = e.filter || null, i = e.removeFromFirst ? u.findLastIndex : u.findIndex;
-    return (e, u, n) => i(n, u => r(u, e, n, n)) === u && (!t || t(e));
+    const r = e.checker || defaultChecker, t = e.filter || null, i = e.allowDuplicate || null, n = e.removeFromFirst ? u.findLastIndex : u.findIndex, a = {
+      checker: r,
+      filter: t,
+      allowDuplicate: i,
+      find: n
+    };
+    return (e, u, l) => (i && i(e, u, l, a) || n(l, (t, i) => r(e, t, u, i, l, a)) === u) && (!t || t(e, u, l, a));
   }
-  function defaultChecker(e, u, t, i) {
+  function defaultChecker(e, u, t, i, n, a) {
     return r(e, u);
   }
   function array_unique(e, r = {}) {

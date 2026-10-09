@@ -3,11 +3,16 @@
 var e = require("deep-eql"), r = require("lodash");
 
 function defaultFilter(e = {}) {
-  const u = e.checker || defaultChecker, t = e.filter || null, n = e.removeFromFirst ? r.findLastIndex : r.findIndex;
-  return (e, r, i) => n(i, r => u(r, e, i, i)) === r && (!t || t(e));
+  const u = e.checker || defaultChecker, t = e.filter || null, n = e.allowDuplicate || null, i = e.removeFromFirst ? r.findLastIndex : r.findIndex, a = {
+    checker: u,
+    filter: t,
+    allowDuplicate: n,
+    find: i
+  };
+  return (e, r, l) => (n && n(e, r, l, a) || i(l, (t, n) => u(e, t, r, n, l, a)) === r) && (!t || t(e, r, l, a));
 }
 
-function defaultChecker(r, u, t, n) {
+function defaultChecker(r, u, t, n, i, a) {
   return e(r, u);
 }
 

@@ -7,11 +7,16 @@ function equals(r, u) {
 }
 
 function defaultFilter(e = {}) {
-  const t = e.checker || defaultChecker, n = e.filter || null, i = e.removeFromFirst ? r : u;
-  return (e, r, u) => i(u, r => t(r, e, u, u)) === r && (!n || n(e));
+  const t = e.checker || defaultChecker, n = e.filter || null, i = e.allowDuplicate || null, a = e.removeFromFirst ? r : u, l = {
+    checker: t,
+    filter: n,
+    allowDuplicate: i,
+    find: a
+  };
+  return (e, r, u) => (i && i(e, r, u, l) || a(u, (n, i) => t(e, n, r, i, u, l)) === r) && (!n || n(e, r, u, l));
 }
 
-function defaultChecker(r, u, t, n) {
+function defaultChecker(r, u, t, n, i, a) {
   return e(r, u);
 }
 
