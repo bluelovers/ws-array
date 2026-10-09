@@ -5,7 +5,7 @@
 [FAIL] array-uniq
 [FAIL] array-unique
 [FAIL] @arr/unique
-[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[ERROR] tfk-unique-array "undefined" is not valid JSON
 [FAIL] just-unique
 [FAIL] arr-unique
 [FAIL] array-unique-deep
@@ -117,7 +117,7 @@
 [SUCCESS] array-uniq
 [SUCCESS] array-unique
 [SUCCESS] @arr/unique
-[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[ERROR] tfk-unique-array "undefined" is not valid JSON
 [SUCCESS] just-unique
 [FAIL] arr-unique
 [SUCCESS] array-unique-deep
@@ -145,7 +145,7 @@
 [SUCCESS] array-uniq
 [SUCCESS] array-unique
 [SUCCESS] @arr/unique
-[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[ERROR] tfk-unique-array "undefined" is not valid JSON
 [SUCCESS] just-unique
 [SUCCESS] arr-unique
 [FAIL] array-unique-deep
@@ -159,7 +159,7 @@
 [FAIL] array-uniq
 [FAIL] array-unique
 [FAIL] @arr/unique
-[ERROR] tfk-unique-array Unexpected token u in JSON at position 0
+[ERROR] tfk-unique-array "undefined" is not valid JSON
 [FAIL] just-unique
 [SUCCESS] arr-unique
 [FAIL] array-unique-deep

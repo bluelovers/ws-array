@@ -73,6 +73,7 @@
     "lint": "ynpx --quiet eslint -- **/*.ts",
     "pretest": "echo pretest",
     "test": "node --run test:node && node --run test:jest --",
+    "test:lib-chk": "tsx test/lib.chk.ts",
     "test:jest": "jest --passWithNoTests",
     "test:jest:coverage": "node --run test:jest -- --coverage",
     "test:jest:snapshot": "node --run test:jest -- -u",
