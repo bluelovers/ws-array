@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.10](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.1.9...array-hyper-unique@2.1.10) (2026-10-09)
+
+
+
+### 🛠　Build System
+
+* **deps:** 更新開發與生產依賴套件版本 ([1a1ee63](https://github.com/bluelovers/ws-array/commit/1a1ee63fd1947abb0c8680b008eb1f79a9fab031))
+
+
+
 ## [2.1.9](https://github.com/bluelovers/ws-array/compare/array-hyper-unique@2.1.8...array-hyper-unique@2.1.9) (2026-10-09)
 
 

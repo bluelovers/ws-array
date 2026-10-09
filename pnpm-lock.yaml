@@ -100,7 +100,7 @@ importers:
   packages/@lazy-array/array-hyper-unique-decorator:
     dependencies:
       array-hyper-unique:
-        specifier: ^2.1.9
+        specifier: ^2.1.10
         version: link:../../array-hyper-unique
 
   packages/@lazy-array/util-unique: {}

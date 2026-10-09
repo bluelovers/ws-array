@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.19](https://github.com/bluelovers/ws-array/compare/array-chunk-split@2.0.18...array-chunk-split@2.0.19) (2026-10-09)
+
+
+
+### 🛠　Build System
+
+* **deps:** 更新開發與生產依賴套件版本 ([1a1ee63](https://github.com/bluelovers/ws-array/commit/1a1ee63fd1947abb0c8680b008eb1f79a9fab031))
+
+
+
 ## [2.0.18](https://github.com/bluelovers/ws-array/compare/array-chunk-split@2.0.17...array-chunk-split@2.0.18) (2026-10-09)
 
 

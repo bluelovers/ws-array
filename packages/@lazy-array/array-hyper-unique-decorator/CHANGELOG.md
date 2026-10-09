@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/bluelovers/ws-array/compare/@lazy-array/array-hyper-unique-decorator@1.0.4...@lazy-array/array-hyper-unique-decorator@1.0.5) (2026-10-09)
+
+**Note:** Version bump only for package @lazy-array/array-hyper-unique-decorator
+
+
+
+
+
 ## [1.0.4](https://github.com/bluelovers/ws-array/compare/@lazy-array/array-hyper-unique-decorator@1.0.3...@lazy-array/array-hyper-unique-decorator@1.0.4) (2026-10-09)
 
 
