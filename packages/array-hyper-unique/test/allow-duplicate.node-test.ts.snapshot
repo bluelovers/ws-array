@@ -1,0 +1,365 @@
+exports[`allowDuplicate + checker > allowDuplicate 優先於 checker：'*.LOG' 被放行 1`] = `
+[
+  "*.log",
+  "*.LOG",
+  ""
+]
+`;
+
+exports[`allowDuplicate + checker > allowDuplicate 全部放行時完全不會呼叫 checker 1`] = `
+[
+  "*.log",
+  "*.LOG",
+  "",
+  "",
+  "*.Log",
+  ""
+]
+`;
+
+exports[`allowDuplicate + checker > allowDuplicate 為 true 時會略過 checker 1`] = `
+[
+  {
+    "elementA": "*.log",
+    "elementB": "*.log",
+    "indexA": 0,
+    "indexB": 0,
+    "arrIsInput": true
+  },
+  {
+    "elementA": "*.LOG",
+    "elementB": "*.log",
+    "indexA": 1,
+    "indexB": 0,
+    "arrIsInput": true
+  },
+  {
+    "elementA": "*.Log",
+    "elementB": "*.log",
+    "indexA": 4,
+    "indexB": 0,
+    "arrIsInput": true
+  }
+]
+`;
+
+exports[`allowDuplicate + checker > checker 依序收到 elementA / elementB / indexA / indexB（findIndex 由頭掃描） 1`] = `
+[
+  {
+    "elementA": "x",
+    "elementB": "x",
+    "indexA": 0,
+    "indexB": 0
+  },
+  {
+    "elementA": "y",
+    "elementB": "x",
+    "indexA": 1,
+    "indexB": 0
+  },
+  {
+    "elementA": "y",
+    "elementB": "y",
+    "indexA": 1,
+    "indexB": 1
+  },
+  {
+    "elementA": "X",
+    "elementB": "x",
+    "indexA": 2,
+    "indexB": 0
+  }
+]
+`;
+
+exports[`allowDuplicate + checker > checker 依序收到 elementA / elementB / indexA / indexB（removeFromFirst 改由尾掃描） 1`] = `
+[
+  {
+    "elementA": "x",
+    "elementB": "X",
+    "indexA": 0,
+    "indexB": 2
+  },
+  {
+    "elementA": "y",
+    "elementB": "X",
+    "indexA": 1,
+    "indexB": 2
+  },
+  {
+    "elementA": "y",
+    "elementB": "y",
+    "indexA": 1,
+    "indexB": 1
+  },
+  {
+    "elementA": "X",
+    "elementB": "X",
+    "indexA": 2,
+    "indexB": 2
+  }
+]
+`;
+
+exports[`allowDuplicate + checker > checker 搭配 allowDuplicate：只放行 '' 1`] = `
+[
+  "*.log",
+  "",
+  "",
+  ""
+]
+`;
+
+exports[`allowDuplicate + checker > removeFromFirst + checker + allowDuplicate 1`] = `
+[
+  "",
+  "",
+  "*.Log",
+  ""
+]
+`;
+
+exports[`allowDuplicate + checker > 自訂 checker 決定唯一性（不分大小寫） 1`] = `
+[
+  "*.log",
+  ""
+]
+`;
+
+exports[`allowDuplicate > callback 會收到 value / index / arr 1`] = `
+[
+  {
+    "v": "# a",
+    "index": 0,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  },
+  {
+    "v": "*.log",
+    "index": 1,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  },
+  {
+    "v": "*.log",
+    "index": 2,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  },
+  {
+    "v": "",
+    "index": 3,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  },
+  {
+    "v": "# b",
+    "index": 4,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  },
+  {
+    "v": "",
+    "index": 5,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  },
+  {
+    "v": "*.log",
+    "index": 6,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  },
+  {
+    "v": "",
+    "index": 7,
+    "arr": [
+      "# a",
+      "*.log",
+      "*.log",
+      "",
+      "# b",
+      "",
+      "*.log",
+      ""
+    ]
+  }
+]
+`;
+
+exports[`allowDuplicate > filter 仍然會限制被允許重複的值 1`] = `
+[
+  "# a",
+  "*.log",
+  "# b"
+]
+`;
+
+exports[`allowDuplicate > overwrite 模式同樣生效 1`] = `
+[
+  "# a",
+  "*.log",
+  "",
+  "# b",
+  "",
+  ""
+]
+`;
+
+exports[`allowDuplicate > removeFromFirst（保留最後一次）搭配 allowDuplicate 1`] = `
+[
+  "# a",
+  "# b",
+  "*.log",
+  ""
+]
+`;
+
+exports[`allowDuplicate > removeFromFirst（保留最後一次）搭配 allowDuplicate 2`] = `
+[
+  "# a",
+  "",
+  "# b",
+  "",
+  "*.log",
+  ""
+]
+`;
+
+exports[`allowDuplicate > 不使用選項時不會修改原始陣列 1`] = `
+[
+  "# a",
+  "*.log",
+  "*.log",
+  "",
+  "# b",
+  "",
+  "*.log",
+  ""
+]
+`;
+
+exports[`allowDuplicate > 以 callback 允許 '' 重複 1`] = `
+[
+  "# a",
+  "*.log",
+  "",
+  "# b",
+  "",
+  ""
+]
+`;
+
+exports[`allowDuplicate > 可依條件允許非空字串重複 1`] = `
+[
+  "# a",
+  "*.log",
+  "*.log",
+  "",
+  "# b",
+  "*.log"
+]
+`;
+
+exports[`allowDuplicate > 條件全數符合時可完整保留原始陣列 1`] = `
+[
+  "# a",
+  "*.log",
+  "*.log",
+  "",
+  "# b",
+  "",
+  "*.log",
+  ""
+]
+`;
+
+exports[`allowDuplicate > 物件去重搭配 allowDuplicate 1`] = `
+[
+  {
+    "id": 1
+  },
+  {
+    "id": 2
+  },
+  {
+    "id": 2
+  }
+]
+`;
+
+exports[`allowDuplicate > 預設行為：所有重複項都會被移除 1`] = `
+[
+  "# a",
+  "*.log",
+  "",
+  "# b"
+]
+`;
+
+exports[`runtimeCache > runtimeCache 會傳入每個 callback 且為同一個實例 1`] = `
+[
+  "# a",
+  "*.log",
+  "",
+  "# b",
+  "",
+  ""
+]
+`;

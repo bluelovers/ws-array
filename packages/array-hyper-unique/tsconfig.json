@@ -1,12 +1,14 @@
 {
   "extends": "@bluelovers/tsconfig/tsdx/index.json",
   "compilerOptions": {
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "noUnusedParameters": false,
     "allowUnusedLabels": true,
     "noUnusedLocals": false,
     "noPropertyAccessFromIndexSignature": false,
     "noImplicitAny": false,
+    "rootDir": "src",
     "types": [
       "jest",
       "node"

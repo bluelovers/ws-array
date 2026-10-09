@@ -111,7 +111,11 @@
   },
   "dependencies": {
     "deep-eql": "= 4.0.0",
-    "lodash": "^4.17.23"
+    "lodash": "^4.17.23",
+    "ts-type": "^3.0.18"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.25"
   },
   "gitHead": "5a3a54df2dcd37f351814f220f4f17c7ffa23e44"
 }
