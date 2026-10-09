@@ -6,6 +6,17 @@
     "allowUnusedLabels": true,
     "noUnusedLocals": false,
     "noPropertyAccessFromIndexSignature": false,
-    "noImplicitAny": false
-  }
+    "noImplicitAny": false,
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "__fixtures__",
+    "__snapshots__",
+    "coverage"
+  ]
 }

@@ -26,3 +26,8 @@ preferWorkspacePackages: true
 
 # onlyBuiltDependencies: []
 # ignoredBuiltDependencies: []
+
+allowBuilds:
+  '@parcel/watcher': true
+  nx: true
+  unrs-resolver: true

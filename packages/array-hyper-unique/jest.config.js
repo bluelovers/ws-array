@@ -125,7 +125,8 @@ try
 					// 如果是 jest-preset.js，使用其目錄作為 preset
 					// If it's jest-preset.js, use its directory as preset
 					// @ts-ignore
-					jestConfig.preset = dirname(result);
+					//jestConfig.preset = dirname(result);
+					jestConfig.preset = result;
 					break;
 				default:
 					// 其他情況，載入配置檔案內容
