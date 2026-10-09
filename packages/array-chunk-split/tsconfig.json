@@ -5,5 +5,18 @@
     "noUnusedLocals": false,
     "noImplicitAny": false,
     "noUnusedParameters": false,
-  }
+    "moduleResolution": "bundler",
+    "rootDir": "src",
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "__fixtures__",
+    "__snapshots__",
+    "coverage"
+  ]
 }

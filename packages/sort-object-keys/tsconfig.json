@@ -3,6 +3,19 @@
   "compilerOptions": {
     "importHelpers": false,
     "noImplicitAny": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+    "noPropertyAccessFromIndexSignature": false,
+    "moduleResolution": "bundler",
+    "rootDir": "src",
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "__fixtures__",
+    "__snapshots__",
+    "coverage"
+  ]
 }
