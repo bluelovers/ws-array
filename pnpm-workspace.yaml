@@ -31,3 +31,6 @@ allowBuilds:
   '@parcel/watcher': true
   nx: true
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - "@types/lodash@4.17.26"
+  - "@types/node@26.6.5"

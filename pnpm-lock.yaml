@@ -13,10 +13,10 @@ importers:
         version: 1.0.1
       '@bluelovers/conventional-changelog-bluelovers':
         specifier: ^5.0.27
-        version: 5.0.27(@types/bluebird@3.5.42)(@types/node@25.9.9)(ts-toolbelt@9.6.0)
+        version: 5.0.27(@types/bluebird@3.5.42)(@types/node@26.6.5)(ts-toolbelt@9.6.0)
       '@bluelovers/jest-config':
         specifier: ^1.1.15
-        version: 1.1.15(@jest/transform@30.5.2(supports-color@7.2.0))(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
+        version: 1.1.15(@jest/transform@30.5.2(supports-color@7.2.0))(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
       arr-unique:
         specifier: ^1.0.2
         version: 1.0.2
@@ -31,7 +31,7 @@ importers:
         version: 1.0.1
       debug-color2:
         specifier: ^1.3.2
-        version: 1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
+        version: 1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
       deep-eql:
         specifier: '= 4.0.0'
         version: 4.0.0
@@ -67,7 +67,7 @@ importers:
         version: 8.11.2
     devDependencies:
       '@bluelovers/tsconfig':
-        specifier: ^2.0.2
+        specifier: ^2.0.3
         version: 2.0.3
       '@types/array-unique':
         specifier: ^0.3.3
@@ -76,26 +76,26 @@ importers:
         specifier: ^30.0.0
         version: 30.0.0
       '@types/lodash':
-        specifier: ^4.17.24
-        version: 4.17.25
+        specifier: ^4.17.26
+        version: 4.17.26
       '@types/lodash.uniq':
         specifier: ^4.5.9
         version: 4.5.9
       '@types/node':
-        specifier: ^25.5.0
-        version: 25.9.9
+        specifier: ^26.6.5
+        version: 26.6.5
       '@yarn-tool/require-resolve':
         specifier: '*'
         version: 4.0.9(ts-toolbelt@9.6.0)
       '@yarn-tool/ws-find-up-paths':
-        specifier: ^1.0.19
+        specifier: ^1.0.22
         version: 1.0.22(ts-toolbelt@9.6.0)
       jest:
-        specifier: ^30.3.0
-        version: 30.5.2(@types/node@25.9.9)(supports-color@7.2.0)
+        specifier: ^30.5.2
+        version: 30.5.2(@types/node@26.6.5)(supports-color@7.2.0)
       ts-jest:
-        specifier: ^29.4.6
-        version: 29.4.14(@babel/core@7.29.7(supports-color@7.2.0))(@jest/transform@30.5.2(supports-color@7.2.0))(@jest/types@30.5.1)(babel-jest@30.5.2(@babel/core@7.29.7(supports-color@7.2.0))(supports-color@7.2.0))(jest-util@30.5.1)(jest@30.5.2(@types/node@25.9.9)(supports-color@7.2.0))(typescript@5.9.3)
+        specifier: ^29.4.14
+        version: 29.4.14(@babel/core@7.29.7(supports-color@7.2.0))(@jest/transform@30.5.2(supports-color@7.2.0))(@jest/types@30.5.1)(babel-jest@30.5.2(@babel/core@7.29.7(supports-color@7.2.0))(supports-color@7.2.0))(jest-util@30.5.1)(jest@30.5.2(@types/node@26.6.5)(supports-color@7.2.0))(typescript@5.9.3)
 
   packages/@lazy-array/array-hyper-unique-decorator:
     dependencies:
@@ -108,7 +108,7 @@ importers:
   packages/array-chunk-split:
     dependencies:
       ts-type:
-        specifier: ^3.0.10
+        specifier: ^3.0.18
         version: 3.0.18(ts-toolbelt@9.6.0)
 
   packages/array-group-to-record:
@@ -127,15 +127,15 @@ importers:
         specifier: '= 4.0.0'
         version: 4.0.0
       lodash:
-        specifier: ^4.17.23
+        specifier: ^4.18.1
         version: 4.18.1
       ts-type:
         specifier: ^3.0.18
         version: 3.0.18(ts-toolbelt@9.6.0)
     devDependencies:
       '@types/lodash':
-        specifier: ^4.17.25
-        version: 4.17.25
+        specifier: ^4.17.26
+        version: 4.17.26
 
   packages/default-compare2: {}
 
@@ -646,8 +646,8 @@ packages:
   '@types/lodash.uniq@4.5.9':
     resolution: {integrity: sha512-2Vd5avnDMNLbDSnUwwgwExKXvX9W3CN72rodT+ikGqGHXn7gVK6BM6Z+kHonbpGgCI2BzM+QDMHrkgKoofOi6A==}
 
-  '@types/lodash@4.17.25':
-    resolution: {integrity: sha512-+K1NIO8I+F9/wNulfVvu23QYd0Pe9/OCqRrim4NoYIf1VoEDL90Ve4ClzpyqBLc7NpGGWRvYNCKZ1BE/Jpf8dQ==}
+  '@types/lodash@4.17.26':
+    resolution: {integrity: sha512-48NWfiY6oNcKOh47Z4h+sIvwcQR91h6KPhaYKgeMIrkT2jV82Gy90SErj60vW8jQbeMSOSbhIv3bZ7JoqPPVhA==}
 
   '@types/luxon@3.7.6':
     resolution: {integrity: sha512-6KSjliQAXK8ZLgFQO4B7iE4Rpf/B3rItzCFuXezBY/XIAGxOdLd7vRNK9/StRPwiS/yJsVbB7HKpW46B8tcEuQ==}
@@ -657,6 +657,9 @@ packages:
 
   '@types/node@25.9.9':
     resolution: {integrity: sha512-b4e2xxj/yMeT2hNlD6x7zNFiQK2Dlmkb9CQ6v3/1G2RezKN4YS2lcEv8lzGm1mhs4f2lM4yNAMI/zUDBZBBt7w==}
+
+  '@types/node@26.6.5':
+    resolution: {integrity: sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2183,6 +2186,9 @@ packages:
   undici-types@8.11.2:
     resolution: {integrity: sha512-iMVNmWZ0leK/goS6eXMizSzmm9CDWtyphwbaCms3DNLqRxDL+mMoNVcZMTyyVgXP0N+Z8neAMzDoUOUJL8veKg==}
 
+  undici-types@8.9.0:
+    resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
+
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
@@ -2445,24 +2451,24 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@bluelovers/conventional-changelog-bluelovers@5.0.27(@types/bluebird@3.5.42)(@types/node@25.9.9)(ts-toolbelt@9.6.0)':
+  '@bluelovers/conventional-changelog-bluelovers@5.0.27(@types/bluebird@3.5.42)(@types/node@26.6.5)(ts-toolbelt@9.6.0)':
     dependencies:
       compare-func: 2.0.0
       emoji-regex: 10.6.0
       q: 1.5.1
-      ts-type: 2.1.10(@types/bluebird@3.5.42)(@types/node@25.9.9)(ts-toolbelt@9.6.0)
+      ts-type: 2.1.10(@types/bluebird@3.5.42)(@types/node@26.6.5)(ts-toolbelt@9.6.0)
     transitivePeerDependencies:
       - '@types/bluebird'
       - '@types/node'
       - ts-toolbelt
 
-  '@bluelovers/jest-config@1.1.15(@jest/transform@30.5.2(supports-color@7.2.0))(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)':
+  '@bluelovers/jest-config@1.1.15(@jest/transform@30.5.2(supports-color@7.2.0))(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)':
     dependencies:
       '@yarn-tool/require-resolve': 4.0.9(ts-toolbelt@9.6.0)
-      '@yarn-tool/table': 2.0.22(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)
+      '@yarn-tool/table': 2.0.22(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)
       array-hyper-unique: 2.1.8
       cli-table3: 0.6.5
-      debug-color2: 1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
+      debug-color2: 1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
       jest-cache-directory: 1.0.7
       jest-chain-transform: 0.0.8(@jest/transform@30.5.2(supports-color@7.2.0))
       regexp-helper-core: 2.0.13
@@ -2519,7 +2525,7 @@ snapshots:
   '@jest/console@30.5.2':
     dependencies:
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       chalk: 4.1.2
       jest-message-util: 30.5.1
       jest-util: 30.5.1
@@ -2533,7 +2539,7 @@ snapshots:
       '@jest/test-result': 30.5.2
       '@jest/transform': 30.5.2(supports-color@7.2.0)
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       ci-info: 4.4.0
@@ -2541,7 +2547,7 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       graceful-fs: 4.2.11
       jest-changed-files: 30.5.1
-      jest-config: 30.5.2(@types/node@25.9.9)(supports-color@7.2.0)
+      jest-config: 30.5.2(@types/node@26.6.5)(supports-color@7.2.0)
       jest-haste-map: 30.5.1
       jest-message-util: 30.5.1
       jest-regex-util: 30.5.0
@@ -2567,7 +2573,7 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 30.5.2
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       jest-mock: 30.5.2
 
   '@jest/expect-utils@30.5.2':
@@ -2585,7 +2591,7 @@ snapshots:
     dependencies:
       '@jest/types': 30.5.1
       '@sinonjs/fake-timers': 15.4.0
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       jest-message-util: 30.5.1
       jest-mock: 30.5.2
       jest-util: 30.5.1
@@ -2614,7 +2620,7 @@ snapshots:
       '@jest/transform': 30.5.2(supports-color@7.2.0)
       '@jest/types': 30.5.1
       '@jridgewell/trace-mapping': 0.3.31
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       chalk: 4.1.2
       collect-v8-coverage: 1.0.3
       exit-x: 0.2.2
@@ -2893,9 +2899,9 @@ snapshots:
 
   '@types/lodash.uniq@4.5.9':
     dependencies:
-      '@types/lodash': 4.17.25
+      '@types/lodash': 4.17.26
 
-  '@types/lodash@4.17.25': {}
+  '@types/lodash@4.17.26': {}
 
   '@types/luxon@3.7.6': {}
 
@@ -2904,6 +2910,10 @@ snapshots:
   '@types/node@25.9.9':
     dependencies:
       undici-types: 7.24.6
+
+  '@types/node@26.6.5':
+    dependencies:
+      undici-types: 8.9.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -3034,19 +3044,19 @@ snapshots:
     transitivePeerDependencies:
       - ts-toolbelt
 
-  '@yarn-tool/semver-diff@2.0.21(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)':
+  '@yarn-tool/semver-diff@2.0.21(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)':
     dependencies:
       '@lazy-node/semver-part': 1.0.27
-      debug-color2: 1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
+      debug-color2: 1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0)
       ts-type: 3.0.18(ts-toolbelt@9.6.0)
       tslib: 2.8.1
     transitivePeerDependencies:
       - ts-toolbelt
 
-  '@yarn-tool/table@2.0.22(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)':
+  '@yarn-tool/table@2.0.22(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)':
     dependencies:
       '@ts-type/package-dts': 3.0.14(ts-toolbelt@9.6.0)
-      '@yarn-tool/semver-diff': 2.0.21(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)
+      '@yarn-tool/semver-diff': 2.0.21(debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0))(ts-toolbelt@9.6.0)
       cli-table3: 0.6.5
       tslib: 2.8.1
     transitivePeerDependencies:
@@ -3287,14 +3297,14 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@25.9.9)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0):
+  debug-color2@1.3.2(@types/bluebird@3.5.42)(@types/node@26.6.5)(debug@4.4.3(supports-color@7.2.0))(ts-toolbelt@9.6.0):
     dependencies:
       '@types/luxon': 3.7.6
       chalk: 2.4.2
       debug: 4.4.3(supports-color@7.2.0)
       env-bool: 2.0.3
       luxon: 3.7.2
-      ts-type: 2.1.10(@types/bluebird@3.5.42)(@types/node@25.9.9)(ts-toolbelt@9.6.0)
+      ts-type: 2.1.10(@types/bluebird@3.5.42)(@types/node@26.6.5)(ts-toolbelt@9.6.0)
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/bluebird'
@@ -3728,7 +3738,7 @@ snapshots:
       '@jest/expect': 30.5.2(supports-color@7.2.0)
       '@jest/test-result': 30.5.2
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.7.2
@@ -3748,7 +3758,7 @@ snapshots:
       - babel-plugin-macros
       - supports-color
 
-  jest-cli@30.5.2(@types/node@25.9.9)(supports-color@7.2.0):
+  jest-cli@30.5.2(@types/node@26.6.5)(supports-color@7.2.0):
     dependencies:
       '@jest/core': 30.5.2(supports-color@7.2.0)
       '@jest/test-result': 30.5.2
@@ -3756,7 +3766,7 @@ snapshots:
       chalk: 4.1.2
       exit-x: 0.2.2
       import-local: 3.2.0
-      jest-config: 30.5.2(@types/node@25.9.9)(supports-color@7.2.0)
+      jest-config: 30.5.2(@types/node@26.6.5)(supports-color@7.2.0)
       jest-util: 30.5.1
       jest-validate: 30.5.1
       yargs: 17.7.3
@@ -3767,7 +3777,7 @@ snapshots:
       - supports-color
       - ts-node
 
-  jest-config@30.5.2(@types/node@25.9.9)(supports-color@7.2.0):
+  jest-config@30.5.2(@types/node@26.6.5)(supports-color@7.2.0):
     dependencies:
       '@babel/core': 7.29.7(supports-color@7.2.0)
       '@jest/get-type': 30.5.0
@@ -3793,7 +3803,7 @@ snapshots:
       slash: 3.0.0
       strip-json-comments: 3.1.1
     optionalDependencies:
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -3830,7 +3840,7 @@ snapshots:
       '@jest/environment': 30.5.2
       '@jest/fake-timers': 30.5.2
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       jest-mock: 30.5.2
       jest-util: 30.5.1
       jest-validate: 30.5.1
@@ -3841,7 +3851,7 @@ snapshots:
     dependencies:
       '@jest/types': 30.5.1
       '@parcel/watcher': 2.6.0
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       fdir: 6.5.0(picomatch@4.0.7)
@@ -3910,7 +3920,7 @@ snapshots:
       '@jest/test-result': 30.5.2
       '@jest/transform': 30.5.2(supports-color@7.2.0)
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       chalk: 4.1.2
       emittery: 0.13.1
       exit-x: 0.2.2
@@ -3938,7 +3948,7 @@ snapshots:
       '@jest/test-result': 30.5.2
       '@jest/transform': 30.5.2(supports-color@7.2.0)
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       chalk: 4.1.2
       cjs-module-lexer: 2.3.0
       collect-v8-coverage: 1.0.3
@@ -4005,7 +4015,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 30.5.2
       '@jest/types': 30.5.1
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.13.1
@@ -4014,18 +4024,18 @@ snapshots:
 
   jest-worker@30.5.1:
     dependencies:
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       '@ungap/structured-clone': 1.4.0
       jest-util: 30.5.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
-  jest@30.5.2(@types/node@25.9.9)(supports-color@7.2.0):
+  jest@30.5.2(@types/node@26.6.5)(supports-color@7.2.0):
     dependencies:
       '@jest/core': 30.5.2(supports-color@7.2.0)
       '@jest/types': 30.5.1
       import-local: 3.2.0
-      jest-cli: 30.5.2(@types/node@25.9.9)(supports-color@7.2.0)
+      jest-cli: 30.5.2(@types/node@26.6.5)(supports-color@7.2.0)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4495,12 +4505,12 @@ snapshots:
 
   trim-newlines@3.0.1: {}
 
-  ts-jest@29.4.14(@babel/core@7.29.7(supports-color@7.2.0))(@jest/transform@30.5.2(supports-color@7.2.0))(@jest/types@30.5.1)(babel-jest@30.5.2(@babel/core@7.29.7(supports-color@7.2.0))(supports-color@7.2.0))(jest-util@30.5.1)(jest@30.5.2(@types/node@25.9.9)(supports-color@7.2.0))(typescript@5.9.3):
+  ts-jest@29.4.14(@babel/core@7.29.7(supports-color@7.2.0))(@jest/transform@30.5.2(supports-color@7.2.0))(@jest/types@30.5.1)(babel-jest@30.5.2(@babel/core@7.29.7(supports-color@7.2.0))(supports-color@7.2.0))(jest-util@30.5.1)(jest@30.5.2(@types/node@26.6.5)(supports-color@7.2.0))(typescript@5.9.3):
     dependencies:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       handlebars: 4.7.10
-      jest: 30.5.2(@types/node@25.9.9)(supports-color@7.2.0)
+      jest: 30.5.2(@types/node@26.6.5)(supports-color@7.2.0)
       json5: 2.2.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
@@ -4517,10 +4527,10 @@ snapshots:
 
   ts-toolbelt@9.6.0: {}
 
-  ts-type@2.1.10(@types/bluebird@3.5.42)(@types/node@25.9.9)(ts-toolbelt@9.6.0):
+  ts-type@2.1.10(@types/bluebird@3.5.42)(@types/node@26.6.5)(ts-toolbelt@9.6.0):
     dependencies:
       '@types/bluebird': 3.5.42
-      '@types/node': 25.9.9
+      '@types/node': 26.6.5
       ts-toolbelt: 9.6.0
       tslib: 2.8.1
       typedarray-dts: 1.0.0
@@ -4568,6 +4578,8 @@ snapshots:
   undici-types@7.24.6: {}
 
   undici-types@8.11.2: {}
+
+  undici-types@8.9.0: {}
 
   universalify@2.0.1: {}
 

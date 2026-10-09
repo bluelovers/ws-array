@@ -98,15 +98,15 @@
     "undici-types": "^8.11.2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^2.0.2",
+    "@bluelovers/tsconfig": "^2.0.3",
     "@types/array-unique": "^0.3.3",
     "@types/jest": "^30.0.0",
-    "@types/lodash": "^4.17.24",
+    "@types/lodash": "^4.17.26",
     "@types/lodash.uniq": "^4.5.9",
-    "@types/node": "^25.5.0",
+    "@types/node": "^26.6.5",
     "@yarn-tool/require-resolve": "*",
-    "@yarn-tool/ws-find-up-paths": "^1.0.19",
-    "jest": "^30.3.0",
-    "ts-jest": "^29.4.6"
+    "@yarn-tool/ws-find-up-paths": "^1.0.22",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.14"
   }
 }
