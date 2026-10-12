@@ -5,9 +5,7 @@
  * @example
  * type T = ITSValueOfTuple<readonly [1, 2, 3]>; // => [1, 2]
  */
-export type ITSValueOfTuple<T extends readonly any[]> = T extends readonly [
-	...infer U
-] ? U : never;
+type ITSValueOfTuple<T extends readonly any[]> = T extends readonly [...infer U] ? U : never;
 /**
  * 使用 indexOf 過濾陣列取得唯一值
  * Get unique values from array using indexOf filter
@@ -44,5 +42,4 @@ export declare function array_unique_indexOf<T extends readonly any[]>(arr: T): 
  * array_unique_by_set(['a', 'b', 'a']); // => ['a', 'b']
  */
 export declare function array_unique_by_set<T extends readonly any[]>(arr: T): ITSValueOfTuple<T>;
-
 export {};
