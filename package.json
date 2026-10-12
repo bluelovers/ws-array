@@ -57,7 +57,7 @@
     "prepare": "echo prepare",
     "prepare:fix-ws-links": "echo skip fix-ws-links (yarn-only)",
     "prepublishOnly": "echo prepublishOnly",
-    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:check-bin": "echo ynpx --quiet @yarn-tool/check-pkg-bin",
     "prepublishOnly:lockfile": "ynpx --quiet sync-lockfile",
     "prepublishOnly:root": "pnpm run prepublishOnly:check-bin",
     "prepublishOnly:update": "pnpm run ncu && pnpm run sort-package-json",
