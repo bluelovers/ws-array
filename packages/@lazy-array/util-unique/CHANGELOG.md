@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/bluelovers/ws-array/compare/@lazy-array/util-unique@1.0.8...@lazy-array/util-unique@1.0.9) (2026-10-12)
+
+
+
+### 🐛　Bug Fixes
+
+* update build ([edcfd7c](https://github.com/bluelovers/ws-array/commit/edcfd7cf407b051a0970e83d78a0ef075d641716))
+
+
+
 ## [1.0.8](https://github.com/bluelovers/ws-array/compare/@lazy-array/util-unique@1.0.7...@lazy-array/util-unique@1.0.8) (2026-10-09)
 
 

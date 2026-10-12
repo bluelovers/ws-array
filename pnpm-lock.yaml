@@ -144,7 +144,7 @@ importers:
   packages/sort-object-keys:
     dependencies:
       '@lazy-array/util-unique':
-        specifier: ^1.0.8
+        specifier: ^1.0.9
         version: link:../@lazy-array/util-unique
 
   packages/string-natural-compare:

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/bluelovers/ws-array/compare/default-compare-with-symbol@1.0.10...default-compare-with-symbol@1.0.11) (2026-10-12)
+
+
+
+### 🐛　Bug Fixes
+
+* update build ([edcfd7c](https://github.com/bluelovers/ws-array/commit/edcfd7cf407b051a0970e83d78a0ef075d641716))
+
+
+
 ## [1.0.10](https://github.com/bluelovers/ws-array/compare/default-compare-with-symbol@1.0.9...default-compare-with-symbol@1.0.10) (2026-10-09)
 
 
